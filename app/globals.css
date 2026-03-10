@@ -1,8 +1,8 @@
 /* ═══ DESIGN TOKENS ═══ */
 :root {
-  --font-heading: var(--font-space-grotesk), 'Space Grotesk', system-ui, sans-serif;
-  --font-body: var(--font-dm-sans), 'DM Sans', system-ui, sans-serif;
-  --font-mono: var(--font-jetbrains-mono), 'JetBrains Mono', 'Fira Code', monospace;
+  --font-heading: var(--font-space-grotesk, 'Space Grotesk'), system-ui, sans-serif;
+  --font-body: var(--font-dm-sans, 'DM Sans'), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono, 'JetBrains Mono'), 'Fira Code', monospace;
 
   --ink: #09090B;
   --ink-secondary: #3F3F46;
@@ -71,7 +71,7 @@ body {
   background: var(--surface-page);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  font-size: 16px;
+  font-size: 17px;
   transition: background 0.2s, color 0.2s;
 }
 
@@ -94,7 +94,7 @@ body {
   color: #F1F5F9;
   padding: 32px 40px;
   display: grid;
-  grid-template-columns: 120px 1fr;
+  grid-template-columns: 140px 1fr;
   gap: 22px;
   align-items: center;
   overflow: hidden;
@@ -123,7 +123,7 @@ body {
 }
 
 .avatar {
-  width: 120px; height: 120px;
+  width: 140px; height: 140px;
   border-radius: 12px;
   object-fit: cover;
   object-position: center top;
@@ -166,7 +166,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2px 16px;
-  font-size: 0.82rem;
+  font-size: 0.88rem;
 }
 
 .contact-item {
@@ -180,7 +180,7 @@ body {
   font-weight: 600;
   color: rgba(241,245,249,0.5);
   min-width: 52px;
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.3px;
 }

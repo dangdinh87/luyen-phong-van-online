@@ -11,7 +11,7 @@ export function CVContent() {
 
       {/* ═══ HEADER ═══ */}
       <header className="header">
-        <Image src="/avatar.jpg" alt="Nguyen Dang Dinh" className="avatar" width={120} height={120} />
+        <Image src="/avatar.jpg" alt="Nguyen Dang Dinh" className="avatar" width={140} height={140} />
         <div className="h-info">
           <h1>Nguyen Dang Dinh</h1>
           <div className="h-title">{t('jobTitle')} <span className="yoe">{t('yoe')}</span></div>
@@ -90,12 +90,12 @@ export function CVContent() {
               <div className="xp-role">Frontend Developer</div>
               <div className="xp-body">
                 <ul>
-                  <li>Developed admin website for workspace management, user/model usage analytics, cost tracking, and employee performance insights.</li>
-                  <li>Integrated and customized LibreChat (open-source), enhancing capabilities with AI Agents, image/video studio, LM notebooks, and deep research.</li>
-                  <li>Developed landing page, auth-web, meeting-note app as standalone micro-frontends.</li>
-                  <li>Built and published cookie consent package, applied across all company products.</li>
-                  <li>Built with Next.js, deployed on Vercel. Implemented i18n (EN/VI/JP), dark mode, and Sentry monitoring.</li>
-                  <li>Build source code base (FE), optimize code, review code, refactor code.</li>
+                  <li>Develop admin website for workspace management, user/model usage analytics, cost tracking, and employee performance insights.</li>
+                  <li>Integrate and customize LibreChat (open-source), enhancing capabilities with AI Agents, image/video studio, LM notebooks, and deep research.</li>
+                  <li>Develop landing page, auth-web, and meeting-note app as standalone micro-frontends.</li>
+                  <li>Build and publish cookie consent package, applied across all company products.</li>
+                  <li>Implement i18n (EN/VI/JP), dark mode, and Sentry monitoring; deploy on Vercel with Next.js.</li>
+                  <li>Architect frontend codebase, conduct code reviews, optimize performance, and refactor for maintainability.</li>
                 </ul>
               </div>
             </div>
@@ -106,13 +106,13 @@ export function CVContent() {
               <div className="xp-role">Frontend Developer &middot; Backend Developer</div>
               <div className="xp-body">
                 <ul>
-                  <li>Developing and improving internal websites such as Selly, Cashbag, Selly landing page, Selly chat system, Zalo Mini App, Mamori.vn, and admin dashboards.</li>
-                  <li>Integrate 3rd APIs such as Telegram, Google, Tiktok, Appscript, etc.</li>
-                  <li>Integrate Cashbag webview into banks (TPBank, VPBank, MBBank, BIDV, etc.) and 3rd clients (MFast, Galaxy, etc.)</li>
-                  <li>Applying solutions that work with mobile as Webview, deep-link, and Adjust.</li>
+                  <li>Developed and maintained internal websites including Selly, Cashbag, Selly landing page, Selly chat system, Zalo Mini App, Mamori.vn, and admin dashboards.</li>
+                  <li>Integrated third-party APIs such as Telegram, Google, TikTok, and Appscript.</li>
+                  <li>Integrated Cashbag webview into banking apps (TPBank, VPBank, MBBank, BIDV, etc.) and third-party clients (MFast, Galaxy, etc.).</li>
+                  <li>Implemented mobile-compatible solutions using Webview, deep-link, and Adjust.</li>
                   <li>Implemented multilingual support (i18n), dark mode toggle, and fully responsive layouts.</li>
-                  <li>Organized source code clearly, wrote clean code, optimized performance, and did code reviews.</li>
-                  <li><strong>Backend:</strong> Resolve some tasks using Go, Node.js, MongoDB.</li>
+                  <li>Structured source code for maintainability, enforced clean code practices, optimized performance, and conducted code reviews.</li>
+                  <li><strong>Backend:</strong> Resolved backend tasks using Go, Node.js, and MongoDB.</li>
                 </ul>
               </div>
             </div>
@@ -123,8 +123,8 @@ export function CVContent() {
               <div className="xp-role">Intern Fullstack</div>
               <div className="xp-body">
                 <ul>
-                  <li>Completed training project with ReactJS, ExpressJS, MongoDB.</li>
-                  <li>Development &amp; fixbug some features of production projects.</li>
+                  <li>Completed training project using ReactJS, ExpressJS, and MongoDB.</li>
+                  <li>Developed features and debugged issues in production projects.</li>
                 </ul>
               </div>
             </div>
@@ -311,7 +311,7 @@ export function CVContent() {
               <tr>
                 <td>{t('summary')}</td>
                 <td style={{ fontSize: '0.88rem', lineHeight: 1.7, color: 'var(--ink-secondary)' }}>
-                  - 3+ years in Front-End: HTML, CSS, SCSS, Tailwind CSS, Bootstrap, Ant Design, JavaScript, TypeScript, ReactJS, UmiJS, Next.js, Redux, Zustand, and tools as Git, Figma.<br />
+                  - 3+ years in Front-End: HTML, CSS, SCSS, Tailwind CSS, Bootstrap, Ant Design, JavaScript, TypeScript, ReactJS, UmiJS, Next.js, Redux, Zustand, and tools such as Git and Figma.<br />
                   - Experienced in Responsive web, SSR, SEO, Socket.IO client, Shadcn/ui, Framer, Subframer.<br />
                   - Backend knowledge: Go, Echo, Node.js, Express.js, MongoDB, MySQL, Docker.<br />
                   - AI-powered development: Claude Code, ClaudeKit, MCP, Agent Skills, Cursor, Trae, Antigravity, GitHub Copilot.
@@ -346,12 +346,11 @@ export function CVContent() {
                 <tr><td>{t('position')}</td><td>Frontend Developer</td></tr>
                 <tr><td>{t('responsibilities')}</td><td>
                   <ul>
-                    <li>Build source code base (FE)</li>
-                    <li>Build Landing page</li>
-                    <li>Develop admin website for workspace management</li>
-                    <li>Integrate and develop LibreChat features</li>
-                    <li>Optimize code, review code, refactor code</li>
-                    <li>Participate in product development plans</li>
+                    <li>Architected and established the frontend codebase</li>
+                    <li>Developed the landing page and marketing assets</li>
+                    <li>Developed admin website for workspace management</li>
+                    <li>Integrated and extended LibreChat with custom features</li>
+                    <li>Optimized performance, conducted code reviews, and refactored for scalability</li>
                   </ul>
                 </td></tr>
                 <tr><td>{t('technologyInUse')}</td><td>
@@ -386,16 +385,15 @@ export function CVContent() {
             <table className="project-table">
               <tbody>
                 <tr><td>{t('client')}</td><td>Vingroup</td></tr>
-                <tr><td>{t('descriptions')}</td><td>V-Creator is a platform by Vingroup that encourages content creation about products and services from its member companies like VinFast, Vincom, and Vinpearl. Users share their content on social media platforms such as YouTube, TikTok, Facebook, and Instagram and receive rewards based on the number of views. Integrate and develop additional features suitable for customers such as MB Bank, VPBank, VNPAY, Yody.</td></tr>
+                <tr><td>{t('descriptions')}</td><td>V-Creator is a platform by Vingroup that encourages content creation about products and services from its member companies like VinFast, Vincom, and Vinpearl. Users share their content on social media platforms such as YouTube, TikTok, Facebook, and Instagram and receive rewards based on the number of views. Integrated and developed additional features tailored to partners such as MB Bank, VPBank, VNPAY, and Yody.</td></tr>
                 <tr><td>{t('numberOfMembers')}</td><td>6</td></tr>
                 <tr><td>{t('position')}</td><td>Frontend Developer</td></tr>
                 <tr><td>{t('responsibilities')}</td><td>
                   <ul>
-                    <li>Development &amp; fixbug</li>
-                    <li>Optimize code</li>
-                    <li>Maintain &amp; refactor</li>
-                    <li>Review code</li>
-                    <li>Participate in product development plans</li>
+                    <li>Developed new features and resolved bugs across the platform</li>
+                    <li>Optimized frontend performance and bundle size</li>
+                    <li>Maintained codebase and refactored legacy components</li>
+                    <li>Conducted code reviews to ensure quality standards</li>
                   </ul>
                 </td></tr>
                 <tr><td>{t('technologyInUse')}</td><td>
@@ -429,14 +427,13 @@ export function CVContent() {
                 <tr><td>{t('position')}</td><td>Frontend Developer &middot; Backend Developer</td></tr>
                 <tr><td>{t('responsibilities')}</td><td>
                   <ul>
-                    <li>Build source code base (FE) for TCB Creator, Ambassador (11 brand variants), and TOS</li>
-                    <li>Develop frontend &amp; admin for TCB Creator: content, events, campaigns, KYC, reconciliation, partner management</li>
-                    <li>Develop Ambassador frontend with multi-brand customization (Yody, VNPAY, VNG, Anker, etc.)</li>
-                    <li>Build TOS (service-tos) KYC/eContract frontend with Next.js, Shadcn/ui, TanStack Query</li>
+                    <li>Architected frontend codebase for TCB Creator, Ambassador (11 brand variants), and TOS</li>
+                    <li>Developed frontend &amp; admin for TCB Creator: content, events, campaigns, KYC, reconciliation, and partner management</li>
+                    <li>Developed Ambassador frontend with multi-brand customization (Yody, VNPAY, VNG, Anker, etc.)</li>
+                    <li>Built TOS (service-tos) KYC/eContract frontend with Next.js, Shadcn/ui, and TanStack Query</li>
                     <li>Integrated FPT eContract API for biometric identity verification and digital contract signing</li>
-                    <li><strong>Backend:</strong> Handled several backend features using Go &amp; Echo framework</li>
-                    <li>Development &amp; fixbug, optimize code, review code</li>
-                    <li>Participate in product development plans</li>
+                    <li><strong>Backend:</strong> Implemented several backend features using Go &amp; Echo framework</li>
+                    <li>Debugged and resolved issues, optimized performance, and conducted code reviews</li>
                   </ul>
                 </td></tr>
                 <tr><td>{t('technologyInUse')}</td><td>
@@ -474,15 +471,14 @@ export function CVContent() {
             <table className="project-table">
               <tbody>
                 <tr><td>{t('client')}</td><td>CaSe Group, Banks</td></tr>
-                <tr><td>{t('descriptions')}</td><td>Build many rewarding games on webview such as spin wheel, open gifts and themes such as Tet, Christmas, etc. integrated into banks and game purchasing apps.</td></tr>
+                <tr><td>{t('descriptions')}</td><td>Built multiple reward-based webview games (spin wheel, gift opening) with seasonal themes (Tet, Christmas, etc.), integrated into banking and game purchasing apps.</td></tr>
                 <tr><td>{t('numberOfMembers')}</td><td>6</td></tr>
                 <tr><td>{t('position')}</td><td>Frontend Developer</td></tr>
                 <tr><td>{t('responsibilities')}</td><td>
                   <ul>
-                    <li>Build source code base (FE)</li>
-                    <li>Develop &amp; fixbug (Client &amp; Admin)</li>
-                    <li>Optimize code</li>
-                    <li>Participate in product development plans</li>
+                    <li>Architected and established the frontend codebase</li>
+                    <li>Developed client-facing and admin features; debugged and resolved issues</li>
+                    <li>Optimized frontend performance for webview environments</li>
                   </ul>
                 </td></tr>
                 <tr><td>{t('technologyInUse')}</td><td>
@@ -511,16 +507,15 @@ export function CVContent() {
             <table className="project-table">
               <tbody>
                 <tr><td>{t('client')}</td><td>CaSe Group</td></tr>
-                <tr><td>{t('descriptions')}</td><td>Website allows you to create a self-introduction website including social network links, personal images, articles, and attach products with available templates.</td></tr>
+                <tr><td>{t('descriptions')}</td><td>A platform that allows users to create personal profile pages with social media links, images, articles, and product listings using customizable templates.</td></tr>
                 <tr><td>{t('numberOfMembers')}</td><td>5</td></tr>
                 <tr><td>{t('position')}</td><td>Frontend Developer, Backend Developer</td></tr>
                 <tr><td>{t('responsibilities')}</td><td>
                   <ul>
-                    <li>Build source code base (FE)</li>
-                    <li>Development &amp; fixbug (Client &amp; Admin)</li>
-                    <li>Optimize code</li>
-                    <li>Maintain &amp; refactor</li>
-                    <li>Participate in product development plans</li>
+                    <li>Architected and established the frontend codebase</li>
+                    <li>Developed client-facing and admin features; debugged and resolved issues</li>
+                    <li>Optimized frontend performance and bundle size</li>
+                    <li>Maintained codebase and refactored for long-term maintainability</li>
                   </ul>
                 </td></tr>
                 <tr><td>{t('technologyInUse')}</td><td>
@@ -548,16 +543,15 @@ export function CVContent() {
             <table className="project-table">
               <tbody>
                 <tr><td>{t('client')}</td><td>Selly</td></tr>
-                <tr><td>{t('descriptions')}</td><td>E-commerce website. Selly is a dropshipping platform that allows sellers to run an online business without stocking inventory or managing logistics. Sellers simply select products from Selly, promote them, and confirm orders, while Selly handles packaging and delivery. Integrate and develop additional features suitable for clients.</td></tr>
+                <tr><td>{t('descriptions')}</td><td>E-commerce website. Selly is a dropshipping platform that allows sellers to run an online business without stocking inventory or managing logistics. Sellers simply select products from Selly, promote them, and confirm orders, while Selly handles packaging and delivery. Integrated and developed additional features tailored to client requirements.</td></tr>
                 <tr><td>{t('numberOfMembers')}</td><td>10</td></tr>
                 <tr><td>{t('position')}</td><td>Frontend Developer, Backend Developer</td></tr>
                 <tr><td>{t('responsibilities')}</td><td>
                   <ul>
-                    <li>Development &amp; fixbug (client, admin)</li>
-                    <li>Optimize code</li>
-                    <li>Maintain &amp; refactor</li>
-                    <li>Review code</li>
-                    <li>Participate in product development plans</li>
+                    <li>Developed new features and resolved bugs for both client and admin interfaces</li>
+                    <li>Optimized frontend performance and load times</li>
+                    <li>Maintained codebase and refactored legacy components</li>
+                    <li>Conducted code reviews to ensure quality standards</li>
                   </ul>
                 </td></tr>
                 <tr><td>{t('technologyInUse')}</td><td>
@@ -595,10 +589,9 @@ export function CVContent() {
                 <tr><td>{t('position')}</td><td>Frontend Developer</td></tr>
                 <tr><td>{t('responsibilities')}</td><td>
                   <ul>
-                    <li>Development &amp; fixbug</li>
-                    <li>Optimize code</li>
-                    <li>Review code</li>
-                    <li>Participate in product development plans</li>
+                    <li>Developed new features and resolved bugs across the platform</li>
+                    <li>Optimized frontend performance and user experience</li>
+                    <li>Conducted code reviews to ensure quality standards</li>
                   </ul>
                 </td></tr>
                 <tr><td>{t('technologyInUse')}</td><td>
@@ -628,14 +621,13 @@ export function CVContent() {
             <table className="project-table">
               <tbody>
                 <tr><td>{t('client')}</td><td>Supplier of Selly</td></tr>
-                <tr><td>{t('descriptions')}</td><td>Customer support center to help customers shop and solve problems when purchasing. Real-time chat with Socket.IO.</td></tr>
+                <tr><td>{t('descriptions')}</td><td>Customer support center enabling real-time assistance for shopping inquiries and purchase-related issues, powered by Socket.IO.</td></tr>
                 <tr><td>{t('numberOfMembers')}</td><td>5</td></tr>
                 <tr><td>{t('position')}</td><td>Developer</td></tr>
                 <tr><td>{t('responsibilities')}</td><td>
                   <ul>
-                    <li>Development Front-end</li>
-                    <li>Handling chat features related to customer support</li>
-                    <li>Participate in product development plans</li>
+                    <li>Developed the frontend interface for real-time chat</li>
+                    <li>Implemented chat features for customer support workflows</li>
                   </ul>
                 </td></tr>
                 <tr><td>{t('technologyInUse')}</td><td>
@@ -660,14 +652,14 @@ export function CVContent() {
             <table className="project-table">
               <tbody>
                 <tr><td>{t('client')}</td><td>Cashbag &amp; Selly</td></tr>
-                <tr><td>{t('descriptions')}</td><td>Build website Cashback &amp; Selly when shopping in E-commerce integrated on Zalo Mini App.</td></tr>
+                <tr><td>{t('descriptions')}</td><td>Built Cashbag &amp; Selly e-commerce cashback experience as a Zalo Mini App integration.</td></tr>
                 <tr><td>{t('numberOfMembers')}</td><td>3</td></tr>
                 <tr><td>{t('position')}</td><td>Frontend Developer</td></tr>
                 <tr><td>{t('responsibilities')}</td><td>
                   <ul>
-                    <li>Build core</li>
-                    <li>Development &amp; fixbug</li>
-                    <li>Deploy on Zalo</li>
+                    <li>Architected the core application structure</li>
+                    <li>Developed features and resolved bugs</li>
+                    <li>Deployed and configured the app on Zalo platform</li>
                   </ul>
                 </td></tr>
                 <tr><td>{t('technologyInUse')}</td><td>
@@ -691,12 +683,12 @@ export function CVContent() {
             <table className="project-table">
               <tbody>
                 <tr><td>{t('client')}</td><td>Sub-brand of Selly</td></tr>
-                <tr><td>{t('descriptions')}</td><td>Website showcases Mamori&apos;s products.</td></tr>
+                <tr><td>{t('descriptions')}</td><td>Product showcase website for Mamori&apos;s brand.</td></tr>
                 <tr><td>{t('numberOfMembers')}</td><td>1</td></tr>
                 <tr><td>{t('position')}</td><td>Frontend Developer</td></tr>
                 <tr><td>{t('responsibilities')}</td><td>
                   <ul>
-                    <li>Build frontend</li>
+                    <li>Developed the complete frontend independently</li>
                   </ul>
                 </td></tr>
                 <tr><td>{t('technologyInUse')}</td><td>
@@ -718,13 +710,13 @@ export function CVContent() {
             <table className="project-table">
               <tbody>
                 <tr><td>{t('client')}</td><td>Buyer of Selly</td></tr>
-                <tr><td>{t('descriptions')}</td><td>Website for users in Selly.vn when buying package pro.</td></tr>
+                <tr><td>{t('descriptions')}</td><td>E-commerce storefront for Selly.vn Pro package subscribers.</td></tr>
                 <tr><td>{t('numberOfMembers')}</td><td>4</td></tr>
                 <tr><td>{t('position')}</td><td>Frontend Developer</td></tr>
                 <tr><td>{t('responsibilities')}</td><td>
                   <ul>
-                    <li>Development</li>
-                    <li>Improvement website &amp; fixbug</li>
+                    <li>Developed new features for the storefront</li>
+                    <li>Improved website functionality and resolved bugs</li>
                   </ul>
                 </td></tr>
                 <tr><td>{t('technologyInUse')}</td><td>
@@ -734,6 +726,84 @@ export function CVContent() {
                     <span className="t g">Bootstrap</span>
                     <span className="t a">Go</span>
                     <span className="t a">Echo</span>
+                  </div>
+                </td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          {/* 11. Pomodoro Focus App */}
+          <div className="project-block">
+            <div className="project-header">
+              <h3>Pomodoro Focus App (Personal)</h3>
+              <span className="project-period">2025</span>
+            </div>
+            <table className="project-table">
+              <tbody>
+                <tr><td>{t('client')}</td><td>Personal Project</td></tr>
+                <tr><td>{t('descriptions')}</td><td>Free online Pomodoro timer with AI-powered study coach (Claude), integrated task management, productivity analytics, leaderboard, and mini-games for breaks. Features multi-language support (EN/VI/JP) and dark/light theme.</td></tr>
+                <tr><td>{t('numberOfMembers')}</td><td>1</td></tr>
+                <tr><td>{t('position')}</td><td>Fullstack Developer</td></tr>
+                <tr><td>{t('responsibilities')}</td><td>
+                  <ul>
+                    <li>Designed and built the full application from scratch</li>
+                    <li>Integrated Claude AI as a study coach via Vercel AI SDK</li>
+                    <li>Implemented task management with drag-and-drop, tags, and analytics</li>
+                    <li>Built productivity analytics dashboard with charts and session history</li>
+                  </ul>
+                </td></tr>
+                <tr><td>{t('technologyInUse')}</td><td>
+                  <div className="tags">
+                    <span className="t b">Next.js 14</span>
+                    <span className="t b">React 18</span>
+                    <span className="t b">TypeScript</span>
+                    <span className="t g">Tailwind CSS</span>
+                    <span className="t g">Shadcn/ui</span>
+                    <span className="t p">Zustand</span>
+                    <span className="t p">Vercel AI SDK</span>
+                    <span className="t r">Framer Motion</span>
+                    <span className="t r">DND Kit</span>
+                    <span className="t a">Supabase</span>
+                    <span className="t c">Claude AI</span>
+                  </div>
+                </td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          {/* 12. Liverpool FC Fan Hub */}
+          <div className="project-block">
+            <div className="project-header">
+              <h3>Liverpool FC Fan Hub (Personal)</h3>
+              <span className="project-period">2025</span>
+            </div>
+            <table className="project-table">
+              <tbody>
+                <tr><td>{t('client')}</td><td>Personal Project</td></tr>
+                <tr><td>{t('descriptions')}</td><td>Comprehensive Liverpool FC fan hub providing live fixtures, squad profiles, Premier League standings, and aggregated news from multiple sources. Features 3D visualizations, match analytics, and AI-powered community chat.</td></tr>
+                <tr><td>{t('numberOfMembers')}</td><td>1</td></tr>
+                <tr><td>{t('position')}</td><td>Fullstack Developer</td></tr>
+                <tr><td>{t('responsibilities')}</td><td>
+                  <ul>
+                    <li>Designed and built the full application from scratch</li>
+                    <li>Integrated multiple sports data APIs (FPL, ESPN, RSS feeds) for live data</li>
+                    <li>Built 3D stadium/player visualizations with Three.js</li>
+                    <li>Implemented news aggregation with readability parsing and reading history</li>
+                  </ul>
+                </td></tr>
+                <tr><td>{t('technologyInUse')}</td><td>
+                  <div className="tags">
+                    <span className="t b">Next.js 16</span>
+                    <span className="t b">React 19</span>
+                    <span className="t b">TypeScript</span>
+                    <span className="t g">Tailwind CSS 4</span>
+                    <span className="t g">Radix UI</span>
+                    <span className="t p">Zustand</span>
+                    <span className="t p">next-intl</span>
+                    <span className="t r">Three.js</span>
+                    <span className="t r">Vercel AI SDK</span>
+                    <span className="t a">Supabase</span>
+                    <span className="t c">Groq AI</span>
                   </div>
                 </td></tr>
               </tbody>

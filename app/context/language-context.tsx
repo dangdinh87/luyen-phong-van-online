@@ -97,10 +97,9 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [locale, setLocale] = useState<Locale>('en')
 
   useEffect(() => {
-    const stored = localStorage.getItem('locale') as Locale | null
-    if (stored === 'en' || stored === 'vi') {
-      setLocale(stored)
-    }
+    // Temporarily force English as default; we'll re-enable switching later.
+    setLocale('en')
+    localStorage.setItem('locale', 'en')
   }, [])
 
   const toggleLocale = () => {
