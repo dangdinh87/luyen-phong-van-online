@@ -15,14 +15,14 @@ const ThemeContext = createContext<ThemeContextValue>({
 })
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
+  // Always init 'light' to match SSR. The blocking script in layout.tsx
+  // already sets data-theme on <html> so CSS is correct from first paint.
+  // useEffect syncs React state with the actual DOM attribute after hydration.
   const [theme, setTheme] = useState<Theme>('light')
 
   useEffect(() => {
-    const stored = localStorage.getItem('theme') as Theme | null
-    const preferred = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-    const initial = stored ?? preferred
-    setTheme(initial)
-    document.documentElement.setAttribute('data-theme', initial)
+    const current = document.documentElement.getAttribute('data-theme') as Theme
+    if (current && current !== theme) setTheme(current)
   }, [])
 
   const toggleTheme = () => {

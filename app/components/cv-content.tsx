@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { useLanguage } from '../context/language-context'
 
 export function CVContent() {
-  const { t } = useLanguage()
+  const { t, tr } = useLanguage()
 
   return (
     <div className="cv">
@@ -58,16 +58,16 @@ export function CVContent() {
             <h2>{t('overview')}</h2>
           </div>
           <ul className="overview-list">
-            <li>Over <strong>3 years of experience</strong> as a Frontend Developer, specializing in building scalable web applications with <strong>React, Next.js, and TypeScript</strong>.</li>
-            <li>Proven track record delivering production products for enterprise clients including <strong>Techcombank, Vingroup, MB Bank</strong>, and multiple fintech/banking partners.</li>
-            <li>Proficient in modern UI frameworks: Tailwind CSS, Ant Design, Shadcn/ui, Bootstrap — with strong focus on responsive design, SSR, and SEO optimization.</li>
-            <li>Experienced in state management ecosystems: Redux, Dva.js, Zustand, TanStack Query, React Hook Form.</li>
-            <li>Capable of backend development with <strong>Go</strong> and <strong>Node.js</strong>, enabling effective full-stack collaboration and independent feature delivery.</li>
-            <li>Hands-on experience with <strong>AI-assisted development</strong>: Claude Code, ClaudeKit, MCP servers, Agent Skills — leveraging AI coding IDEs (Cursor, Trae, Antigravity) to accelerate development velocity.</li>
-            <li>Experience building landing pages with <strong>Framer</strong> and <strong>Subframer</strong> — design-to-code workflow for rapid, high-quality marketing pages.</li>
-            <li>Strong communicator with a quick learning mindset, consistently adapting to new technologies and project requirements.</li>
-            <li>Goal: Become a well-rounded full-stack developer while deepening frontend architecture expertise.</li>
-            <li>Current working location: Da Nang, Viet Nam.</li>
+            <li>{tr('overview1')}</li>
+            <li>{tr('overview2')}</li>
+            <li>{tr('overview3')}</li>
+            <li>{tr('overview4')}</li>
+            <li>{tr('overview5')}</li>
+            <li>{tr('overview6')}</li>
+            <li>{tr('overview7')}</li>
+            <li>{tr('overview8')}</li>
+            <li>{tr('overview9')}</li>
+            <li>{tr('overview10')}</li>
           </ul>
         </section>
 
@@ -90,12 +90,12 @@ export function CVContent() {
               <div className="xp-role">Frontend Developer</div>
               <div className="xp-body">
                 <ul>
-                  <li>Develop admin website for workspace management, user/model usage analytics, cost tracking, and employee performance insights.</li>
-                  <li>Integrate and customize LibreChat (open-source), enhancing capabilities with AI Agents, image/video studio, LM notebooks, and deep research.</li>
-                  <li>Develop landing page, auth-web, and meeting-note app as standalone micro-frontends.</li>
-                  <li>Build and publish cookie consent package, applied across all company products.</li>
-                  <li>Implement i18n (EN/VI/JP), dark mode, and Sentry monitoring; deploy on Vercel with Next.js.</li>
-                  <li>Architect frontend codebase, conduct code reviews, optimize performance, and refactor for maintainability.</li>
+                  <li>{tr('expDoraverse1')}</li>
+                  <li>{tr('expDoraverse2')}</li>
+                  <li>{tr('expDoraverse3')}</li>
+                  <li>{tr('expDoraverse4')}</li>
+                  <li>{tr('expDoraverse5')}</li>
+                  <li>{tr('expDoraverse6')}</li>
                 </ul>
               </div>
             </div>
@@ -106,13 +106,13 @@ export function CVContent() {
               <div className="xp-role">Frontend Developer &middot; Backend Developer</div>
               <div className="xp-body">
                 <ul>
-                  <li>Developed and maintained internal websites including Selly, Cashbag, Selly landing page, Selly chat system, Zalo Mini App, Mamori.vn, and admin dashboards.</li>
-                  <li>Integrated third-party APIs such as Telegram, Google, TikTok, and Appscript.</li>
-                  <li>Integrated Cashbag webview into banking apps (TPBank, VPBank, MBBank, BIDV, etc.) and third-party clients (MFast, Galaxy, etc.).</li>
-                  <li>Implemented mobile-compatible solutions using Webview, deep-link, and Adjust.</li>
-                  <li>Implemented multilingual support (i18n), dark mode toggle, and fully responsive layouts.</li>
-                  <li>Structured source code for maintainability, enforced clean code practices, optimized performance, and conducted code reviews.</li>
-                  <li><strong>Backend:</strong> Resolved backend tasks using Go, Node.js, and MongoDB.</li>
+                  <li>{tr('expSelly1')}</li>
+                  <li>{tr('expSelly2')}</li>
+                  <li>{tr('expSelly3')}</li>
+                  <li>{tr('expSelly4')}</li>
+                  <li>{tr('expSelly5')}</li>
+                  <li>{tr('expSelly6')}</li>
+                  <li>{tr('expSelly7')}</li>
                 </ul>
               </div>
             </div>
@@ -123,8 +123,8 @@ export function CVContent() {
               <div className="xp-role">Intern Fullstack</div>
               <div className="xp-body">
                 <ul>
-                  <li>Completed training project using ReactJS, ExpressJS, and MongoDB.</li>
-                  <li>Developed features and debugged issues in production projects.</li>
+                  <li>{tr('expNccsoft1')}</li>
+                  <li>{tr('expNccsoft2')}</li>
                 </ul>
               </div>
             </div>
@@ -151,11 +151,11 @@ export function CVContent() {
               <div className="xp-role">Frontend Developer &middot; Backend Developer</div>
               <div className="xp-body">
                 <ul>
-                  <li>Developed TCB Creator platform (tfluencer.vn) — KOL/influencer management for Techcombank &amp; AccessTrade.</li>
-                  <li>Built service-tos microservice with eKYC, eContract, bank card linking, OTP verification using Next.js &amp; Shadcn/ui.</li>
-                  <li>Integrated FPT eContract API for biometric identity verification and digital contract signing.</li>
-                  <li>Developed 11 brand campaign variants (Yody, VNPay, VNG, Anker, HDBank, MBBank, TPBank, VPBank, etc.) with shared component architecture.</li>
-                  <li><strong>Backend:</strong> Handled several backend features using Go &amp; Echo framework.</li>
+                  <li>{tr('expTfluencer1')}</li>
+                  <li>{tr('expTfluencer2')}</li>
+                  <li>{tr('expTfluencer3')}</li>
+                  <li>{tr('expTfluencer4')}</li>
+                  <li>{tr('expTfluencer5')}</li>
                 </ul>
               </div>
             </div>
@@ -166,8 +166,8 @@ export function CVContent() {
               <div className="xp-role">Frontend Developer</div>
               <div className="xp-body">
                 <ul>
-                  <li>Built vcreator.global — video creator platform with UmiJS, Ant Design, Dva.js state management.</li>
-                  <li>Integrated social APIs (YouTube, TikTok, Facebook), Firebase, and partner modules.</li>
+                  <li>{tr('expVcreator1')}</li>
+                  <li>{tr('expVcreator2')}</li>
                 </ul>
               </div>
             </div>
@@ -178,8 +178,8 @@ export function CVContent() {
               <div className="xp-role">Frontend Developer</div>
               <div className="xp-body">
                 <ul>
-                  <li>Developed Admin Front-end with ReactJS, Redux, REST API.</li>
-                  <li>Team size: 5. Backend: Java.</li>
+                  <li>{tr('expGiupviec1')}</li>
+                  <li>{tr('expGiupviec2')}</li>
                 </ul>
               </div>
             </div>
@@ -199,8 +199,8 @@ export function CVContent() {
           </div>
           <div className="edu">
             <div>
-              <div className="edu-name">University of Technical Education, University of Danang</div>
-              <div className="edu-sub">Major: Information Technology &middot; Grade: Very Good</div>
+              <div className="edu-name">{t('eduName')}</div>
+              <div className="edu-sub">{t('eduSub')}</div>
             </div>
             <div className="edu-date">08/2018 — 12/2022</div>
           </div>
@@ -311,10 +311,10 @@ export function CVContent() {
               <tr>
                 <td>{t('summary')}</td>
                 <td style={{ fontSize: '0.88rem', lineHeight: 1.7, color: 'var(--ink-secondary)' }}>
-                  - 3+ years in Front-End: HTML, CSS, SCSS, Tailwind CSS, Bootstrap, Ant Design, JavaScript, TypeScript, ReactJS, UmiJS, Next.js, Redux, Zustand, and tools such as Git and Figma.<br />
-                  - Experienced in Responsive web, SSR, SEO, Socket.IO client, Shadcn/ui, Framer, Subframer.<br />
-                  - Backend knowledge: Go, Echo, Node.js, Express.js, MongoDB, MySQL, Docker.<br />
-                  - AI-powered development: Claude Code, ClaudeKit, MCP, Agent Skills, Cursor, Trae, Antigravity, GitHub Copilot.
+                  {t('skillsSummary1')}<br />
+                  {t('skillsSummary2')}<br />
+                  {t('skillsSummary3')}<br />
+                  {t('skillsSummary4')}
                 </td>
               </tr>
             </tbody>
@@ -341,18 +341,18 @@ export function CVContent() {
             <table className="project-table">
               <tbody>
                 <tr><td>{t('client')}</td><td>Doraverse</td></tr>
-                <tr><td>{t('descriptions')}</td><td>Enterprise-grade AI workspace platform based on LibreChat (open-source), enabling multi-model conversations (GPT, Claude, Gemini), custom AI Agents, image/video studio, and LM notebooks. Includes workspace admin with multi-department support, analytics dashboards, Stripe billing, credit tracking, and deep research integration.</td></tr>
+                <tr><td>{t('descriptions')}</td><td>{tr('projDoraverseDesc')}</td></tr>
                 <tr><td>{t('numberOfMembers')}</td><td>10</td></tr>
                 <tr><td>{t('position')}</td><td>Frontend Developer</td></tr>
                 <tr><td>{t('responsibilities')}</td><td>
                   <ul>
-                    <li>Architected and established the frontend codebase for workspace admin, auth-web, and meeting-note app as standalone micro-frontends</li>
-                    <li>Developed workspace admin dashboard: analytics (Recharts), AI model management, credit usage tracking by department, member/role management, and Stripe billing integration</li>
-                    <li>Integrated and extended LibreChat with custom features: AI Agents, image/video studio, LM notebooks</li>
-                    <li>Built deep research module with real-time chat integration, WebSocket connect/reconnect handling, and streaming message processing</li>
-                    <li>Developed landing page with Framer and published cookie consent package applied across all company products</li>
-                    <li>Implemented i18n (EN/VI/JP), dark mode, branding/domain settings, and Sentry monitoring</li>
-                    <li>Optimized performance, conducted code reviews, and refactored for scalability</li>
+                    <li>{tr('projDoraverseResp1')}</li>
+                    <li>{tr('projDoraverseResp2')}</li>
+                    <li>{tr('projDoraverseResp3')}</li>
+                    <li>{tr('projDoraverseResp4')}</li>
+                    <li>{tr('projDoraverseResp5')}</li>
+                    <li>{tr('projDoraverseResp6')}</li>
+                    <li>{tr('projDoraverseResp7')}</li>
                   </ul>
                 </td></tr>
                 <tr><td>{t('technologyInUse')}</td><td>
@@ -387,15 +387,15 @@ export function CVContent() {
             <table className="project-table">
               <tbody>
                 <tr><td>{t('client')}</td><td>Vingroup</td></tr>
-                <tr><td>{t('descriptions')}</td><td>V-Creator is a platform by Vingroup that encourages content creation about products and services from its member companies like VinFast, Vincom, and Vinpearl. Users share their content on social media platforms such as YouTube, TikTok, Facebook, and Instagram and receive rewards based on the number of views. Integrated and developed additional features tailored to partners such as MB Bank, VPBank, VNPAY, and Yody.</td></tr>
+                <tr><td>{t('descriptions')}</td><td>{tr('projVcreatorDesc')}</td></tr>
                 <tr><td>{t('numberOfMembers')}</td><td>6</td></tr>
                 <tr><td>{t('position')}</td><td>Frontend Developer</td></tr>
                 <tr><td>{t('responsibilities')}</td><td>
                   <ul>
-                    <li>Developed new features and resolved bugs across the platform</li>
-                    <li>Optimized frontend performance and bundle size</li>
-                    <li>Maintained codebase and refactored legacy components</li>
-                    <li>Conducted code reviews to ensure quality standards</li>
+                    <li>{tr('projVcreatorResp1')}</li>
+                    <li>{tr('projVcreatorResp2')}</li>
+                    <li>{tr('projVcreatorResp3')}</li>
+                    <li>{tr('projVcreatorResp4')}</li>
                   </ul>
                 </td></tr>
                 <tr><td>{t('technologyInUse')}</td><td>
@@ -424,18 +424,18 @@ export function CVContent() {
             <table className="project-table">
               <tbody>
                 <tr><td>{t('client')}</td><td>Techcombank, AccessTrade</td></tr>
-                <tr><td>{t('descriptions')}</td><td>Tfluencer is a content creator monetization platform for Techcombank. Includes 3 sub-systems: <strong>TCB Creator</strong> (tfluencer.vn) — creator platform with content management, events/campaigns, KYC verification, reconciliation, partner integration; <strong>Ambassador</strong> — multi-brand campaign system with 11 brand-specific variants (Yody, VNPAY, VNG, Anker, Turborg, Flamingo, Wild Rift, HDBank, MBBank, TPBank, VPBank) each with customized frontend; <strong>TOS (service-tos)</strong> — KYC/eContract microservice handling eKYC verification, electronic contract signing, bank card linking, OTP verification, and partner webhook integration.</td></tr>
+                <tr><td>{t('descriptions')}</td><td>{tr('projTfluencerDesc')}</td></tr>
                 <tr><td>{t('numberOfMembers')}</td><td>6</td></tr>
                 <tr><td>{t('position')}</td><td>Frontend Developer &middot; Backend Developer</td></tr>
                 <tr><td>{t('responsibilities')}</td><td>
                   <ul>
-                    <li>Architected frontend codebase for TCB Creator, Ambassador (11 brand variants), and TOS</li>
-                    <li>Developed frontend &amp; admin for TCB Creator: content, events, campaigns, KYC, reconciliation, and partner management</li>
-                    <li>Developed Ambassador frontend with multi-brand customization (Yody, VNPAY, VNG, Anker, etc.)</li>
-                    <li>Built TOS (service-tos) KYC/eContract frontend with Next.js, Shadcn/ui, and TanStack Query</li>
-                    <li>Integrated FPT eContract API for biometric identity verification and digital contract signing</li>
-                    <li><strong>Backend:</strong> Implemented several backend features using Go &amp; Echo framework</li>
-                    <li>Debugged and resolved issues, optimized performance, and conducted code reviews</li>
+                    <li>{tr('projTfluencerResp1')}</li>
+                    <li>{tr('projTfluencerResp2')}</li>
+                    <li>{tr('projTfluencerResp3')}</li>
+                    <li>{tr('projTfluencerResp4')}</li>
+                    <li>{tr('projTfluencerResp5')}</li>
+                    <li>{tr('projTfluencerResp6')}</li>
+                    <li>{tr('projTfluencerResp7')}</li>
                   </ul>
                 </td></tr>
                 <tr><td>{t('technologyInUse')}</td><td>
@@ -473,14 +473,14 @@ export function CVContent() {
             <table className="project-table">
               <tbody>
                 <tr><td>{t('client')}</td><td>CaSe Group, Banks</td></tr>
-                <tr><td>{t('descriptions')}</td><td>Built multiple reward-based webview games (spin wheel, gift opening) with seasonal themes (Tet, Christmas, etc.), integrated into banking and game purchasing apps.</td></tr>
+                <tr><td>{t('descriptions')}</td><td>{tr('projMinigameDesc')}</td></tr>
                 <tr><td>{t('numberOfMembers')}</td><td>6</td></tr>
                 <tr><td>{t('position')}</td><td>Frontend Developer</td></tr>
                 <tr><td>{t('responsibilities')}</td><td>
                   <ul>
-                    <li>Architected and established the frontend codebase</li>
-                    <li>Developed client-facing and admin features; debugged and resolved issues</li>
-                    <li>Optimized frontend performance for webview environments</li>
+                    <li>{tr('projMinigameResp1')}</li>
+                    <li>{tr('projMinigameResp2')}</li>
+                    <li>{tr('projMinigameResp3')}</li>
                   </ul>
                 </td></tr>
                 <tr><td>{t('technologyInUse')}</td><td>
@@ -509,15 +509,15 @@ export function CVContent() {
             <table className="project-table">
               <tbody>
                 <tr><td>{t('client')}</td><td>CaSe Group</td></tr>
-                <tr><td>{t('descriptions')}</td><td>A platform that allows users to create personal profile pages with social media links, images, articles, and product listings using customizable templates.</td></tr>
+                <tr><td>{t('descriptions')}</td><td>{tr('projBiolinkDesc')}</td></tr>
                 <tr><td>{t('numberOfMembers')}</td><td>5</td></tr>
                 <tr><td>{t('position')}</td><td>Frontend Developer, Backend Developer</td></tr>
                 <tr><td>{t('responsibilities')}</td><td>
                   <ul>
-                    <li>Architected and established the frontend codebase</li>
-                    <li>Developed client-facing and admin features; debugged and resolved issues</li>
-                    <li>Optimized frontend performance and bundle size</li>
-                    <li>Maintained codebase and refactored for long-term maintainability</li>
+                    <li>{tr('projBiolinkResp1')}</li>
+                    <li>{tr('projBiolinkResp2')}</li>
+                    <li>{tr('projBiolinkResp3')}</li>
+                    <li>{tr('projBiolinkResp4')}</li>
                   </ul>
                 </td></tr>
                 <tr><td>{t('technologyInUse')}</td><td>
@@ -545,18 +545,18 @@ export function CVContent() {
             <table className="project-table">
               <tbody>
                 <tr><td>{t('client')}</td><td>Selly</td></tr>
-                <tr><td>{t('descriptions')}</td><td>Multi-platform e-commerce ecosystem with 6 sub-projects: consumer storefront, seller portal, merchant dashboard, admin panel, webview for mobile/banking apps, and Zalo Mini App. Dropshipping platform enabling sellers to manage inventory, orders, and campaigns with real-time chat support.</td></tr>
+                <tr><td>{t('descriptions')}</td><td>{tr('projSellyDesc')}</td></tr>
                 <tr><td>{t('numberOfMembers')}</td><td>10</td></tr>
                 <tr><td>{t('position')}</td><td>Frontend Developer, Backend Developer</td></tr>
                 <tr><td>{t('responsibilities')}</td><td>
                   <ul>
-                    <li>Developed and maintained 6 frontend applications: consumer site, seller portal, merchant dashboard, admin panel, mobile webview, and web-admin</li>
-                    <li>Built complete e-commerce flows: product catalog, checkout, order tracking, inventory management, and campaign/affiliate systems</li>
-                    <li>Implemented real-time chat system with Socket.IO for customer support and merchant communication</li>
-                    <li>Developed webview integration for mobile apps and banking partners (Zalo Mini App, deep-link, Adjust tracking)</li>
-                    <li>Implemented i18n, dark mode, responsive layouts, PDF export, and drag-and-drop interfaces</li>
-                    <li>Integrated third-party services: Firebase analytics, Facebook login, Telegram, Google, TikTok APIs</li>
-                    <li><strong>Backend:</strong> Resolved backend tasks using Go, Node.js, and MongoDB</li>
+                    <li>{tr('projSellyResp1')}</li>
+                    <li>{tr('projSellyResp2')}</li>
+                    <li>{tr('projSellyResp3')}</li>
+                    <li>{tr('projSellyResp4')}</li>
+                    <li>{tr('projSellyResp5')}</li>
+                    <li>{tr('projSellyResp6')}</li>
+                    <li>{tr('projSellyResp7')}</li>
                   </ul>
                 </td></tr>
                 <tr><td>{t('technologyInUse')}</td><td>
@@ -589,16 +589,16 @@ export function CVContent() {
             <table className="project-table">
               <tbody>
                 <tr><td>{t('client')}</td><td>Cashbag</td></tr>
-                <tr><td>{t('descriptions')}</td><td>Cashback rewards platform integrated into 15+ banking apps (TPBank, MBBank, BIDV, VPBank, SeaBank, Shinhan, LPBank, NamABank, PVComebank, SHB, VietinBank, TNEX, etc.) and third-party partners (MFast, Galaxy). Features gamification, voucher management, transaction history, and withdrawal systems.</td></tr>
+                <tr><td>{t('descriptions')}</td><td>{tr('projCashbagDesc')}</td></tr>
                 <tr><td>{t('numberOfMembers')}</td><td>6</td></tr>
                 <tr><td>{t('position')}</td><td>Frontend Developer</td></tr>
                 <tr><td>{t('responsibilities')}</td><td>
                   <ul>
-                    <li>Developed and maintained Cashbag webview integrated into 15+ banking apps with per-bank branding customization</li>
-                    <li>Built gamification features: spin wheel, leaderboards, and seasonal reward campaigns</li>
-                    <li>Developed admin CRM dashboard for campaign management, financial reporting, and transaction auditing</li>
-                    <li>Implemented voucher management system, withdrawal flows, and transaction history</li>
-                    <li>Integrated Sentry error tracking and Firebase analytics across all bank variants</li>
+                    <li>{tr('projCashbagResp1')}</li>
+                    <li>{tr('projCashbagResp2')}</li>
+                    <li>{tr('projCashbagResp3')}</li>
+                    <li>{tr('projCashbagResp4')}</li>
+                    <li>{tr('projCashbagResp5')}</li>
                   </ul>
                 </td></tr>
                 <tr><td>{t('technologyInUse')}</td><td>
@@ -628,13 +628,13 @@ export function CVContent() {
             <table className="project-table">
               <tbody>
                 <tr><td>{t('client')}</td><td>Supplier of Selly</td></tr>
-                <tr><td>{t('descriptions')}</td><td>Customer support center enabling real-time assistance for shopping inquiries and purchase-related issues, powered by Socket.IO.</td></tr>
+                <tr><td>{t('descriptions')}</td><td>{tr('projChatDesc')}</td></tr>
                 <tr><td>{t('numberOfMembers')}</td><td>5</td></tr>
                 <tr><td>{t('position')}</td><td>Developer</td></tr>
                 <tr><td>{t('responsibilities')}</td><td>
                   <ul>
-                    <li>Developed the frontend interface for real-time chat</li>
-                    <li>Implemented chat features for customer support workflows</li>
+                    <li>{tr('projChatResp1')}</li>
+                    <li>{tr('projChatResp2')}</li>
                   </ul>
                 </td></tr>
                 <tr><td>{t('technologyInUse')}</td><td>
@@ -659,14 +659,14 @@ export function CVContent() {
             <table className="project-table">
               <tbody>
                 <tr><td>{t('client')}</td><td>Cashbag &amp; Selly</td></tr>
-                <tr><td>{t('descriptions')}</td><td>Built Cashbag &amp; Selly e-commerce cashback experience as a Zalo Mini App integration.</td></tr>
+                <tr><td>{t('descriptions')}</td><td>{tr('projZaloDesc')}</td></tr>
                 <tr><td>{t('numberOfMembers')}</td><td>3</td></tr>
                 <tr><td>{t('position')}</td><td>Frontend Developer</td></tr>
                 <tr><td>{t('responsibilities')}</td><td>
                   <ul>
-                    <li>Architected the core application structure</li>
-                    <li>Developed features and resolved bugs</li>
-                    <li>Deployed and configured the app on Zalo platform</li>
+                    <li>{tr('projZaloResp1')}</li>
+                    <li>{tr('projZaloResp2')}</li>
+                    <li>{tr('projZaloResp3')}</li>
                   </ul>
                 </td></tr>
                 <tr><td>{t('technologyInUse')}</td><td>
@@ -690,12 +690,12 @@ export function CVContent() {
             <table className="project-table">
               <tbody>
                 <tr><td>{t('client')}</td><td>Sub-brand of Selly</td></tr>
-                <tr><td>{t('descriptions')}</td><td>Product showcase website for Mamori&apos;s brand.</td></tr>
+                <tr><td>{t('descriptions')}</td><td>{tr('projMamoriDesc')}</td></tr>
                 <tr><td>{t('numberOfMembers')}</td><td>1</td></tr>
                 <tr><td>{t('position')}</td><td>Frontend Developer</td></tr>
                 <tr><td>{t('responsibilities')}</td><td>
                   <ul>
-                    <li>Developed the complete frontend independently</li>
+                    <li>{tr('projMamoriResp1')}</li>
                   </ul>
                 </td></tr>
                 <tr><td>{t('technologyInUse')}</td><td>
@@ -717,13 +717,13 @@ export function CVContent() {
             <table className="project-table">
               <tbody>
                 <tr><td>{t('client')}</td><td>Buyer of Selly</td></tr>
-                <tr><td>{t('descriptions')}</td><td>E-commerce storefront for Selly.vn Pro package subscribers.</td></tr>
+                <tr><td>{t('descriptions')}</td><td>{tr('projShopSellyDesc')}</td></tr>
                 <tr><td>{t('numberOfMembers')}</td><td>4</td></tr>
                 <tr><td>{t('position')}</td><td>Frontend Developer</td></tr>
                 <tr><td>{t('responsibilities')}</td><td>
                   <ul>
-                    <li>Developed new features for the storefront</li>
-                    <li>Improved website functionality and resolved bugs</li>
+                    <li>{tr('projShopSellyResp1')}</li>
+                    <li>{tr('projShopSellyResp2')}</li>
                   </ul>
                 </td></tr>
                 <tr><td>{t('technologyInUse')}</td><td>
@@ -761,14 +761,14 @@ export function CVContent() {
             </div>
             <table className="project-table">
               <tbody>
-                <tr><td>{t('descriptions')}</td><td>Free online Pomodoro timer with AI-powered study coach (Claude), integrated task management, productivity analytics, leaderboard, and mini-games for breaks. Features multi-language support (EN/VI/JP) and dark/light theme.</td></tr>
+                <tr><td>{t('descriptions')}</td><td>{tr('projPomodoroDesc')}</td></tr>
                 <tr><td>{t('position')}</td><td>Fullstack Developer</td></tr>
                 <tr><td>{t('responsibilities')}</td><td>
                   <ul>
-                    <li>Designed and built the full application from scratch</li>
-                    <li>Integrated Claude AI as a study coach via Vercel AI SDK</li>
-                    <li>Implemented task management with drag-and-drop, tags, and analytics</li>
-                    <li>Built productivity analytics dashboard with charts and session history</li>
+                    <li>{tr('projPomodoroResp1')}</li>
+                    <li>{tr('projPomodoroResp2')}</li>
+                    <li>{tr('projPomodoroResp3')}</li>
+                    <li>{tr('projPomodoroResp4')}</li>
                   </ul>
                 </td></tr>
                 <tr><td>{t('technologyInUse')}</td><td>
@@ -798,16 +798,16 @@ export function CVContent() {
             </div>
             <table className="project-table">
               <tbody>
-                <tr><td>{t('descriptions')}</td><td>Comprehensive Liverpool FC fan platform with live fixtures, squad profiles, Premier League standings, multi-source news aggregation (20+ RSS feeds, EN/VI), AI-powered chat assistant, user profiles, and reading history. Features ISR caching, Supabase auth, and multi-language support.</td></tr>
+                <tr><td>{t('descriptions')}</td><td>{tr('projLiverpoolDesc')}</td></tr>
                 <tr><td>{t('position')}</td><td>Fullstack Developer</td></tr>
                 <tr><td>{t('responsibilities')}</td><td>
                   <ul>
-                    <li>Designed and built the full application from scratch with Next.js App Router and ISR caching</li>
-                    <li>Integrated multiple sports data APIs (Football-Data.org, FPL, ESPN) for live fixtures, standings, and player stats</li>
-                    <li>Built automated news pipeline syncing 20+ RSS feeds with AI-powered translation (Groq LLM) and content extraction</li>
-                    <li>Implemented user authentication, profile management, and favorite player system with Supabase</li>
-                    <li>Developed AI chat assistant (LiverBird AI) with multi-turn conversation history and streaming responses</li>
-                    <li>Built news reading features: like/comment system, reading history tracking, and article bookmarking</li>
+                    <li>{tr('projLiverpoolResp1')}</li>
+                    <li>{tr('projLiverpoolResp2')}</li>
+                    <li>{tr('projLiverpoolResp3')}</li>
+                    <li>{tr('projLiverpoolResp4')}</li>
+                    <li>{tr('projLiverpoolResp5')}</li>
+                    <li>{tr('projLiverpoolResp6')}</li>
                   </ul>
                 </td></tr>
                 <tr><td>{t('technologyInUse')}</td><td>
@@ -841,11 +841,11 @@ export function CVContent() {
             <h2>{t('certificates')}</h2>
           </div>
           <div className="edu">
-            <div><div className="edu-name">Scrum Course — Axon Active Da Nang</div></div>
+            <div><div className="edu-name">{t('certScrum')}</div></div>
             <div className="edu-date">08/2020</div>
           </div>
           <div className="edu">
-            <div><div className="edu-name">ReactJS Course Completion Certificate — Udemy</div></div>
+            <div><div className="edu-name">{t('certReact')}</div></div>
             <div className="edu-date">01/2022</div>
           </div>
         </section>
