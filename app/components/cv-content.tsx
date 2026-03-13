@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { useLanguage } from '../context/language-context'
+import type { TranslationKey } from '../data/translations'
 
 export function CVContent() {
   const { t, tr } = useLanguage()
@@ -64,7 +65,7 @@ export function CVContent() {
             <h2>{t('overview')}</h2>
           </div>
           <ul className="overview-list">
-            {['overview1','overview2','overview3','overview4','overview5','overview6','overview7','overview8','overview9','overview10'].map(key => {
+            {(['overview1','overview2','overview3','overview4','overview5','overview6','overview7','overview8','overview9','overview10'] as TranslationKey[]).map(key => {
               const val = t(key)
               return val ? <li key={key}>{tr(key)}</li> : null
             })}
