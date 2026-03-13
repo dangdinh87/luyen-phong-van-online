@@ -19,6 +19,7 @@ export const translations = {
     certificates: 'Certificates',
     client: 'Client',
     descriptions: 'Descriptions',
+    link: 'Link',
     numberOfMembers: 'Number of members',
     position: 'Position',
     responsibilities: 'Responsibilities',
@@ -30,27 +31,28 @@ export const translations = {
     ide: 'IDE',
     database: 'Database',
     sourceControl: 'Source Control',
+    devops: 'DevOps',
     summary: 'Summary',
 
     // ── Overview ──
-    overview1: 'Over **3 years of experience** as a Frontend Developer, specializing in building scalable web applications with **React, Next.js, and TypeScript**.',
-    overview2: 'Proven track record delivering production products for enterprise clients including **Techcombank, Vingroup, MB Bank**, and multiple fintech/banking partners.',
-    overview3: 'Proficient in modern UI frameworks: Tailwind CSS, Ant Design, Shadcn/ui, Bootstrap — with strong focus on responsive design, SSR, and SEO optimization.',
-    overview4: 'Experienced in state management ecosystems: Redux, Dva.js, Zustand, TanStack Query, React Hook Form.',
-    overview5: 'Capable of backend development with **Go** and **Node.js**, enabling effective full-stack collaboration and independent feature delivery.',
-    overview6: 'Hands-on experience with **AI-assisted development**: Claude Code, ClaudeKit, MCP servers, Agent Skills — leveraging AI coding IDEs (Cursor, Trae, Antigravity) to accelerate development velocity.',
-    overview7: 'Experience building landing pages with **Framer** and **Subframer** — design-to-code workflow for rapid, high-quality marketing pages.',
-    overview8: 'Strong communicator with a quick learning mindset, consistently adapting to new technologies and project requirements.',
-    overview9: 'Goal: Become a well-rounded full-stack developer while deepening frontend architecture expertise.',
-    overview10: 'Current working location: Da Nang, Viet Nam.',
+    overview1: 'Over **3 years of experience** as a Frontend Developer, specializing in building scalable web applications with React, UmiJS, Next.js, and TypeScript.',
+    overview2: 'Hands-on backend experience with **Go** and **Node.js**, enabling independent full-stack feature development.',
+    overview3: 'Skilled in modern UI frameworks (Tailwind CSS, Ant Design, Shadcn/ui, Bootstrap) and state management solutions (Redux, Dva.js, Zustand, TanStack Query). Use **Figma** and **Framer** for design collaboration and high-fidelity prototyping.',
+    overview4: 'Using AI developer tools such as **Claude Code**, **Cursor**, MCP servers, Agent Skills, and **Antigravity** to accelerate coding and development workflows.',
+    overview5: 'Experienced in developing AI workspace platforms (LibreChat), e-commerce (Selly), cashback systems (Cashbag), Zalo Mini Apps, and Webview applications integrated into banking apps (**TPBank, VPBank, MBBank, BIDV**, etc.).',
+    overview6: '',
+    overview7: 'Expanding my full-stack skills while building scalable, high-performance, and maintainable applications.',
+    overview8: 'Quick learner with strong communication skills.',
+    overview9: 'Current working location: Da Nang, Viet Nam.',
+    overview10: '',
 
     // ── Experience — Doraverse ──
-    expDoraverse1: 'Develop admin website for workspace management, user/model usage analytics, cost tracking, and employee performance insights.',
-    expDoraverse2: 'Integrate and customize LibreChat (open-source), enhancing capabilities with AI Agents, image/video studio, LM notebooks, and deep research.',
-    expDoraverse3: 'Develop landing page, auth-web, and meeting-note app as standalone micro-frontends.',
-    expDoraverse4: 'Build and publish cookie consent package, applied across all company products.',
-    expDoraverse5: 'Implement i18n (EN/VI/JP), dark mode, and Sentry monitoring; deploy on Vercel with Next.js.',
-    expDoraverse6: 'Architect frontend codebase, conduct code reviews, optimize performance, and refactor for maintainability.',
+    expDoraverse1: 'Build admin dashboard with usage analytics, AI model management, per-department credit tracking, member/role management, and Stripe billing.',
+    expDoraverse2: 'Extend LibreChat (open-source) with custom modules: AI Agents, AI debate, image/video studio, LM notebooks, and meeting notes.',
+    expDoraverse3: 'Build deep research feature with WebSocket streaming, multi-model support (GPT, Claude, Gemini), tool-use and function-calling.',
+    expDoraverse4: 'Develop landing page with Framer; publish internal cookie consent npm package used across all company products.',
+    expDoraverse5: 'Implement multi-language support, dark/light mode, responsive design, and third-party tracking integrations (GA, GTM, HubSpot, Microsoft Clarity).',
+    expDoraverse6: 'Lead code reviews, optimize bundle performance, and refactor legacy code for maintainability.',
 
     // ── Experience — Selly & Cashbag ──
     expSelly1: 'Developed and maintained internal websites including Selly, Cashbag, Selly landing page, Selly chat system, Zalo Mini App, Mamori.vn, and admin dashboards.',
@@ -70,7 +72,8 @@ export const translations = {
     expTfluencer2: 'Built service-tos microservice with eKYC, eContract, bank card linking, OTP verification using Next.js & Shadcn/ui.',
     expTfluencer3: 'Integrated FPT eContract API for biometric identity verification and digital contract signing.',
     expTfluencer4: 'Developed 11 brand campaign variants (Yody, VNPay, VNG, Anker, HDBank, MBBank, TPBank, VPBank, etc.) with shared component architecture.',
-    expTfluencer5: '**Backend:** Handled several backend features using Go & Echo framework.',
+    expTfluencer5: 'Developed admin features: user/creator management, campaign approval, KYC review, and analytics dashboards.',
+    expTfluencer6: '**Backend:** Handled several backend features using Go & Echo framework.',
 
     // ── Freelance — Vcreator ──
     expVcreator1: 'Built vcreator.global — video creator platform with UmiJS, Ant Design, Dva.js state management.',
@@ -85,30 +88,30 @@ export const translations = {
     eduSub: 'Major: Information Technology · Grade: Very Good',
 
     // ── Skills Summary ──
-    skillsSummary1: '- 3+ years in Front-End: HTML, CSS, SCSS, Tailwind CSS, Bootstrap, Ant Design, JavaScript, TypeScript, ReactJS, UmiJS, Next.js, Redux, Zustand, and tools such as Git and Figma.',
-    skillsSummary2: '- Experienced in Responsive web, SSR, SEO, Socket.IO client, Shadcn/ui, Framer, Subframer.',
-    skillsSummary3: '- Backend knowledge: Go, Echo, Node.js, Express.js, MongoDB, MySQL, Docker.',
-    skillsSummary4: '- AI-powered development: Claude Code, ClaudeKit, MCP, Agent Skills, Cursor, Trae, Antigravity, GitHub Copilot.',
+    skillsSummary1: '- **Frontend:** JavaScript, TypeScript, ReactJS, Next.js, UmiJS | State: Redux, Zustand | Styling: Tailwind CSS, SCSS, Ant Design, Shadcn/ui.',
+    skillsSummary2: '- **Concepts:** Responsive design, SSR, SEO, WebSocket / Socket.IO.',
+    skillsSummary3: '- **Backend:** Node.js, Express.js, Go, Echo, MongoDB, MySQL.',
+    skillsSummary4: '- **Tools & AI:** Git, Git Flow, Figma, Docker | AI: Claude Code, ClaudeKit, MCP, Cursor, GitHub Copilot.',
 
     // ── Project: Doraverse ──
-    projDoraverseDesc: 'Enterprise-grade AI workspace platform based on LibreChat (open-source), enabling multi-model conversations (GPT, Claude, Gemini), custom AI Agents, image/video studio, and LM notebooks. Includes workspace admin with multi-department support, analytics dashboards, Stripe billing, credit tracking, and deep research integration.',
-    projDoraverseResp1: 'Architected and established the frontend codebase for workspace admin, auth-web, and meeting-note app as standalone micro-frontends',
-    projDoraverseResp2: 'Developed workspace admin dashboard: analytics (Recharts), AI model management, credit usage tracking by department, member/role management, and Stripe billing integration',
-    projDoraverseResp3: 'Integrated and extended LibreChat with custom features: AI Agents, image/video studio, LM notebooks',
-    projDoraverseResp4: 'Built deep research module with real-time chat integration, WebSocket connect/reconnect handling, and streaming message processing',
-    projDoraverseResp5: 'Developed landing page with Framer and published cookie consent package applied across all company products',
-    projDoraverseResp6: 'Implemented i18n (EN/VI/JP), dark mode, branding/domain settings, and Sentry monitoring',
-    projDoraverseResp7: 'Optimized performance, conducted code reviews, and refactored for scalability',
+    projDoraverseDesc: 'Enterprise AI workspace built on LibreChat with multi-model chat (GPT, Claude, Gemini), custom AI Agents, image/video studio, LM notebooks, AI debate, meeting notes, workspace admin, and analytics dashboards.',
+    projDoraverseResp1: 'Set up frontend architecture for 3 standalone micro-frontends: workspace admin, auth-web, and meeting-note app',
+    projDoraverseResp2: 'Built admin dashboard with usage analytics (Recharts), AI model management, per-department credit tracking, member/role management, and Stripe billing',
+    projDoraverseResp3: 'Extended LibreChat with custom modules: AI Agents, AI debate, image/video studio, LM notebooks, and meeting notes',
+    projDoraverseResp4: 'Built deep research feature with WebSocket streaming, multi-model support (GPT, Claude, Gemini), tool-use and function-calling',
+    projDoraverseResp5: 'Built landing page with Framer; published internal cookie consent npm package used across all company products',
+    projDoraverseResp6: 'Implemented i18n (EN/VI/JP), dark/light mode, responsive design, and per-workspace branding settings',
+    projDoraverseResp7: 'Led code reviews, optimized bundle performance, and refactored legacy code for maintainability',
 
     // ── Project: Vcreator ──
-    projVcreatorDesc: 'V-Creator is a platform by Vingroup that encourages content creation about products and services from its member companies like VinFast, Vincom, and Vinpearl. Users share their content on social media platforms such as YouTube, TikTok, Facebook, and Instagram and receive rewards based on the number of views. Integrated and developed additional features tailored to partners such as MB Bank, VPBank, VNPAY, and Yody.',
+    projVcreatorDesc: "Vingroup's content creator platform where users share videos on YouTube, TikTok, Facebook to earn view-based rewards. Includes partner integrations for MB Bank, VPBank, VNPAY, and Yody.",
     projVcreatorResp1: 'Developed new features and resolved bugs across the platform',
     projVcreatorResp2: 'Optimized frontend performance and bundle size',
     projVcreatorResp3: 'Maintained codebase and refactored legacy components',
     projVcreatorResp4: 'Conducted code reviews to ensure quality standards',
 
     // ── Project: Tfluencer ──
-    projTfluencerDesc: 'Tfluencer is a content creator monetization platform for Techcombank. Includes 3 sub-systems: **TCB Creator** (tfluencer.vn) — creator platform with content management, events/campaigns, KYC verification, reconciliation, partner integration; **Ambassador** — multi-brand campaign system with 11 brand-specific variants (Yody, VNPAY, VNG, Anker, Turborg, Flamingo, Wild Rift, HDBank, MBBank, TPBank, VPBank) each with customized frontend; **TOS (service-tos)** — KYC/eContract microservice handling eKYC verification, electronic contract signing, bank card linking, OTP verification, and partner webhook integration.',
+    projTfluencerDesc: "Techcombank's content creator monetization platform with 3 sub-systems: **TCB Creator** (creator portal with KYC & campaigns), **Ambassador** (11 brand campaign variants), and **TOS** (KYC/eContract microservice).",
     projTfluencerResp1: 'Architected frontend codebase for TCB Creator, Ambassador (11 brand variants), and TOS',
     projTfluencerResp2: 'Developed frontend & admin for TCB Creator: content, events, campaigns, KYC, reconciliation, and partner management',
     projTfluencerResp3: 'Developed Ambassador frontend with multi-brand customization (Yody, VNPAY, VNG, Anker, etc.)',
@@ -118,50 +121,54 @@ export const translations = {
     projTfluencerResp7: 'Debugged and resolved issues, optimized performance, and conducted code reviews',
 
     // ── Project: Webview Mini Game ──
-    projMinigameDesc: 'Built multiple reward-based webview games (spin wheel, gift opening) with seasonal themes (Tet, Christmas, etc.), integrated into banking and game purchasing apps.',
-    projMinigameResp1: 'Architected and established the frontend codebase',
-    projMinigameResp2: 'Developed client-facing and admin features; debugged and resolved issues',
-    projMinigameResp3: 'Optimized frontend performance for webview environments',
+    projMinigameDesc: 'Reward-based webview games integrated into banking and game apps.',
+    projMinigameResp1: 'Build multiple game types (spin wheel, gift opening, scratch card) with seasonal event themes (Tet, Christmas, Mid-Autumn, etc.)',
+    projMinigameResp2: 'Collaborate with backend developers and designers to deliver polished game experiences',
+    projMinigameResp3: 'Develop admin panel for game configuration, reward management, and campaign analytics',
+    projMinigameResp4: 'Optimize webview performance for smooth gameplay across banking and game apps',
 
     // ── Project: Bio Link ──
-    projBiolinkDesc: 'A platform that allows users to create personal profile pages with social media links, images, articles, and product listings using customizable templates.',
-    projBiolinkResp1: 'Architected and established the frontend codebase',
-    projBiolinkResp2: 'Developed client-facing and admin features; debugged and resolved issues',
-    projBiolinkResp3: 'Optimized frontend performance and bundle size',
-    projBiolinkResp4: 'Maintained codebase and refactored for long-term maintainability',
+    projBiolinkDesc: 'Platform for creating personal profile pages with social links, images, articles, and product listings using customizable templates.',
+    projBiolinkResp1: 'Built and maintained the frontend codebase',
+    projBiolinkResp2: 'Developed user and admin features, and fixed bugs',
+    projBiolinkResp3: 'Improved frontend performance and reduced bundle size',
+    projBiolinkResp4: 'Refactored codebase for long-term maintainability',
 
     // ── Project: Selly.vn ──
-    projSellyDesc: 'Multi-platform e-commerce ecosystem with 6 sub-projects: consumer storefront, seller portal, merchant dashboard, admin panel, webview for mobile/banking apps, and Zalo Mini App. Dropshipping platform enabling sellers to manage inventory, orders, and campaigns with real-time chat support.',
-    projSellyResp1: 'Developed and maintained 6 frontend applications: consumer site, seller portal, merchant dashboard, admin panel, mobile webview, and web-admin',
-    projSellyResp2: 'Built complete e-commerce flows: product catalog, checkout, order tracking, inventory management, and campaign/affiliate systems',
-    projSellyResp3: 'Implemented real-time chat system with Socket.IO for customer support and merchant communication',
-    projSellyResp4: 'Developed webview integration for mobile apps and banking partners (Zalo Mini App, deep-link, Adjust tracking)',
-    projSellyResp5: 'Implemented i18n, dark mode, responsive layouts, PDF export, and drag-and-drop interfaces',
-    projSellyResp6: 'Integrated third-party services: Firebase analytics, Facebook login, Telegram, Google, TikTok APIs',
-    projSellyResp7: '**Backend:** Resolved backend tasks using Go, Node.js, and MongoDB',
+    projSellyDesc: 'Multi-platform e-commerce ecosystem (storefront, seller portal, merchant dashboard, admin, mobile webview, Zalo Mini App) with dropshipping and real-time chat support.',
+    projSellyResp1: 'Build and maintain 6 frontend apps: consumer site, seller portal, merchant dashboard, admin panel, mobile webview, and Zalo Mini App.',
+    projSellyResp2: 'Develop e-commerce flows: product catalog, checkout, order tracking, inventory management, and campaign/affiliate systems.',
+    projSellyResp3: 'Implement real-time chat system with Socket.IO for customer support and merchant communication.',
+    projSellyResp4: 'Integrate webview into mobile apps and banking partners with deep-link and Adjust tracking.',
+    projSellyResp5: 'Implement multi-language support, dark mode, responsive layouts, and third-party services (Firebase, Facebook, Telegram, Google, TikTok).',
+    projSellyResp6: 'Collaborate with backend developers and designers; conduct code reviews and fix bugs.',
+    projSellyResp7: 'Handle backend tasks using Go, Echo, and MongoDB.',
 
     // ── Project: Cashbag ──
-    projCashbagDesc: 'Cashback rewards platform integrated into 15+ banking apps (TPBank, MBBank, BIDV, VPBank, SeaBank, Shinhan, LPBank, NamABank, PVComebank, SHB, VietinBank, TNEX, etc.) and third-party partners (MFast, Galaxy). Features gamification, voucher management, transaction history, and withdrawal systems.',
+    projCashbagDesc: 'Cashback rewards platform integrated into 15+ banking apps (TPBank, MBBank, BIDV, VPBank, etc.) with gamification, voucher management, and withdrawal systems.',
     projCashbagResp1: 'Developed and maintained Cashbag webview integrated into 15+ banking apps with per-bank branding customization',
     projCashbagResp2: 'Built gamification features: spin wheel, leaderboards, and seasonal reward campaigns',
     projCashbagResp3: 'Developed admin CRM dashboard for campaign management, financial reporting, and transaction auditing',
     projCashbagResp4: 'Implemented voucher management system, withdrawal flows, and transaction history',
-    projCashbagResp5: 'Integrated Sentry error tracking and Firebase analytics across all bank variants',
+    projCashbagResp5: 'Integrated Firebase analytics across all bank variants',
 
     // ── Project: Chat Application ──
-    projChatDesc: 'Customer support center enabling real-time assistance for shopping inquiries and purchase-related issues, powered by Socket.IO.',
+    projChatDesc: 'Real-time customer support chat for shopping inquiries, powered by Socket.IO.',
     projChatResp1: 'Developed the frontend interface for real-time chat',
     projChatResp2: 'Implemented chat features for customer support workflows',
 
     // ── Project: Zalo Mini App ──
-    projZaloDesc: 'Built Cashbag & Selly e-commerce cashback experience as a Zalo Mini App integration.',
+    projZaloDesc: 'Cashbag & Selly cashback e-commerce experience as a Zalo Mini App.',
     projZaloResp1: 'Architected the core application structure',
-    projZaloResp2: 'Developed features and resolved bugs',
-    projZaloResp3: 'Deployed and configured the app on Zalo platform',
+    projZaloResp2: 'Collaborated with backend developers on API integration and data flow',
+    projZaloResp3: 'Worked with designers to implement UI from Figma',
+    projZaloResp4: 'Deployed and configured the app on Zalo platform',
 
     // ── Project: Mamori.vn ──
     projMamoriDesc: "Product showcase website for Mamori's brand.",
-    projMamoriResp1: 'Developed the complete frontend independently',
+    projMamoriResp1: 'Build and develop the frontend based on design specifications.',
+    projMamoriResp2: 'Fix bugs and improve code quality.',
+    projMamoriResp3: 'Handle order processing and report notifications via Telegram bot.',
 
     // ── Project: Shop Selly ──
     projShopSellyDesc: 'E-commerce storefront for Selly.vn Pro package subscribers.',
@@ -169,14 +176,15 @@ export const translations = {
     projShopSellyResp2: 'Improved website functionality and resolved bugs',
 
     // ── Personal: Pomodoro ──
-    projPomodoroDesc: 'Free online Pomodoro timer with AI-powered study coach (Claude), integrated task management, productivity analytics, leaderboard, and mini-games for breaks. Features multi-language support (EN/VI/JP) and dark/light theme.',
-    projPomodoroResp1: 'Designed and built the full application from scratch',
-    projPomodoroResp2: 'Integrated Claude AI as a study coach via Vercel AI SDK',
-    projPomodoroResp3: 'Implemented task management with drag-and-drop, tags, and analytics',
-    projPomodoroResp4: 'Built productivity analytics dashboard with charts and session history',
+    projPomodoroDesc: 'Free Pomodoro timer with personalized AI study coach, task management, productivity analytics, leaderboard, and break mini-games.',
+    projPomodoroResp1: 'Design and build the full application from scratch.',
+    projPomodoroResp2: 'Implement focus features: customizable timer, background themes, ambient music, and user settings.',
+    projPomodoroResp3: 'Implement task management with drag-and-drop, tags, and analytics.',
+    projPomodoroResp4: 'Integrate AI chat assistant with conversation history via Vercel AI SDK.',
+    projPomodoroResp5: 'Build productivity analytics dashboard with charts and session history.',
 
     // ── Personal: Liverpool FC ──
-    projLiverpoolDesc: 'Comprehensive Liverpool FC fan platform with live fixtures, squad profiles, Premier League standings, multi-source news aggregation (20+ RSS feeds, EN/VI), AI-powered chat assistant, user profiles, and reading history. Features ISR caching, Supabase auth, and multi-language support.',
+    projLiverpoolDesc: 'Liverpool FC fan platform with live fixtures, standings, news aggregation (20+ RSS feeds), AI chat assistant, and user profiles.',
     projLiverpoolResp1: 'Designed and built the full application from scratch with Next.js App Router and ISR caching',
     projLiverpoolResp2: 'Integrated multiple sports data APIs (Football-Data.org, FPL, ESPN) for live fixtures, standings, and player stats',
     projLiverpoolResp3: 'Built automated news pipeline syncing 20+ RSS feeds with AI-powered translation (Groq LLM) and content extraction',
@@ -209,6 +217,7 @@ export const translations = {
     certificates: 'Chứng chỉ',
     client: 'Khách hàng',
     descriptions: 'Mô tả',
+    link: 'Link',
     numberOfMembers: 'Số thành viên',
     position: 'Vị trí',
     responsibilities: 'Trách nhiệm',
@@ -220,26 +229,27 @@ export const translations = {
     ide: 'IDE',
     database: 'Cơ sở dữ liệu',
     sourceControl: 'Quản lý mã nguồn',
+    devops: 'DevOps',
     summary: 'Tóm tắt',
 
     // ── Overview ──
-    overview1: 'Hơn **3 năm kinh nghiệm** làm Lập trình viên Frontend, chuyên xây dựng ứng dụng web quy mô lớn với **React, Next.js và TypeScript**.',
-    overview2: 'Kinh nghiệm triển khai sản phẩm production cho khách hàng doanh nghiệp: **Techcombank, Vingroup, MB Bank** và nhiều đối tác fintech/ngân hàng.',
-    overview3: 'Thành thạo các framework UI hiện đại: Tailwind CSS, Ant Design, Shadcn/ui, Bootstrap — tập trung vào responsive design, SSR và tối ưu SEO.',
-    overview4: 'Kinh nghiệm với các hệ thống quản lý state: Redux, Dva.js, Zustand, TanStack Query, React Hook Form.',
-    overview5: 'Có khả năng phát triển backend với **Go** và **Node.js**, hỗ trợ cộng tác full-stack và tự chủ triển khai tính năng.',
-    overview6: 'Kinh nghiệm với **phát triển hỗ trợ AI**: Claude Code, ClaudeKit, MCP servers, Agent Skills — sử dụng AI coding IDE (Cursor, Trae, Antigravity) để tăng tốc phát triển.',
-    overview7: 'Kinh nghiệm xây dựng landing page với **Framer** và **Subframer** — quy trình design-to-code nhanh chóng, chất lượng cao.',
-    overview8: 'Kỹ năng giao tiếp tốt, tư duy học hỏi nhanh, liên tục thích ứng với công nghệ mới và yêu cầu dự án.',
-    overview9: 'Mục tiêu: Trở thành lập trình viên full-stack toàn diện, đồng thời chuyên sâu kiến trúc frontend.',
-    overview10: 'Vị trí làm việc hiện tại: Đà Nẵng, Việt Nam.',
+    overview1: 'Hơn **3 năm kinh nghiệm** làm Frontend Developer, chuyên xây dựng ứng dụng web với React, UmiJS, Next.js và TypeScript.',
+    overview2: 'Có kinh nghiệm thực chiến backend với **Go** và **Node.js**, có thể tự chủ triển khai tính năng full-stack.',
+    overview3: 'Thành thạo các UI framework hiện đại (Tailwind CSS, Ant Design, Shadcn/ui, Bootstrap) và giải pháp quản lý state (Redux, Dva.js, Zustand, TanStack Query). Sử dụng **Figma** và **Framer** để thiết kế và tạo prototype chất lượng cao.',
+    overview4: 'Sử dụng các công cụ AI như **Claude Code**, **Cursor**, MCP servers, Agent Skills và **Antigravity** để tăng tốc quy trình lập trình và phát triển.',
+    overview5: 'Có kinh nghiệm phát triển nền tảng AI workspace (LibreChat), e-commerce (Selly), hệ thống cashback (Cashbag), Zalo Mini App và ứng dụng Webview tích hợp vào app ngân hàng (**TPBank, VPBank, MBBank, BIDV**, v.v.).',
+    overview6: '',
+    overview7: 'Không ngừng mở rộng kỹ năng full-stack, hướng đến xây dựng ứng dụng có khả năng mở rộng, hiệu suất cao và dễ bảo trì.',
+    overview8: 'Học hỏi nhanh, kỹ năng giao tiếp tốt.',
+    overview9: 'Nơi làm việc hiện tại: Đà Nẵng, Việt Nam.',
+    overview10: '',
 
     // ── Experience — Doraverse ──
     expDoraverse1: 'Phát triển website quản trị workspace, phân tích sử dụng user/model, theo dõi chi phí và đánh giá hiệu suất nhân viên.',
-    expDoraverse2: 'Tích hợp và tùy chỉnh LibreChat (mã nguồn mở), mở rộng với AI Agents, studio hình ảnh/video, LM notebooks và deep research.',
+    expDoraverse2: 'Tích hợp và tùy chỉnh LibreChat (mã nguồn mở), mở rộng với AI Agents, studio hình ảnh/video, LM notebooks và deep research. Xử lý luồng chat streaming đa model (GPT, Claude, Gemini) với hỗ trợ tool-use và function-calling.',
     expDoraverse3: 'Phát triển landing page, auth-web và ứng dụng meeting-note dưới dạng micro-frontend độc lập.',
     expDoraverse4: 'Xây dựng và publish package cookie consent, áp dụng cho tất cả sản phẩm công ty.',
-    expDoraverse5: 'Triển khai i18n (EN/VI/JP), dark mode và Sentry monitoring; deploy trên Vercel với Next.js.',
+    expDoraverse5: 'Triển khai i18n (EN/VI/JP), dark mode và tích hợp tracking bên thứ ba (GA, GTM, HubSpot, Microsoft Clarity).',
     expDoraverse6: 'Thiết kế kiến trúc codebase frontend, review code, tối ưu hiệu suất và refactor để dễ bảo trì.',
 
     // ── Experience — Selly & Cashbag ──
@@ -260,7 +270,8 @@ export const translations = {
     expTfluencer2: 'Xây dựng microservice service-tos với eKYC, eContract, liên kết thẻ ngân hàng, xác thực OTP sử dụng Next.js & Shadcn/ui.',
     expTfluencer3: 'Tích hợp FPT eContract API cho xác minh sinh trắc học và ký hợp đồng điện tử.',
     expTfluencer4: 'Phát triển 11 biến thể chiến dịch thương hiệu (Yody, VNPay, VNG, Anker, HDBank, MBBank, TPBank, VPBank, v.v.) với kiến trúc component dùng chung.',
-    expTfluencer5: '**Backend:** Xử lý nhiều tính năng backend sử dụng Go & Echo framework.',
+    expTfluencer5: 'Phát triển các tính năng admin: quản lý user/creator, duyệt chiến dịch, review KYC và dashboard phân tích.',
+    expTfluencer6: '**Backend:** Xử lý nhiều tính năng backend sử dụng Go & Echo framework.',
 
     // ── Freelance — Vcreator ──
     expVcreator1: 'Xây dựng vcreator.global — nền tảng video creator với UmiJS, Ant Design, quản lý state Dva.js.',
@@ -275,30 +286,30 @@ export const translations = {
     eduSub: 'Chuyên ngành: Công nghệ Thông tin · Xếp loại: Giỏi',
 
     // ── Skills Summary ──
-    skillsSummary1: '- 3+ năm Front-End: HTML, CSS, SCSS, Tailwind CSS, Bootstrap, Ant Design, JavaScript, TypeScript, ReactJS, UmiJS, Next.js, Redux, Zustand và các công cụ như Git, Figma.',
-    skillsSummary2: '- Kinh nghiệm Responsive web, SSR, SEO, Socket.IO client, Shadcn/ui, Framer, Subframer.',
-    skillsSummary3: '- Kiến thức Backend: Go, Echo, Node.js, Express.js, MongoDB, MySQL, Docker.',
-    skillsSummary4: '- Phát triển hỗ trợ AI: Claude Code, ClaudeKit, MCP, Agent Skills, Cursor, Trae, Antigravity, GitHub Copilot.',
+    skillsSummary1: '- **Frontend:** JavaScript, TypeScript, ReactJS, Next.js, UmiJS | State: Redux, Zustand | Styling: Tailwind CSS, SCSS, Ant Design, Shadcn/ui.',
+    skillsSummary2: '- **Concepts:** Responsive design, SSR, SEO, WebSocket / Socket.IO.',
+    skillsSummary3: '- **Backend:** Node.js, Express.js, Go, Echo, MongoDB, MySQL.',
+    skillsSummary4: '- **Tools & AI:** Git, Git Flow, Figma, Docker | AI: Claude Code, ClaudeKit, MCP, Cursor, GitHub Copilot.',
 
     // ── Project: Doraverse ──
-    projDoraverseDesc: 'Nền tảng AI workspace cấp doanh nghiệp dựa trên LibreChat (mã nguồn mở), hỗ trợ hội thoại đa model (GPT, Claude, Gemini), AI Agents tùy chỉnh, studio hình ảnh/video và LM notebooks. Bao gồm quản trị workspace đa phòng ban, dashboard phân tích, thanh toán Stripe, theo dõi credit và tích hợp deep research.',
-    projDoraverseResp1: 'Thiết kế kiến trúc và khởi tạo codebase frontend cho workspace admin, auth-web và ứng dụng meeting-note dưới dạng micro-frontend độc lập',
-    projDoraverseResp2: 'Phát triển dashboard quản trị workspace: phân tích (Recharts), quản lý AI model, theo dõi credit theo phòng ban, quản lý thành viên/vai trò và tích hợp thanh toán Stripe',
-    projDoraverseResp3: 'Tích hợp và mở rộng LibreChat với tính năng tùy chỉnh: AI Agents, studio hình ảnh/video, LM notebooks',
-    projDoraverseResp4: 'Xây dựng module deep research với tích hợp chat real-time, xử lý kết nối/tái kết nối WebSocket và streaming message',
-    projDoraverseResp5: 'Phát triển landing page với Framer và publish package cookie consent áp dụng cho tất cả sản phẩm công ty',
-    projDoraverseResp6: 'Triển khai i18n (EN/VI/JP), dark mode, cài đặt branding/domain và Sentry monitoring',
-    projDoraverseResp7: 'Tối ưu hiệu suất, review code và refactor để mở rộng quy mô',
+    projDoraverseDesc: 'AI workspace doanh nghiệp xây dựng trên LibreChat với chat đa model (GPT, Claude, Gemini), AI Agents, studio hình ảnh/video, LM notebooks, AI debate, ghi chú cuộc họp, quản trị workspace và dashboard phân tích.',
+    projDoraverseResp1: 'Thiết lập kiến trúc frontend cho 3 micro-frontend độc lập: workspace admin, auth-web và meeting-note app',
+    projDoraverseResp2: 'Xây dựng admin dashboard với analytics (Recharts), quản lý AI model, theo dõi credit theo phòng ban, quản lý thành viên/vai trò và thanh toán Stripe',
+    projDoraverseResp3: 'Mở rộng LibreChat với các module tùy chỉnh: AI Agents, AI debate, studio hình ảnh/video, LM notebooks và meeting notes',
+    projDoraverseResp4: 'Xây dựng tính năng deep research với WebSocket streaming, hỗ trợ đa model (GPT, Claude, Gemini), tool-use và function-calling',
+    projDoraverseResp5: 'Xây dựng landing page với Framer; publish npm package cookie consent dùng chung cho toàn bộ sản phẩm công ty',
+    projDoraverseResp6: 'Triển khai i18n (EN/VI/JP), dark/light mode, responsive design và cài đặt branding theo workspace',
+    projDoraverseResp7: 'Review code, tối ưu bundle performance và refactor code cũ để dễ bảo trì',
 
     // ── Project: Vcreator ──
-    projVcreatorDesc: 'V-Creator là nền tảng của Vingroup khuyến khích sáng tạo nội dung về sản phẩm và dịch vụ của các công ty thành viên như VinFast, Vincom và Vinpearl. Người dùng chia sẻ nội dung trên các mạng xã hội YouTube, TikTok, Facebook, Instagram và nhận thưởng theo lượt xem. Tích hợp và phát triển tính năng cho đối tác MB Bank, VPBank, VNPAY, Yody.',
+    projVcreatorDesc: 'Nền tảng creator của Vingroup, người dùng chia sẻ video trên YouTube, TikTok, Facebook để nhận thưởng theo lượt xem. Tích hợp đối tác MB Bank, VPBank, VNPAY, Yody.',
     projVcreatorResp1: 'Phát triển tính năng mới và xử lý bug trên toàn nền tảng',
     projVcreatorResp2: 'Tối ưu hiệu suất frontend và kích thước bundle',
     projVcreatorResp3: 'Bảo trì codebase và refactor các component cũ',
     projVcreatorResp4: 'Review code đảm bảo tiêu chuẩn chất lượng',
 
     // ── Project: Tfluencer ──
-    projTfluencerDesc: 'Tfluencer là nền tảng kiếm tiền cho content creator của Techcombank. Gồm 3 hệ thống con: **TCB Creator** (tfluencer.vn) — nền tảng creator với quản lý nội dung, sự kiện/chiến dịch, xác minh KYC, đối soát, tích hợp đối tác; **Ambassador** — hệ thống chiến dịch đa thương hiệu với 11 biến thể (Yody, VNPAY, VNG, Anker, Turborg, Flamingo, Wild Rift, HDBank, MBBank, TPBank, VPBank) mỗi biến thể có frontend tùy chỉnh; **TOS (service-tos)** — microservice KYC/eContract xử lý xác minh eKYC, ký hợp đồng điện tử, liên kết thẻ ngân hàng, xác thực OTP và tích hợp webhook đối tác.',
+    projTfluencerDesc: 'Nền tảng kiếm tiền cho content creator của Techcombank với 3 hệ thống: **TCB Creator** (cổng creator với KYC & chiến dịch), **Ambassador** (11 biến thể chiến dịch thương hiệu), và **TOS** (microservice KYC/eContract).',
     projTfluencerResp1: 'Thiết kế kiến trúc codebase frontend cho TCB Creator, Ambassador (11 biến thể thương hiệu) và TOS',
     projTfluencerResp2: 'Phát triển frontend & admin cho TCB Creator: nội dung, sự kiện, chiến dịch, KYC, đối soát và quản lý đối tác',
     projTfluencerResp3: 'Phát triển frontend Ambassador với tùy chỉnh đa thương hiệu (Yody, VNPAY, VNG, Anker, v.v.)',
@@ -308,50 +319,54 @@ export const translations = {
     projTfluencerResp7: 'Debug và xử lý lỗi, tối ưu hiệu suất và review code',
 
     // ── Project: Webview Mini Game ──
-    projMinigameDesc: 'Xây dựng nhiều game webview dạng quay thưởng (vòng quay, mở quà) theo chủ đề mùa (Tết, Giáng sinh, v.v.), tích hợp vào ứng dụng ngân hàng và mua game.',
-    projMinigameResp1: 'Thiết kế kiến trúc và khởi tạo codebase frontend',
-    projMinigameResp2: 'Phát triển tính năng client và admin; debug và xử lý lỗi',
-    projMinigameResp3: 'Tối ưu hiệu suất frontend cho môi trường webview',
+    projMinigameDesc: 'Game webview dạng quay thưởng tích hợp vào ứng dụng ngân hàng và game.',
+    projMinigameResp1: 'Xây dựng nhiều loại game (vòng quay, mở quà, cào thẻ) với theme theo sự kiện (Tết, Giáng sinh, Trung thu,...)',
+    projMinigameResp2: 'Phối hợp với backend developer và designer để hoàn thiện trải nghiệm game',
+    projMinigameResp3: 'Phát triển admin panel cho cấu hình game, quản lý phần thưởng và phân tích chiến dịch',
+    projMinigameResp4: 'Tối ưu hiệu suất webview cho trải nghiệm chơi game mượt mà trên các ứng dụng ngân hàng và game',
 
     // ── Project: Bio Link ──
-    projBiolinkDesc: 'Nền tảng cho phép người dùng tạo trang cá nhân với liên kết mạng xã hội, hình ảnh, bài viết và danh sách sản phẩm sử dụng template tùy chỉnh.',
-    projBiolinkResp1: 'Thiết kế kiến trúc và khởi tạo codebase frontend',
-    projBiolinkResp2: 'Phát triển tính năng client và admin; debug và xử lý lỗi',
-    projBiolinkResp3: 'Tối ưu hiệu suất frontend và kích thước bundle',
-    projBiolinkResp4: 'Bảo trì codebase và refactor để dễ bảo trì lâu dài',
+    projBiolinkDesc: 'Nền tảng tạo trang cá nhân với liên kết mạng xã hội, hình ảnh, bài viết và danh sách sản phẩm theo template tùy chỉnh.',
+    projBiolinkResp1: 'Xây dựng và duy trì codebase frontend',
+    projBiolinkResp2: 'Phát triển tính năng cho user và admin, fix bugs',
+    projBiolinkResp3: 'Cải thiện hiệu suất frontend và giảm kích thước bundle',
+    projBiolinkResp4: 'Refactor codebase để dễ bảo trì lâu dài',
 
     // ── Project: Selly.vn ──
-    projSellyDesc: 'Hệ sinh thái thương mại điện tử đa nền tảng với 6 dự án con: trang mua hàng, cổng seller, dashboard merchant, trang quản trị, webview cho ứng dụng mobile/ngân hàng và Zalo Mini App. Nền tảng dropshipping cho seller quản lý kho, đơn hàng và chiến dịch với hỗ trợ chat real-time.',
-    projSellyResp1: 'Phát triển và bảo trì 6 ứng dụng frontend: trang mua hàng, cổng seller, dashboard merchant, trang quản trị, mobile webview và web-admin',
-    projSellyResp2: 'Xây dựng luồng e-commerce hoàn chỉnh: catalog sản phẩm, thanh toán, theo dõi đơn hàng, quản lý kho và hệ thống chiến dịch/affiliate',
-    projSellyResp3: 'Triển khai hệ thống chat real-time với Socket.IO cho hỗ trợ khách hàng và giao tiếp merchant',
-    projSellyResp4: 'Phát triển tích hợp webview cho ứng dụng mobile và đối tác ngân hàng (Zalo Mini App, deep-link, Adjust tracking)',
-    projSellyResp5: 'Triển khai i18n, dark mode, giao diện responsive, xuất PDF và giao diện kéo thả',
-    projSellyResp6: 'Tích hợp dịch vụ bên thứ ba: Firebase analytics, Facebook login, Telegram, Google, TikTok APIs',
-    projSellyResp7: '**Backend:** Xử lý các task backend sử dụng Go, Node.js và MongoDB',
+    projSellyDesc: 'Hệ sinh thái thương mại điện tử đa nền tảng (trang mua hàng, cổng seller, merchant dashboard, admin, mobile webview, Zalo Mini App) với dropshipping và chat real-time.',
+    projSellyResp1: 'Xây dựng và bảo trì 6 ứng dụng frontend: trang mua hàng, cổng seller, dashboard merchant, trang quản trị, mobile webview và Zalo Mini App.',
+    projSellyResp2: 'Phát triển luồng e-commerce: catalog sản phẩm, thanh toán, theo dõi đơn hàng, quản lý kho và hệ thống chiến dịch/affiliate.',
+    projSellyResp3: 'Triển khai hệ thống chat real-time với Socket.IO cho hỗ trợ khách hàng và giao tiếp merchant.',
+    projSellyResp4: 'Tích hợp webview vào ứng dụng mobile và đối tác ngân hàng với deep-link và Adjust tracking.',
+    projSellyResp5: 'Triển khai đa ngôn ngữ, dark mode, giao diện responsive và dịch vụ bên thứ ba (Firebase, Facebook, Telegram, Google, TikTok).',
+    projSellyResp6: 'Phối hợp với backend developer và designer; review code và fix bugs.',
+    projSellyResp7: 'Xử lý các task backend sử dụng Go, Echo và MongoDB.',
 
     // ── Project: Cashbag ──
-    projCashbagDesc: 'Nền tảng hoàn tiền cashback tích hợp vào 15+ ứng dụng ngân hàng (TPBank, MBBank, BIDV, VPBank, SeaBank, Shinhan, LPBank, NamABank, PVComebank, SHB, VietinBank, TNEX, v.v.) và đối tác bên thứ ba (MFast, Galaxy). Tính năng gamification, quản lý voucher, lịch sử giao dịch và hệ thống rút tiền.',
+    projCashbagDesc: 'Nền tảng cashback tích hợp vào 15+ ứng dụng ngân hàng (TPBank, MBBank, BIDV, VPBank, v.v.) với gamification, quản lý voucher và hệ thống rút tiền.',
     projCashbagResp1: 'Phát triển và bảo trì Cashbag webview tích hợp vào 15+ ứng dụng ngân hàng với tùy chỉnh thương hiệu theo từng ngân hàng',
     projCashbagResp2: 'Xây dựng tính năng gamification: vòng quay, bảng xếp hạng và chiến dịch thưởng theo mùa',
     projCashbagResp3: 'Phát triển dashboard CRM quản trị cho quản lý chiến dịch, báo cáo tài chính và kiểm tra giao dịch',
     projCashbagResp4: 'Triển khai hệ thống quản lý voucher, luồng rút tiền và lịch sử giao dịch',
-    projCashbagResp5: 'Tích hợp Sentry error tracking và Firebase analytics cho tất cả biến thể ngân hàng',
+    projCashbagResp5: 'Tích hợp Firebase analytics cho tất cả biến thể ngân hàng',
 
     // ── Project: Chat Application ──
-    projChatDesc: 'Trung tâm hỗ trợ khách hàng cho phép trợ giúp real-time cho các câu hỏi mua sắm và vấn đề liên quan đến đơn hàng, sử dụng Socket.IO.',
+    projChatDesc: 'Hệ thống chat hỗ trợ khách hàng real-time cho các thắc mắc mua sắm, sử dụng Socket.IO.',
     projChatResp1: 'Phát triển giao diện frontend cho chat real-time',
     projChatResp2: 'Triển khai tính năng chat cho quy trình hỗ trợ khách hàng',
 
     // ── Project: Zalo Mini App ──
-    projZaloDesc: 'Xây dựng trải nghiệm cashback thương mại điện tử Cashbag & Selly dưới dạng Zalo Mini App.',
+    projZaloDesc: 'Trải nghiệm cashback thương mại điện tử Cashbag & Selly dưới dạng Zalo Mini App.',
     projZaloResp1: 'Thiết kế kiến trúc cốt lõi của ứng dụng',
-    projZaloResp2: 'Phát triển tính năng và xử lý lỗi',
-    projZaloResp3: 'Deploy và cấu hình ứng dụng trên nền tảng Zalo',
+    projZaloResp2: 'Phối hợp với backend trong việc tích hợp API và xử lý luồng dữ liệu',
+    projZaloResp3: 'Làm việc với designer để hiện thực hoá UI từ Figma',
+    projZaloResp4: 'Deploy và cấu hình ứng dụng trên nền tảng Zalo',
 
     // ── Project: Mamori.vn ──
     projMamoriDesc: 'Website giới thiệu sản phẩm cho thương hiệu Mamori.',
-    projMamoriResp1: 'Phát triển toàn bộ frontend độc lập',
+    projMamoriResp1: 'Xây dựng và phát triển frontend theo design.',
+    projMamoriResp2: 'Fix bugs và cải thiện code.',
+    projMamoriResp3: 'Xử lý phát sinh đơn hàng và report thông báo qua Telegram bot.',
 
     // ── Project: Shop Selly ──
     projShopSellyDesc: 'Cửa hàng thương mại điện tử cho người đăng ký gói Pro của Selly.vn.',
@@ -359,14 +374,15 @@ export const translations = {
     projShopSellyResp2: 'Cải thiện chức năng website và xử lý lỗi',
 
     // ── Personal: Pomodoro ──
-    projPomodoroDesc: 'Ứng dụng Pomodoro timer miễn phí với trợ lý học tập AI (Claude), quản lý task tích hợp, phân tích năng suất, bảng xếp hạng và mini-game giải lao. Hỗ trợ đa ngôn ngữ (EN/VI/JP) và theme sáng/tối.',
-    projPomodoroResp1: 'Thiết kế và xây dựng toàn bộ ứng dụng từ đầu',
-    projPomodoroResp2: 'Tích hợp Claude AI làm trợ lý học tập qua Vercel AI SDK',
-    projPomodoroResp3: 'Triển khai quản lý task với kéo thả, tags và phân tích',
-    projPomodoroResp4: 'Xây dựng dashboard phân tích năng suất với biểu đồ và lịch sử phiên',
+    projPomodoroDesc: 'Pomodoro timer miễn phí với trợ lý học tập AI cá nhân hoá, quản lý task, phân tích năng suất, bảng xếp hạng và mini-game giải lao.',
+    projPomodoroResp1: 'Thiết kế và xây dựng toàn bộ ứng dụng từ đầu.',
+    projPomodoroResp2: 'Triển khai tính năng focus: đồng hồ tùy chỉnh, theme nền, nhạc nền và cài đặt cá nhân.',
+    projPomodoroResp3: 'Triển khai quản lý task với kéo thả, tags và phân tích.',
+    projPomodoroResp4: 'Tích hợp trợ lý AI chat với lưu lịch sử hội thoại qua Vercel AI SDK.',
+    projPomodoroResp5: 'Xây dựng dashboard phân tích năng suất với biểu đồ và lịch sử phiên.',
 
     // ── Personal: Liverpool FC ──
-    projLiverpoolDesc: 'Nền tảng fan Liverpool FC toàn diện với lịch thi đấu trực tiếp, hồ sơ cầu thủ, bảng xếp hạng Premier League, tổng hợp tin tức đa nguồn (20+ RSS feeds, EN/VI), trợ lý chat AI, hồ sơ người dùng và lịch sử đọc. Tính năng ISR caching, Supabase auth và hỗ trợ đa ngôn ngữ.',
+    projLiverpoolDesc: 'Nền tảng fan Liverpool FC với lịch thi đấu, bảng xếp hạng, tổng hợp tin tức (20+ RSS feeds), trợ lý chat AI và hồ sơ người dùng.',
     projLiverpoolResp1: 'Thiết kế và xây dựng toàn bộ ứng dụng từ đầu với Next.js App Router và ISR caching',
     projLiverpoolResp2: 'Tích hợp nhiều API dữ liệu thể thao (Football-Data.org, FPL, ESPN) cho lịch thi đấu, bảng xếp hạng và thống kê cầu thủ',
     projLiverpoolResp3: 'Xây dựng pipeline tin tức tự động đồng bộ 20+ RSS feeds với dịch thuật AI (Groq LLM) và trích xuất nội dung',

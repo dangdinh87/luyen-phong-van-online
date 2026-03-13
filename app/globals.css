@@ -122,7 +122,7 @@ section {
    ═══════════════════════════════════════ */
 .header {
   position: relative;
-  background: linear-gradient(155deg, #1e293b 0%, #334155 35%, #1e293b 65%, #374151 100%);
+  background: linear-gradient(155deg, #0f1b3d 0%, #162952 35%, #111f42 65%, #1a2f5a 100%);
   color: #F1F5F9;
   padding: 32px 40px;
   display: grid;
@@ -134,7 +134,7 @@ section {
 }
 
 [data-theme="dark"] .header {
-  background: linear-gradient(155deg, #060810 0%, #0d1628 35%, #080f1c 65%, #101526 100%);
+  background: linear-gradient(155deg, #060b1e 0%, #0c1633 35%, #08102a 65%, #0e1a3a 100%);
 }
 
 .header::before {
@@ -142,7 +142,7 @@ section {
   position: absolute;
   top: -60px; right: -40px;
   width: 320px; height: 320px;
-  background: radial-gradient(circle, rgba(37,99,235,0.18) 0%, transparent 60%);
+  background: radial-gradient(circle, rgba(96,165,250,0.25) 0%, transparent 60%);
   border-radius: 50%;
 }
 
@@ -151,7 +151,7 @@ section {
   position: absolute;
   bottom: -80px; left: 25%;
   width: 240px; height: 240px;
-  background: radial-gradient(circle, rgba(139,92,246,0.1) 0%, transparent 60%);
+  background: radial-gradient(circle, rgba(147,197,253,0.15) 0%, transparent 60%);
   border-radius: 50%;
 }
 
@@ -184,12 +184,13 @@ section {
 
 .h-title .yoe {
   display: inline-block;
-  background: rgba(37,99,235,0.28);
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
   padding: 1px 9px;
   border-radius: 5px;
   font-size: 0.78rem;
   font-weight: 600;
-  color: #BFDBFE;
+  color: #E2E8F0;
   margin-left: 6px;
   vertical-align: middle;
 }
@@ -225,7 +226,7 @@ section {
 }
 .contact-item a:hover { color: #93C5FD; }
 
-.contact-item svg { width: 13px; height: 13px; opacity: 0.5; flex-shrink: 0; }
+.contact-item svg { width: 13px; height: 13px; opacity: 0.6; flex-shrink: 0; }
 
 /* ═══════════════════════════════════════
    CONTENT
@@ -470,6 +471,15 @@ section:last-child { margin-bottom: 0; }
 
 .project-table tr:last-child td {
   border-bottom: none;
+}
+
+.project-table a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.project-table a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
 }
 
 .project-table td:first-child {
