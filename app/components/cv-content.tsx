@@ -793,7 +793,7 @@ export function CVContent() {
             <table className="project-table">
               <tbody>
                 <tr><td>{t('descriptions')}</td><td>{tr('projLiverpoolDesc')}</td></tr>
-                <tr><td>{t('link')}</td><td><a href="https://liverpool-app-five.vercel.app" target="_blank" rel="noopener noreferrer">https://liverpool-app-five.vercel.app</a></td></tr>
+                <tr><td>{t('link')}</td><td><a href="https://www.liverpoolfcvn.blog/" target="_blank" rel="noopener noreferrer">https://www.liverpoolfcvn.blog/</a></td></tr>
                 <tr><td>{t('position')}</td><td>Fullstack Developer</td></tr>
                 <tr><td>{t('responsibilities')}</td><td>
                   <ul>
