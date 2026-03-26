@@ -7,6 +7,12 @@ import { CATEGORY_GROUPS, getGroupLabel } from './category-groups'
 const STORAGE_KEYS = {
   bookmarks: 'iv_bookmarks',
   learned: 'iv_learned',
+  openAnswers: 'iv_open_answers',
+  showAll: 'iv_show_all',
+  activeCategory: 'iv_active_category',
+  activeLevel: 'iv_active_level',
+  showFilter: 'iv_show_filter',
+  shuffled: 'iv_shuffled',
 } as const
 
 function loadSet(key: string): Set<number> {
@@ -22,6 +28,18 @@ function saveSet(key: string, set: Set<number>) {
   localStorage.setItem(key, JSON.stringify([...set]))
 }
 
+function loadString(key: string, fallback: string): string {
+  if (typeof window === 'undefined') return fallback
+  return localStorage.getItem(key) ?? fallback
+}
+
+function loadBool(key: string, fallback: boolean): boolean {
+  if (typeof window === 'undefined') return fallback
+  const val = localStorage.getItem(key)
+  if (val === null) return fallback
+  return val === 'true'
+}
+
 function shuffleArray<T>(arr: T[]): T[] {
   const a = [...arr]
   for (let i = a.length - 1; i > 0; i--) {
@@ -32,8 +50,10 @@ function shuffleArray<T>(arr: T[]): T[] {
 }
 
 export function useInterviewStore(allData: QAItem[]) {
-  const [bookmarks, setBookmarks] = useState<Set<number>>(() => loadSet(STORAGE_KEYS.bookmarks))
-  const [learned, setLearned] = useState<Set<number>>(() => loadSet(STORAGE_KEYS.learned))
+  const [bookmarks, setBookmarks] = useState<Set<number>>(new Set())
+  const [learned, setLearned] = useState<Set<number>>(new Set())
+  const [hydrated, setHydrated] = useState(false)
+
   const [search, setSearch] = useState('')
   const [activeCategory, setActiveCategory] = useState<string>('all')
   const [activeLevel, setActiveLevel] = useState<string>('all')
@@ -43,9 +63,28 @@ export function useInterviewStore(allData: QAItem[]) {
   const [shuffleSeed, setShuffleSeed] = useState(0)
   const [showFilter, setShowFilter] = useState<'all' | 'not-learned' | 'learned-only'>('all')
 
-  // Persist to localStorage
-  useEffect(() => { saveSet(STORAGE_KEYS.bookmarks, bookmarks) }, [bookmarks])
-  useEffect(() => { saveSet(STORAGE_KEYS.learned, learned) }, [learned])
+  // Hydrate all persisted state from localStorage after mount
+  useEffect(() => {
+    setBookmarks(loadSet(STORAGE_KEYS.bookmarks))
+    setLearned(loadSet(STORAGE_KEYS.learned))
+    setOpenAnswers(loadSet(STORAGE_KEYS.openAnswers))
+    setShowAll(loadBool(STORAGE_KEYS.showAll, false))
+    setActiveCategory(loadString(STORAGE_KEYS.activeCategory, 'all'))
+    setActiveLevel(loadString(STORAGE_KEYS.activeLevel, 'all'))
+    setShowFilter(loadString(STORAGE_KEYS.showFilter, 'all') as 'all' | 'not-learned' | 'learned-only')
+    setShuffled(loadBool(STORAGE_KEYS.shuffled, false))
+    setHydrated(true)
+  }, [])
+
+  // Persist to localStorage (skip before hydration)
+  useEffect(() => { if (hydrated) saveSet(STORAGE_KEYS.bookmarks, bookmarks) }, [bookmarks, hydrated])
+  useEffect(() => { if (hydrated) saveSet(STORAGE_KEYS.learned, learned) }, [learned, hydrated])
+  useEffect(() => { if (hydrated) saveSet(STORAGE_KEYS.openAnswers, openAnswers) }, [openAnswers, hydrated])
+  useEffect(() => { if (hydrated) localStorage.setItem(STORAGE_KEYS.showAll, String(showAll)) }, [showAll, hydrated])
+  useEffect(() => { if (hydrated) localStorage.setItem(STORAGE_KEYS.activeCategory, activeCategory) }, [activeCategory, hydrated])
+  useEffect(() => { if (hydrated) localStorage.setItem(STORAGE_KEYS.activeLevel, activeLevel) }, [activeLevel, hydrated])
+  useEffect(() => { if (hydrated) localStorage.setItem(STORAGE_KEYS.showFilter, showFilter) }, [showFilter, hydrated])
+  useEffect(() => { if (hydrated) localStorage.setItem(STORAGE_KEYS.shuffled, String(shuffled)) }, [shuffled, hydrated])
 
   // Group counts (how many items per group)
   const groupCounts = useMemo(() => {

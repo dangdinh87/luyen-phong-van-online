@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { CATEGORIES } from './interview-data'
 
 interface FormData {
@@ -15,17 +15,31 @@ interface FormData {
 
 const INITIAL: FormData = { name: '', email: '', category: '', question: '', answer: '', note: '', links: '' }
 
+type ContributeTab = 'question' | 'feature'
+
 export function ContributeForm({ onClose }: { onClose: () => void }) {
+  const [tab, setTab] = useState<ContributeTab>('question')
   const [form, setForm] = useState<FormData>(INITIAL)
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
   const [errorMsg, setErrorMsg] = useState('')
+
+  // Close on Escape
+  const handleKeyDown = useCallback((e: KeyboardEvent) => {
+    if (e.key === 'Escape') onClose()
+  }, [onClose])
+
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [handleKeyDown])
 
   const set = (key: keyof FormData) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
     setForm(prev => ({ ...prev, [key]: e.target.value }))
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (!form.question.trim()) { setErrorMsg('Vui lòng nhập câu hỏi'); return }
+    if (tab === 'question' && !form.question.trim()) { setErrorMsg('Vui lòng nhập câu hỏi'); return }
+    if (tab === 'feature' && !form.question.trim()) { setErrorMsg('Vui lòng nhập mô tả tính năng'); return }
 
     setStatus('sending')
     setErrorMsg('')
@@ -34,7 +48,7 @@ export function ContributeForm({ onClose }: { onClose: () => void }) {
       const res = await fetch('/api/contribute', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, type: tab }),
       })
       const data = await res.json()
       if (res.ok) {
@@ -55,9 +69,24 @@ export function ContributeForm({ onClose }: { onClose: () => void }) {
       <div className="iv-contribute-overlay" onClick={onClose} />
       <div className="iv-contribute-modal">
         <div className="iv-contribute-header">
-          <h3>Đóng Góp Câu Hỏi</h3>
+          <h3>Đóng Góp</h3>
           <button className="iv-contribute-close" onClick={onClose} aria-label="Đóng">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+          </button>
+        </div>
+
+        <div className="iv-contribute-tabs">
+          <button
+            className={`iv-contribute-tab ${tab === 'question' ? 'active' : ''}`}
+            onClick={() => { setTab('question'); setStatus('idle'); setErrorMsg('') }}
+          >
+            Câu hỏi
+          </button>
+          <button
+            className={`iv-contribute-tab ${tab === 'feature' ? 'active' : ''}`}
+            onClick={() => { setTab('feature'); setStatus('idle'); setErrorMsg('') }}
+          >
+            Tính năng
           </button>
         </div>
 
@@ -70,63 +99,101 @@ export function ContributeForm({ onClose }: { onClose: () => void }) {
           </div>
         ) : (
           <form className="iv-contribute-form" onSubmit={handleSubmit}>
-            <div className="iv-contribute-row">
-              <div className="iv-contribute-field">
-                <label>Tên <span className="iv-optional">(tùy chọn)</span></label>
-                <input type="text" value={form.name} onChange={set('name')} placeholder="Ẩn danh" />
-              </div>
-              <div className="iv-contribute-field">
-                <label>Email <span className="iv-optional">(tùy chọn)</span></label>
-                <input type="email" value={form.email} onChange={set('email')} placeholder="email@example.com" />
-              </div>
-            </div>
+            {tab === 'question' ? (
+              <>
+                <div className="iv-contribute-row">
+                  <div className="iv-contribute-field">
+                    <label>Tên <span className="iv-optional">(tùy chọn)</span></label>
+                    <input type="text" value={form.name} onChange={set('name')} placeholder="Ẩn danh" />
+                  </div>
+                  <div className="iv-contribute-field">
+                    <label>Email <span className="iv-optional">(tùy chọn)</span></label>
+                    <input type="email" value={form.email} onChange={set('email')} placeholder="email@example.com" />
+                  </div>
+                </div>
 
-            <div className="iv-contribute-field">
-              <label>Chủ đề</label>
-              <select value={form.category} onChange={set('category')}>
-                <option value="">-- Chọn chủ đề --</option>
-                {CATEGORIES.map(cat => (
-                  <option key={cat} value={cat}>{cat}</option>
-                ))}
-                <option value="Khác">Khác</option>
-              </select>
-            </div>
+                <div className="iv-contribute-field">
+                  <label>Chủ đề</label>
+                  <select value={form.category} onChange={set('category')}>
+                    <option value="">-- Chọn chủ đề --</option>
+                    {CATEGORIES.map(cat => (
+                      <option key={cat} value={cat}>{cat}</option>
+                    ))}
+                    <option value="Khác">Khác</option>
+                  </select>
+                </div>
 
-            <div className="iv-contribute-field">
-              <label>Câu hỏi <span className="iv-required">*</span></label>
-              <textarea
-                value={form.question}
-                onChange={set('question')}
-                placeholder="Nhập câu hỏi phỏng vấn..."
-                rows={3}
-                required
-              />
-            </div>
+                <div className="iv-contribute-field">
+                  <label>Câu hỏi <span className="iv-required">*</span></label>
+                  <textarea
+                    value={form.question}
+                    onChange={set('question')}
+                    placeholder="Nhập câu hỏi phỏng vấn..."
+                    rows={3}
+                    required
+                  />
+                </div>
 
-            <div className="iv-contribute-field">
-              <label>Gợi ý đáp án <span className="iv-optional">(tùy chọn)</span></label>
-              <textarea
-                value={form.answer}
-                onChange={set('answer')}
-                placeholder="Nếu bạn có gợi ý đáp án..."
-                rows={4}
-              />
-            </div>
+                <div className="iv-contribute-field">
+                  <label>Gợi ý đáp án <span className="iv-optional">(tùy chọn)</span></label>
+                  <textarea
+                    value={form.answer}
+                    onChange={set('answer')}
+                    placeholder="Nếu bạn có gợi ý đáp án..."
+                    rows={4}
+                  />
+                </div>
 
-            <div className="iv-contribute-field">
-              <label>Link tham khảo <span className="iv-optional">(tùy chọn)</span></label>
-              <textarea
-                value={form.links}
-                onChange={set('links')}
-                placeholder="Dán link bài viết, video, tài liệu hữu ích... (mỗi link 1 dòng)"
-                rows={3}
-              />
-            </div>
+                <div className="iv-contribute-field">
+                  <label>Ghi chú <span className="iv-optional">(tùy chọn)</span></label>
+                  <input type="text" value={form.note} onChange={set('note')} placeholder="Nguồn, level gợi ý..." />
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="iv-contribute-row">
+                  <div className="iv-contribute-field">
+                    <label>Tên <span className="iv-optional">(tùy chọn)</span></label>
+                    <input type="text" value={form.name} onChange={set('name')} placeholder="Ẩn danh" />
+                  </div>
+                  <div className="iv-contribute-field">
+                    <label>Email <span className="iv-optional">(tùy chọn)</span></label>
+                    <input type="email" value={form.email} onChange={set('email')} placeholder="email@example.com" />
+                  </div>
+                </div>
 
-            <div className="iv-contribute-field">
-              <label>Ghi chú <span className="iv-optional">(tùy chọn)</span></label>
-              <input type="text" value={form.note} onChange={set('note')} placeholder="Nguồn, level gợi ý..." />
-            </div>
+                <div className="iv-contribute-field">
+                  <label>Mô tả tính năng <span className="iv-required">*</span></label>
+                  <textarea
+                    value={form.question}
+                    onChange={set('question')}
+                    placeholder="Bạn muốn website có thêm tính năng gì? Mô tả chi tiết..."
+                    rows={4}
+                    required
+                  />
+                </div>
+
+                <div className="iv-contribute-field">
+                  <label>Lý do / Lợi ích <span className="iv-optional">(tùy chọn)</span></label>
+                  <textarea
+                    value={form.answer}
+                    onChange={set('answer')}
+                    placeholder="Tính năng này giúp ích gì cho việc học/ôn tập?"
+                    rows={3}
+                  />
+                </div>
+
+                <div className="iv-contribute-field">
+                  <label>Link tham khảo <span className="iv-optional">(tùy chọn)</span></label>
+                  <textarea
+                    value={form.links}
+                    onChange={set('links')}
+                    placeholder="Link ví dụ từ website khác, ảnh minh họa..."
+                    rows={2}
+                  />
+                </div>
+              </>
+            )}
 
             {errorMsg && <div className="iv-contribute-error">{errorMsg}</div>}
 

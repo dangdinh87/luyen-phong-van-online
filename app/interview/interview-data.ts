@@ -17,9 +17,9 @@ export const CATEGORIES = [
 export type Category = (typeof CATEGORIES)[number]
 
 export const LEVEL_CONFIG = {
-  beginner: { label: 'Cơ Bản', bg: 'var(--green-bg)', color: 'var(--green-ink)' },
-  intermediate: { label: 'Trung Bình', bg: 'var(--amber-bg)', color: 'var(--amber-ink)' },
-  advanced: { label: 'Nâng Cao', bg: 'var(--rose-bg)', color: 'var(--rose-ink)' },
+  beginner: { label: 'Cơ Bản', bg: '#2563EB', color: '#fff' },
+  intermediate: { label: 'Trung Bình', bg: '#e58e07', color: '#fff' },
+  advanced: { label: 'Nâng Cao', bg: '#f43f5e', color: '#fff' },
 } as const
 
 // Static imports from all data files (~888 Q&A items total)

@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     template: '%s | Luyện Phỏng Vấn',
   },
   description:
-    'Luyện tập phỏng vấn IT với 1100+ câu hỏi thực tế từ các công ty hàng đầu. Bao gồm React, Next.js, Node.js, TypeScript, Golang, DevOps, System Design và nhiều hơn nữa.',
+    'Tổng hợp 1100+ câu hỏi phỏng vấn IT từ cơ bản đến nâng cao — HTML, CSS, JavaScript, React, Node.js, Golang, DevOps. Nắm vững nền tảng, luyện cách trả lời và tự tin trước mọi interviewer.',
   keywords: [
     'phỏng vấn', 'interview', 'frontend', 'backend', 'fullstack',
     'React', 'Next.js', 'Node.js', 'TypeScript', 'Golang',

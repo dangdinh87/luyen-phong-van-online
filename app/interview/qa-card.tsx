@@ -1,6 +1,7 @@
 'use client'
 
 import { memo } from 'react'
+import confetti from 'canvas-confetti'
 import type { QAItem } from './interview-data'
 import { LEVEL_CONFIG } from './interview-data'
 
@@ -43,15 +44,32 @@ export const QACard = memo(function QACard({
               title="Lưu"
               aria-label="Đánh dấu"
             >
-              &#9733;
+              <svg width="16" height="16" viewBox="0 0 24 24" fill={isBookmarked ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
             </button>
             <button
               className={`qa-action-btn ${isLearned ? 'learned-active' : ''}`}
-              onClick={(e) => { e.stopPropagation(); onToggleLearned(item.id) }}
+              onClick={(e) => {
+                e.stopPropagation()
+                if (!isLearned) {
+                  const rect = e.currentTarget.getBoundingClientRect()
+                  const x = (rect.left + rect.width / 2) / window.innerWidth
+                  const y = (rect.top + rect.height / 2) / window.innerHeight
+                  confetti({
+                    particleCount: 80,
+                    spread: 60,
+                    origin: { x, y },
+                    colors: ['#4ade80', '#22c55e', '#16a34a', '#fbbf24', '#f59e0b'],
+                    ticks: 120,
+                    gravity: 1.2,
+                    scalar: 0.9,
+                  })
+                }
+                onToggleLearned(item.id)
+              }}
               title="Đã học"
               aria-label="Đánh dấu đã học"
             >
-              &#10003;
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={isLearned ? 3 : 2} strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
             </button>
           </div>
         </div>
