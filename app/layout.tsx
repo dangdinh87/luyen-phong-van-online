@@ -31,11 +31,11 @@ const SITE_URL = 'https://luyenphongvan.online'
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Luyện Phỏng Vấn — 1100+ Câu Hỏi Phỏng Vấn IT',
+    default: 'Luyện Phỏng Vấn | Chinh Phục Mọi Buổi Interview IT',
     template: '%s | Luyện Phỏng Vấn',
   },
   description:
-    'Tổng hợp 1100+ câu hỏi phỏng vấn IT từ cơ bản đến nâng cao. HTML, CSS, JavaScript, TypeScript, React, Next.js, Node.js, Golang, Database, DevOps, Testing, Security, Career & more.',
+    'Luyện tập phỏng vấn IT với 1100+ câu hỏi thực tế từ các công ty hàng đầu. Bao gồm React, Next.js, Node.js, TypeScript, Golang, DevOps, System Design và nhiều hơn nữa.',
   keywords: [
     'phỏng vấn', 'interview', 'frontend', 'backend', 'fullstack',
     'React', 'Next.js', 'Node.js', 'TypeScript', 'Golang',
@@ -50,16 +50,16 @@ export const metadata: Metadata = {
     locale: 'vi_VN',
     url: SITE_URL,
     siteName: 'Luyện Phỏng Vấn',
-    title: 'Luyện Phỏng Vấn — 1100+ Câu Hỏi Phỏng Vấn IT',
+    title: 'Luyện Phỏng Vấn | Chinh Phục Mọi Buổi Interview IT',
     description:
-      'Tổng hợp 1100+ câu hỏi phỏng vấn IT từ cơ bản đến nâng cao. Luyện tập ngay với HTML, CSS, JS, React, Node.js, Golang, DevOps & more.',
+      'Luyện tập phỏng vấn IT với 1100+ câu hỏi thực tế. React, Next.js, Node.js, TypeScript, Golang, DevOps & System Design.',
     images: [{ url: '/icon.svg', width: 512, height: 512, alt: 'Luyện Phỏng Vấn' }],
   },
   twitter: {
     card: 'summary',
-    title: 'Luyện Phỏng Vấn — 1100+ Câu Hỏi Phỏng Vấn IT',
+    title: 'Luyện Phỏng Vấn | Chinh Phục Mọi Buổi Interview IT',
     description:
-      'Tổng hợp 1100+ câu hỏi phỏng vấn IT từ cơ bản đến nâng cao.',
+      'Luyện tập phỏng vấn IT với 1100+ câu hỏi thực tế từ các công ty hàng đầu.',
     images: ['/icon.svg'],
   },
   verification: {
