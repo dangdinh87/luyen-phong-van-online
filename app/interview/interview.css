@@ -37,6 +37,29 @@
   border-color: rgba(255,255,255,0.25);
 }
 
+/* Language toggle button */
+.iv-lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 12px;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 6px;
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.7);
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: var(--font-body);
+  transition: all 0.15s;
+  letter-spacing: 0.03em;
+}
+.iv-lang-toggle:hover {
+  background: rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.95);
+  border-color: rgba(255,255,255,0.25);
+}
+
 /* Interactive Hover Button (hero) */
 .iv-hover-btn {
   position: relative;
@@ -104,21 +127,24 @@
 .iv-morphing-title.morphing-text-wrap {
   position: relative;
   width: 100%;
-  max-width: 700px;
-  margin: 0 auto 12px;
-  height: clamp(2.2rem, 5vw, 3rem);
+  max-width: 800px;
+  margin: 0 auto 20px;
+  height: clamp(3rem, 8vw, 3.5rem);
   filter: url(#threshold) blur(0.3px);
 }
 .morphing-text-span {
   position: absolute;
   inset: 0;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   text-align: center;
   font-family: var(--font-heading);
-  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-size: clamp(1.3rem, 3.5vw, 2.2rem);
   font-weight: 700;
   color: #fff;
+  white-space: nowrap;
 }
 /* Keep h1 styles for fallback */
 .iv-hero h1 {
@@ -130,9 +156,13 @@
 }
 /* Hero subtitle with fade-in-up */
 .iv-hero-sub {
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   opacity: 0;
   position: relative;
+  max-width: 600px;
+  margin: 8px auto 0;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
   animation: iv-fade-in-up 0.8s ease-out 0.3s forwards;
 }
 @keyframes iv-fade-in-up {

@@ -4,9 +4,12 @@ import { memo } from 'react'
 import confetti from 'canvas-confetti'
 import type { QAItem } from './interview-data'
 import { LEVEL_CONFIG } from './interview-data'
+import { useLanguage } from '../context/language-context'
 
 interface QACardProps {
   item: QAItem
+  /** 1-based display index within the current filtered list */
+  index: number
   isBookmarked: boolean
   isLearned: boolean
   isOpen: boolean
@@ -16,10 +19,13 @@ interface QACardProps {
 }
 
 export const QACard = memo(function QACard({
-  item, isBookmarked, isLearned, isOpen,
+  item, index, isBookmarked, isLearned, isOpen,
   onToggleAnswer, onToggleBookmark, onToggleLearned,
 }: QACardProps) {
+  const { locale } = useLanguage()
   const levelStyle = LEVEL_CONFIG[item.level]
+  const question = locale === 'en' && item.q_en ? item.q_en : item.q
+  const answer = locale === 'en' && item.a_en ? item.a_en : item.a
 
   return (
     <div
@@ -28,21 +34,21 @@ export const QACard = memo(function QACard({
       data-learned={isLearned || undefined}
     >
       <div className="qa-question" onClick={() => onToggleAnswer(item.id)}>
-        <span className="qa-num">#{item.id}</span>
-        <span className="qa-text">{item.q}</span>
+        <span className="qa-num">#{index}</span>
+        <span className="qa-text">{question}</span>
         <div className="qa-meta">
           <span
             className="qa-level"
             style={{ background: levelStyle.bg, color: levelStyle.color }}
           >
-            {levelStyle.label}
+            {locale === 'en' ? levelStyle.label_en : levelStyle.label}
           </span>
           <div className="qa-actions">
             <button
               className={`qa-action-btn ${isBookmarked ? 'active' : ''}`}
               onClick={(e) => { e.stopPropagation(); onToggleBookmark(item.id) }}
-              title="Lưu"
-              aria-label="Đánh dấu"
+              title={locale === 'en' ? 'Save' : 'Lưu'}
+              aria-label={locale === 'en' ? 'Bookmark' : 'Đánh dấu'}
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill={isBookmarked ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
             </button>
@@ -66,8 +72,8 @@ export const QACard = memo(function QACard({
                 }
                 onToggleLearned(item.id)
               }}
-              title="Đã học"
-              aria-label="Đánh dấu đã học"
+              title={locale === 'en' ? 'Learned' : 'Đã học'}
+              aria-label={locale === 'en' ? 'Mark as learned' : 'Đánh dấu đã học'}
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={isLearned ? 3 : 2} strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
             </button>
@@ -76,9 +82,9 @@ export const QACard = memo(function QACard({
       </div>
       {isOpen && (
         <div className="qa-answer">
-          {item.a
-            ? <span dangerouslySetInnerHTML={{ __html: formatAnswer(item.a) }} />
-            : <em style={{ color: 'var(--ink-faint)' }}>Đang cập nhật đáp án...</em>
+          {answer
+            ? <span dangerouslySetInnerHTML={{ __html: formatAnswer(answer) }} />
+            : <em style={{ color: 'var(--ink-faint)' }}>{locale === 'en' ? 'Answer coming soon...' : 'Đang cập nhật đáp án...'}</em>
           }
         </div>
       )}

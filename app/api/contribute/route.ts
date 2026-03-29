@@ -14,7 +14,7 @@ export async function POST(req: NextRequest) {
 
     // Format message for Telegram
     const lines = [
-      '📝 *ĐÓNG GÓP CÂU HỎI PHỎNG VẤN*',
+      '📝 *ĐÓNG GÓP KIẾN THỨC IT*',
       '',
       `👤 *Người gửi:* ${name || 'Ẩn danh'}`,
       email ? `📧 *Email:* ${email}` : '',

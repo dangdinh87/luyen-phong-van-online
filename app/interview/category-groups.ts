@@ -130,6 +130,57 @@ export const CATEGORY_GROUPS: CategoryGroup[] = [
     ],
   },
   {
+    label: 'System Design',
+    icon: '/icons/system-design.svg',
+    members: [
+      'System Design', 'Fundamentals', 'Scaling', 'Architecture Patterns',
+      'Data & Storage', 'Interview Scenarios',
+    ],
+  },
+  {
+    label: 'Design Patterns',
+    icon: '/icons/design-patterns.svg',
+    members: [
+      'Design Patterns', 'SOLID', 'Creational', 'Structural', 'Behavioral',
+    ],
+  },
+  {
+    label: 'Kafka',
+    icon: '/icons/kafka.svg',
+    members: [
+      'Kafka',
+    ],
+  },
+  {
+    label: 'Redis',
+    icon: '/icons/redis.svg',
+    members: [
+      'Redis',
+    ],
+  },
+  {
+    label: 'Network',
+    icon: '/icons/network.svg',
+    members: [
+      'Network', 'OSI & TCP/IP', 'Web & API Networking',
+    ],
+  },
+  {
+    label: 'Operating System',
+    icon: '/icons/os.svg',
+    members: [
+      'Operating System', 'Process & Thread', 'Memory & Storage',
+    ],
+  },
+  {
+    label: 'AWS & Cloud',
+    icon: '/icons/aws-cloud.svg',
+    members: [
+      'AWS & Cloud', 'Compute & Networking', 'Storage & Database',
+      'Security & DevOps', 'Architecture',
+    ],
+  },
+  {
     label: 'Career & Non-Tech',
     icon: '/icons/career.svg',
     members: [

@@ -31,36 +31,44 @@ const SITE_URL = 'https://luyenphongvan.online'
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Luyện Phỏng Vấn | Chinh Phục Mọi Buổi Interview IT',
-    template: '%s | Luyện Phỏng Vấn',
+    default: 'Ôn Tập Phỏng Vấn IT — 1280+ Câu Hỏi Phỏng Vấn Lập Trình 2026',
+    template: '%s | Ôn Tập Phỏng Vấn IT',
   },
   description:
-    'Tổng hợp 1100+ câu hỏi phỏng vấn IT từ cơ bản đến nâng cao — HTML, CSS, JavaScript, React, Node.js, Golang, DevOps. Nắm vững nền tảng, luyện cách trả lời và tự tin trước mọi interviewer.',
+    'Tổng hợp 1280+ câu hỏi phỏng vấn IT có đáp án chi tiết, song ngữ Việt-Anh. Ôn tập React, JavaScript, TypeScript, Node.js, Golang, System Design, Design Patterns, Kafka, Redis, AWS, DevOps. Phỏng vấn Frontend, Backend, Fullstack Developer.',
   keywords: [
-    'phỏng vấn', 'interview', 'frontend', 'backend', 'fullstack',
-    'React', 'Next.js', 'Node.js', 'TypeScript', 'Golang',
-    'luyện phỏng vấn', 'câu hỏi phỏng vấn IT', 'career',
-    'phỏng vấn lập trình', 'tuyển dụng IT', 'developer interview',
+    'câu hỏi phỏng vấn IT', 'phỏng vấn lập trình', 'ôn tập phỏng vấn',
+    'phỏng vấn frontend', 'phỏng vấn backend', 'phỏng vấn fullstack',
+    'câu hỏi phỏng vấn JavaScript', 'câu hỏi phỏng vấn React',
+    'câu hỏi phỏng vấn TypeScript', 'câu hỏi phỏng vấn Node.js',
+    'câu hỏi phỏng vấn Golang', 'câu hỏi phỏng vấn System Design',
+    'câu hỏi phỏng vấn AWS', 'câu hỏi phỏng vấn DevOps',
+    'luyện phỏng vấn IT', 'tuyển dụng IT', 'kiến thức lập trình',
+    'ôn tập lập trình', 'học lập trình', 'design patterns',
+    'phỏng vấn Next.js', 'phỏng vấn database', 'phỏng vấn Kafka Redis',
+    'IT interview questions Vietnam', 'coding interview Vietnamese',
   ],
   alternates: {
     canonical: SITE_URL,
+    languages: { 'vi': SITE_URL, 'en': SITE_URL },
   },
   openGraph: {
     type: 'website',
     locale: 'vi_VN',
+    alternateLocale: ['en_US'],
     url: SITE_URL,
-    siteName: 'Luyện Phỏng Vấn',
-    title: 'Luyện Phỏng Vấn | Chinh Phục Mọi Buổi Interview IT',
+    siteName: 'Ôn Tập Phỏng Vấn IT',
+    title: 'Ôn Tập Phỏng Vấn IT — 1280+ Câu Hỏi Có Đáp Án Chi Tiết',
     description:
-      'Luyện tập phỏng vấn IT với 1100+ câu hỏi thực tế. React, Next.js, Node.js, TypeScript, Golang, DevOps & System Design.',
-    images: [{ url: '/icon.svg', width: 512, height: 512, alt: 'Luyện Phỏng Vấn' }],
+      '1280+ câu hỏi phỏng vấn IT có đáp án. React, JavaScript, TypeScript, Node.js, System Design, Design Patterns, AWS, DevOps. Song ngữ Việt-Anh.',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Ôn Tập Phỏng Vấn IT — 1280+ Câu Hỏi Phỏng Vấn Lập Trình' }],
   },
   twitter: {
-    card: 'summary',
-    title: 'Luyện Phỏng Vấn | Chinh Phục Mọi Buổi Interview IT',
+    card: 'summary_large_image',
+    title: 'Ôn Tập Phỏng Vấn IT — 1280+ Câu Hỏi Phỏng Vấn Lập Trình',
     description:
-      'Luyện tập phỏng vấn IT với 1100+ câu hỏi thực tế từ các công ty hàng đầu.',
-    images: ['/icon.svg'],
+      '1280+ câu hỏi phỏng vấn Frontend, Backend, System Design, AWS, DevOps có đáp án chi tiết. Song ngữ Việt-Anh.',
+    images: ['/opengraph-image'],
   },
   verification: {
     google: 'google583c5c945cf216b2',
@@ -75,6 +83,9 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
+  },
+  other: {
+    'google-site-verification': 'google583c5c945cf216b2',
   },
 }
 
@@ -99,10 +110,46 @@ export default function RootLayout({
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'WebSite',
-              name: 'Luyện Phỏng Vấn',
+              name: 'Ôn Tập Phỏng Vấn IT',
+              alternateName: ['IT Knowledge Hub', 'Luyện Phỏng Vấn', 'Câu Hỏi Phỏng Vấn IT'],
               url: SITE_URL,
-              description: 'Tổng hợp 1100+ câu hỏi phỏng vấn IT từ cơ bản đến nâng cao',
-              inLanguage: 'vi',
+              description: '1280+ câu hỏi phỏng vấn IT có đáp án chi tiết, song ngữ Việt-Anh',
+              inLanguage: ['vi', 'en'],
+              potentialAction: {
+                '@type': 'SearchAction',
+                target: `${SITE_URL}/?q={search_term_string}`,
+                'query-input': 'required name=search_term_string',
+              },
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: [
+                { '@type': 'Question', name: 'What is the CAP theorem in system design?', acceptedAnswer: { '@type': 'Answer', text: 'The CAP theorem states that a distributed system can only guarantee two of three properties: Consistency, Availability, and Partition Tolerance. In practice, since network partitions are unavoidable, you must choose between CP (consistency + partition tolerance) or AP (availability + partition tolerance).' } },
+                { '@type': 'Question', name: 'What are the SOLID principles?', acceptedAnswer: { '@type': 'Answer', text: 'SOLID stands for: Single Responsibility (one class, one job), Open/Closed (open to extend, closed to modify), Liskov Substitution (subtypes must behave like parents), Interface Segregation (don\'t force unused implementations), and Dependency Inversion (depend on abstractions, not concretions).' } },
+                { '@type': 'Question', name: 'Sự khác biệt giữa var, let và const trong JavaScript là gì?', acceptedAnswer: { '@type': 'Answer', text: 'var có function scope và bị hoisting, let có block scope và không thể re-declare, const có block scope và không thể re-assign. Nên dùng const mặc định, let khi cần thay đổi giá trị, tránh dùng var.' } },
+                { '@type': 'Question', name: 'What is Apache Kafka and when should you use it?', acceptedAnswer: { '@type': 'Answer', text: 'Apache Kafka is a distributed event streaming platform designed for high-throughput, fault-tolerant real-time data pipelines. Use Kafka when you need to process millions of events per second with message replay capability, event sourcing, or decouple microservices.' } },
+                { '@type': 'Question', name: 'Redis là gì và tại sao nó nhanh?', acceptedAnswer: { '@type': 'Answer', text: 'Redis là in-memory data store sử dụng single-threaded event loop để xử lý commands, loại bỏ overhead của locking. Tất cả data lưu trong RAM nên latency cực thấp (sub-millisecond). Redis hỗ trợ nhiều data structures: String, Hash, List, Set, Sorted Set, Stream.' } },
+              ],
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'EducationalOrganization',
+              name: 'Ôn Tập Phỏng Vấn IT',
+              url: SITE_URL,
+              description: '1280+ câu hỏi phỏng vấn lập trình có đáp án, dành cho developer Việt Nam',
+              availableLanguage: ['Vietnamese', 'English'],
+              teaches: ['Frontend Development', 'Backend Development', 'System Design', 'Design Patterns', 'DevOps', 'Cloud Computing', 'Database', 'Networking'],
             }),
           }}
         />
