@@ -32,11 +32,11 @@ const SITE_URL = 'https://luyenphongvan.online'
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: '1100+ Câu Hỏi Phỏng Vấn IT 2026 Có Đáp Án — Luyện Phỏng Vấn Online',
+    default: '1280+ Câu Hỏi Phỏng Vấn IT 2026 Có Đáp Án — Luyện Phỏng Vấn Online',
     template: '%s | Luyện Phỏng Vấn IT',
   },
   description:
-    'Tổng hợp 1100+ câu hỏi phỏng vấn IT có đáp án chi tiết. Frontend, Backend, Fullstack — React, JavaScript, TypeScript, Node.js, Next.js, System Design, Database, DevOps. Từ Junior đến Senior. Luyện tập miễn phí online.',
+    'Tổng hợp 1280+ câu hỏi phỏng vấn IT có đáp án chi tiết. Frontend, Backend, Fullstack — React, JavaScript, TypeScript, Node.js, Next.js, System Design, Database, DevOps. Từ Junior đến Senior. Luyện tập miễn phí online.',
   keywords: [
     'câu hỏi phỏng vấn IT', 'phỏng vấn lập trình viên', 'ôn tập phỏng vấn',
     'câu hỏi phỏng vấn frontend', 'câu hỏi phỏng vấn backend', 'phỏng vấn fullstack',
@@ -58,14 +58,14 @@ export const metadata: Metadata = {
     alternateLocale: ['en_US'],
     url: SITE_URL,
     siteName: 'Luyện Phỏng Vấn IT',
-    title: '1100+ Câu Hỏi Phỏng Vấn IT 2026 Có Đáp Án — Luyện Phỏng Vấn Online',
+    title: '1280+ Câu Hỏi Phỏng Vấn IT 2026 Có Đáp Án — Luyện Phỏng Vấn Online',
     description:
-      'Luyện phỏng vấn IT miễn phí. 1100+ câu hỏi Frontend, Backend, Fullstack — React, JavaScript, TypeScript, Node.js, System Design, DevOps. Từ Junior đến Senior.',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: '1100+ Câu Hỏi Phỏng Vấn IT 2026 Có Đáp Án' }],
+      'Luyện phỏng vấn IT miễn phí. 1280+ câu hỏi Frontend, Backend, Fullstack — React, JavaScript, TypeScript, Node.js, System Design, DevOps. Từ Junior đến Senior.',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: '1280+ Câu Hỏi Phỏng Vấn IT 2026 Có Đáp Án' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: '1100+ Câu Hỏi Phỏng Vấn IT 2026 Có Đáp Án',
+    title: '1280+ Câu Hỏi Phỏng Vấn IT 2026 Có Đáp Án',
     description:
       'Luyện phỏng vấn IT miễn phí — Frontend, Backend, Fullstack. React, JavaScript, Node.js, System Design, DevOps. Junior đến Senior.',
     images: ['/opengraph-image'],
@@ -124,7 +124,7 @@ export default function RootLayout({
               name: 'Luyện Phỏng Vấn IT',
               alternateName: ['Câu Hỏi Phỏng Vấn IT', 'Ôn Tập Phỏng Vấn IT', 'IT Interview Questions'],
               url: SITE_URL,
-              description: '1100+ câu hỏi phỏng vấn IT có đáp án chi tiết. Frontend, Backend, Fullstack — từ Junior đến Senior.',
+              description: '1280+ câu hỏi phỏng vấn IT có đáp án chi tiết. Frontend, Backend, Fullstack — từ Junior đến Senior.',
               inLanguage: ['vi', 'en'],
               potentialAction: {
                 '@type': 'SearchAction',
@@ -158,7 +158,7 @@ export default function RootLayout({
               '@type': 'EducationalOrganization',
               name: 'Luyện Phỏng Vấn IT',
               url: SITE_URL,
-              description: '1100+ câu hỏi phỏng vấn IT có đáp án, dành cho developer Việt Nam',
+              description: '1280+ câu hỏi phỏng vấn IT có đáp án, dành cho developer Việt Nam',
               availableLanguage: ['Vietnamese', 'English'],
               teaches: ['Frontend Development', 'Backend Development', 'System Design', 'Design Patterns', 'DevOps', 'Cloud Computing', 'Database', 'Networking'],
             }),
