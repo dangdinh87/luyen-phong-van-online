@@ -248,25 +248,36 @@
     }
     .search-box input {
       width: 100%;
-      padding: 8px 12px 8px 36px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
+      padding: 10px 14px 10px 40px;
+      border: 2px solid var(--border-strong);
+      border-radius: 10px;
       font-family: var(--font-body);
-      font-size: 0.875rem;
+      font-size: 0.95rem;
       background: var(--surface);
       color: var(--ink);
       outline: none;
-      transition: border-color 0.15s;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      box-shadow: var(--shadow-sm);
     }
-    .search-box input:focus { border-color: var(--accent); }
+    .search-box input::placeholder {
+      color: var(--ink-muted);
+      font-weight: 400;
+    }
+    .search-box input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-soft);
+    }
     .search-box svg {
       position: absolute;
-      left: 10px;
+      left: 12px;
       top: 50%;
       transform: translateY(-50%);
-      width: 16px;
-      height: 16px;
-      color: var(--ink-faint);
+      width: 18px;
+      height: 18px;
+      color: var(--ink-muted);
+    }
+    .search-box:focus-within svg {
+      color: var(--accent);
     }
     .filter-group {
       display: flex;
@@ -641,7 +652,7 @@
     </button>
     <div class="search-box">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-      <input type="search" id="searchInput" placeholder="Tìm kiếm câu hỏi..." oninput="handleSearch()" aria-label="Tìm kiếm câu hỏi phỏng vấn">
+      <input type="search" id="searchInput" placeholder="Tìm câu hỏi... (nhấn / để focus)" oninput="handleSearch()" aria-label="Tìm kiếm câu hỏi phỏng vấn">
     </div>
     <div class="filter-group" id="levelFilters">
       <button class="filter-btn active" data-level="all" onclick="filterLevel('all', this)">Tat Ca</button>
