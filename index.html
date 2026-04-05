@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C1KQC1HB34"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-C1KQC1HB34');
+  </script>
+  <title>Nguyen Dang Dinh — Frontend Developer | React, Next.js, TypeScript</title>
+  <meta name="description" content="CV của Nguyễn Đăng Định — Frontend Developer 3+ năm kinh nghiệm. Chuyên React, Next.js, TypeScript, Node.js. Từng phát triển AI workspace, e-commerce, Zalo Mini Apps cho TPBank, VPBank, MBBank.">
+  <meta name="keywords" content="Nguyen Dang Dinh, frontend developer, React developer, Next.js developer, TypeScript, Da Nang, Vietnam, CV, resume, lập trình viên, tuyển dụng IT">
+  <link rel="canonical" href="https://luyenphongvan.online/">
+  <link rel="alternate" hreflang="vi" href="https://luyenphongvan.online/">
+  <link rel="alternate" hreflang="x-default" href="https://luyenphongvan.online/">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+  <!-- Open Graph -->
+  <meta property="og:type" content="profile">
+  <meta property="og:locale" content="vi_VN">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:url" content="https://luyenphongvan.online/">
+  <meta property="og:site_name" content="Nguyen Dang Dinh — Frontend Developer">
+  <meta property="og:title" content="Nguyen Dang Dinh — Frontend Developer | React, Next.js, TypeScript">
+  <meta property="og:description" content="Frontend Developer 3+ năm kinh nghiệm. React, Next.js, TypeScript, Node.js. AI workspace, e-commerce, Zalo Mini Apps.">
+  <meta property="og:image" content="https://luyenphongvan.online/photo_2026-02-28_14-23-18.jpg">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+  <meta property="og:image:alt" content="Nguyen Dang Dinh — Frontend Developer">
+  <meta property="profile:first_name" content="Dinh">
+  <meta property="profile:last_name" content="Nguyen Dang">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Nguyen Dang Dinh — Frontend Developer | React, Next.js, TypeScript">
+  <meta name="twitter:description" content="Frontend Developer 3+ năm kinh nghiệm. React, Next.js, TypeScript, Node.js, Go.">
+  <meta name="twitter:image" content="https://luyenphongvan.online/photo_2026-02-28_14-23-18.jpg">
+  <!-- Robots -->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="author" content="Nguyen Dang Dinh">
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Nguyen Dang Dinh",
+      "jobTitle": "Frontend Developer",
+      "url": "https://luyenphongvan.online/",
+      "image": "https://luyenphongvan.online/photo_2026-02-28_14-23-18.jpg",
+      "email": "nguyendangdinh47@gmail.com",
+      "telephone": "+84977963775",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Da Nang",
+        "addressCountry": "VN"
+      },
+      "sameAs": [
+        "https://github.com/dangdinh87",
+        "https://www.linkedin.com/in/dinhnguyen87"
+      ],
+      "knowsAbout": ["React", "Next.js", "TypeScript", "JavaScript", "Node.js", "Go", "Tailwind CSS", "Redux", "Zustand", "TanStack Query"],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Doraverse"
+      }
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "CV",
+        "item": "https://luyenphongvan.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "1100+ Câu Hỏi Phỏng Vấn IT",
+        "item": "https://luyenphongvan.online/interview.html"
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    /* ═══ DESIGN TOKENS ═══ */
+    :root {
+      --font-heading: 'Space Grotesk', system-ui, sans-serif;
+      --font-body: 'DM Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+      --ink: #09090B;
+      --ink-secondary: #3F3F46;
+      --ink-muted: #71717A;
+      --ink-faint: #A1A1AA;
+
+      --surface: #FFFFFF;
+      --surface-page: #FAFAFA;
+      --surface-raised: #F4F4F5;
+      --surface-hover: #E4E4E7;
+
+      --accent: #2563EB;
+      --accent-hover: #1D4ED8;
+      --accent-soft: #DBEAFE;
+      --accent-ink: #1E40AF;
+
+      --border: #E4E4E7;
+      --border-strong: #D4D4D8;
+
+      --blue-bg: #EFF6FF; --blue-ink: #1E40AF;
+      --green-bg: #ECFDF5; --green-ink: #065F46;
+      --purple-bg: #F5F3FF; --purple-ink: #5B21B6;
+      --amber-bg: #FFFBEB; --amber-ink: #92400E;
+      --rose-bg: #FFF1F2; --rose-ink: #9F1239;
+      --cyan-bg: #ECFEFF; --cyan-ink: #155E75;
+
+      --radius: 8px;
+      --radius-lg: 14px;
+    }
+
+    /* ═══ RESET ═══ */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--ink);
+      background: var(--surface-page);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      font-size: 16px;
+    }
+
+    /* ═══ LAYOUT ═══ */
+    .cv {
+      max-width: 880px;
+      margin: 28px auto;
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 8px 32px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    /* ═══════════════════════════════════════
+       HEADER
+       ═══════════════════════════════════════ */
+    .header {
+      position: relative;
+      background: linear-gradient(155deg, #0f1b3d 0%, #162952 35%, #111f42 65%, #1a2f5a 100%);
+      color: #F1F5F9;
+      padding: 32px 40px;
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 22px;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .header::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -40px;
+      width: 320px; height: 320px;
+      background: radial-gradient(circle, rgba(96,165,250,0.25) 0%, transparent 60%);
+      border-radius: 50%;
+    }
+
+    .header::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: 25%;
+      width: 240px; height: 240px;
+      background: radial-gradient(circle, rgba(147,197,253,0.15) 0%, transparent 60%);
+      border-radius: 50%;
+    }
+
+    .avatar {
+      width: 120px; height: 120px;
+      border-radius: 12px;
+      object-fit: cover;
+      object-position: center top;
+      border: 2px solid rgba(255,255,255,0.12);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+      position: relative; z-index: 1;
+    }
+
+    .h-info { position: relative; z-index: 1; }
+
+    .h-info h1 {
+      font-family: var(--font-heading);
+      font-size: 2.1rem;
+      font-weight: 700;
+      letter-spacing: -0.4px;
+      line-height: 1.15;
+    }
+
+    .h-title {
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: #93C5FD;
+      margin-bottom: 10px;
+    }
+
+    .h-title .yoe {
+      display: inline-block;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 1px 9px;
+      border-radius: 5px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #E2E8F0;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+
+    /* Contact grid (label-value like PDF) */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px 16px;
+      font-size: 0.82rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: rgba(241,245,249,0.75);
+    }
+
+    .contact-item .label {
+      font-weight: 600;
+      color: rgba(241,245,249,0.5);
+      min-width: 52px;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .contact-item a {
+      color: rgba(241,245,249,0.85);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .contact-item a:hover { color: #93C5FD; }
+
+    .contact-item svg { width: 13px; height: 13px; opacity: 0.6; flex-shrink: 0; }
+
+    /* ═══════════════════════════════════════
+       CONTENT
+       ═══════════════════════════════════════ */
+    .body { padding: 32px 44px 40px; }
+
+    section { margin-bottom: 28px; }
+    section:last-child { margin-bottom: 0; }
+
+    .sh {
+      display: flex; align-items: center; gap: 9px;
+      margin-bottom: 14px; padding-bottom: 8px;
+      border-bottom: 1.5px solid var(--border);
+    }
+
+    .sh-icon {
+      width: 26px; height: 26px;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--accent-soft); color: var(--accent);
+      border-radius: 6px; flex-shrink: 0;
+    }
+    .sh-icon svg { width: 14px; height: 14px; }
+
+    .sh h2 {
+      font-family: var(--font-heading);
+      font-size: 0.88rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 1.1px;
+      color: var(--ink);
+    }
+
+    /* ─── Overview (bullet points) ─── */
+    .overview-list {
+      font-size: 0.9rem;
+      color: var(--ink-secondary);
+      line-height: 1.75;
+      padding-left: 18px;
+    }
+    .overview-list li {
+      margin-bottom: 3px;
+    }
+    .overview-list li strong { color: var(--ink); font-weight: 600; }
+
+    /* ─── Work Experience (two-column: Company | Freelance) ─── */
+    .xp-list { display: flex; flex-direction: column; gap: 0; }
+
+    .xp-item {
+      padding: 10px 14px;
+      border-left: 2px solid var(--border);
+      position: relative;
+      margin-left: 4px;
+    }
+    .xp-item:last-child { border-left-color: transparent; }
+
+    .xp-item::before {
+      content: '';
+      position: absolute;
+      left: -5px;
+      top: 14px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .xp-item.current::before {
+      box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
+    }
+    .xp-item.freelance-item::before { background: var(--green-ink); }
+    .xp-item.freelance-item.current::before { box-shadow: 0 0 0 3px rgba(6,95,70,0.15); }
+
+    .xp-top {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 1px;
+      flex-wrap: wrap;
+    }
+
+    .xp-date {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--ink-muted);
+    }
+
+    .xp-badge {
+      font-family: var(--font-heading);
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 1px 6px;
+      border-radius: 3px;
+    }
+    .xp-badge.company { background: var(--blue-bg); color: var(--accent-ink); }
+    .xp-badge.freelance { background: var(--green-bg); color: var(--green-ink); }
+
+    .xp-co {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .xp-role {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 4px;
+      font-style: italic;
+    }
+    .xp-item.freelance-item .xp-role { color: var(--green-ink); }
+
+    .xp-body {
+      font-size: 0.9rem;
+      color: var(--ink-secondary);
+      line-height: 1.6;
+    }
+    .xp-body ul { padding-left: 16px; }
+    .xp-body li { margin-bottom: 3px; }
+    .xp-body li strong { color: var(--ink); font-weight: 600; }
+
+    /* ─── Skills Table ─── */
+    .skills-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+
+    .skills-table td {
+      padding: 8px 12px;
+      border: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    .skills-table td:first-child {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--accent-ink);
+      background: var(--blue-bg);
+      width: 160px;
+      white-space: nowrap;
+    }
+
+    .skills-table td:last-child {
+      color: var(--ink-secondary);
+    }
+
+    .skills-table .tags { display: flex; flex-wrap: wrap; gap: 4px; }
+
+    .t {
+      font-size: 0.78rem; font-weight: 500;
+      padding: 2px 8px; border-radius: 4px;
+      white-space: nowrap;
+      background: var(--surface-raised); color: var(--ink);
+      border: 1px solid var(--border);
+      display: inline-block;
+    }
+
+    .t.b { background: var(--blue-bg); color: var(--blue-ink); border-color: transparent; }
+    .t.g { background: var(--green-bg); color: var(--green-ink); border-color: transparent; }
+    .t.p { background: var(--purple-bg); color: var(--purple-ink); border-color: transparent; }
+    .t.a { background: var(--amber-bg); color: var(--amber-ink); border-color: transparent; }
+    .t.r { background: var(--rose-bg); color: var(--rose-ink); border-color: transparent; }
+    .t.c { background: var(--cyan-bg); color: var(--cyan-ink); border-color: transparent; }
+
+    /* ─── Education ─── */
+    .edu {
+      display: flex; justify-content: space-between;
+      align-items: baseline; padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .edu:last-child { border-bottom: none; }
+
+    .edu-name {
+      font-family: var(--font-heading);
+      font-weight: 600; font-size: 0.92rem;
+    }
+    .edu-sub { font-size: 0.82rem; color: var(--ink-muted); margin-top: 1px; }
+
+    .edu-date {
+      font-family: var(--font-mono);
+      font-size: 0.78rem; color: var(--ink-muted);
+      white-space: nowrap;
+    }
+
+    /* ─── Project Table ─── */
+    .project-block {
+      margin-bottom: 22px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: border-color 0.15s ease-out;
+    }
+    .project-block:hover { border-color: var(--accent); }
+    .project-block:last-child { margin-bottom: 0; }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 16px;
+      background: linear-gradient(135deg, #FAFBFF 0%, #EFF6FF 100%);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .project-header h3 {
+      font-family: var(--font-heading);
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .project-header .project-period {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--ink-muted);
+      background: var(--surface);
+      padding: 2px 9px;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+    }
+
+    .project-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+
+    .project-table td {
+      padding: 8px 14px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    .project-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .project-table a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .project-table a:hover {
+      color: var(--accent-hover);
+      text-decoration: underline;
+    }
+
+    .project-table td:first-child {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--ink-muted);
+      width: 150px;
+      background: var(--surface-raised);
+      white-space: nowrap;
+    }
+
+    .project-table td:last-child {
+      color: var(--ink-secondary);
+      line-height: 1.6;
+    }
+
+    .project-table ul {
+      padding-left: 15px;
+      margin: 0;
+    }
+    .project-table li { margin-bottom: 2px; }
+    .project-table li strong { color: var(--ink); font-weight: 600; }
+
+    .project-table .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-top: 2px;
+    }
+
+    .project-table .t { font-size: 0.75rem; padding: 2px 8px; }
+
+    /* featured project */
+    .project-block.featured {
+      border-color: #BFDBFE;
+    }
+    .project-block.featured .project-header {
+      background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+    }
+
+    /* ═══ PRINT ═══ */
+    @media print {
+      body { background: white; font-size: 13px; }
+      .cv { margin: 0; box-shadow: none; border-radius: 0; }
+      .header { padding: 24px 28px; }
+      .body { padding: 20px 28px; }
+      .project-block:hover { border-color: var(--border); }
+      section { margin-bottom: 20px; }
+      .project-block { break-inside: avoid; }
+    }
+
+    /* ═══ RESPONSIVE ═══ */
+    @media screen and (max-width: 768px) {
+      .cv { margin: 0; border-radius: 0; }
+      .header { grid-template-columns: 1fr; text-align: center; padding: 28px 20px; gap: 16px; }
+      .avatar { margin: 0 auto; width: 100px; height: 100px; }
+      .contact-grid { grid-template-columns: 1fr; text-align: left; }
+      .body { padding: 20px; }
+      .xp-item { padding: 8px 10px; }
+      .skills-table td:first-child { width: 100px; }
+      .project-header { flex-direction: column; gap: 4px; align-items: flex-start; }
+      .project-table td:first-child { width: 110px; }
+      .edu { flex-direction: column; gap: 2px; }
+    }
+
+    @media screen and (max-width: 480px) {
+      .h-info h1 { font-size: 1.4rem; }
+      .project-table td { padding: 6px 10px; }
+    }
+  </style>
+</head>
+<body>
+<div class="cv">
+
+  <!-- ═══ HEADER ═══ -->
+  <header class="header">
+    <img src="photo_2026-02-28_14-23-18.jpg" alt="Nguyen Dang Dinh" class="avatar">
+    <div class="h-info">
+      <h1>Nguyen Dang Dinh</h1>
+      <div class="h-title">Frontend Developer <span class="yoe">3+ YoE</span></div>
+      <div class="contact-grid">
+        <div class="contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" /></svg>
+          <span class="label">Birth</span>
+          <span>08/07/2000</span>
+        </div>
+        <div class="contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
+          <span class="label">Email</span>
+          <a href="mailto:nguyendangdinh47@gmail.com">nguyendangdinh47@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" /></svg>
+          <span class="label">Phone</span>
+          <a href="tel:+84977963775">0977 963 775</a>
+        </div>
+        <div class="contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          <span class="label">Github</span>
+          <a href="https://github.com/dangdinh87" target="_blank" rel="noopener">github.com/dangdinh87</a>
+        </div>
+        <div class="contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" /></svg>
+          <span class="label">Address</span>
+          <span>Da Nang, Vietnam</span>
+        </div>
+        <div class="contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          <span class="label">LinkedIn</span>
+          <a href="https://www.linkedin.com/in/dinhnguyen87" target="_blank" rel="noopener">linkedin.com/in/dinhnguyen87</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══ BODY ═══ -->
+  <main class="body">
+
+    <!-- ── OVERVIEW ── -->
+    <section>
+      <div class="sh">
+        <div class="sh-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0"/></svg></div>
+        <h2>Overview</h2>
+      </div>
+      <ul class="overview-list">
+        <li>Over <strong>3 years of experience</strong> as a Frontend Developer, specializing in building scalable web applications with React, UmiJS, Next.js, and TypeScript.</li>
+        <li>Skilled in modern UI frameworks (Tailwind CSS, Ant Design, Shadcn/ui, Bootstrap) and state management solutions (Redux, Dva.js, Zustand, TanStack Query).</li>
+        <li>Experienced in developing AI workspace platforms (LibreChat), e-commerce (Selly), cashback systems (Cashbag), Zalo Mini Apps, and Webview applications integrated into banking apps (<strong>TPBank, VPBank, MBBank, BIDV</strong>, etc.).</li>
+        <li>Hands-on backend experience with <strong>Go</strong> and <strong>Node.js</strong>, enabling independent full-stack feature development.</li>
+        <li>Actively leveraging AI-assisted development tools: Claude Code, MCP servers, Agent Skills, Cursor, and Trae.</li>
+        <li>Built landing pages and marketing sites with <strong>Framer</strong> and <strong>Subframer</strong>.</li>
+        <li>Quick learner with strong communication skills. Based in Da Nang, Vietnam.</li>
+      </ul>
+    </section>
+
+    <!-- ── WORK EXPERIENCE — COMPANY ── -->
+    <section>
+      <div class="sh">
+        <div class="sh-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"/></svg></div>
+        <h2>Work Experience — Company</h2>
+      </div>
+
+      <div class="xp-list">
+
+        <div class="xp-item current">
+          <div class="xp-date">04/2026 — Present</div>
+          <div class="xp-co">Doraverse</div>
+          <div class="xp-role">Frontend Developer</div>
+          <div class="xp-body">
+            AI workspace platform — workspace admin, LibreChat integration, landing page, cookie consent package. Next.js 15, React 19, Tailwind, Shadcn/ui.
+          </div>
+        </div>
+
+        <div class="xp-item">
+          <div class="xp-date">12/2022 — 03/2026</div>
+          <div class="xp-co">Selly &amp; Cashbag (CaSe Group)</div>
+          <div class="xp-role">Frontend Developer &middot; Backend Developer</div>
+          <div class="xp-body">
+            E-commerce &amp; fintech — Selly (6 sub-projects), Cashbag (15+ bank integrations), mini games, bio link, chat system. Backend: Go, Node.js.
+          </div>
+        </div>
+
+        <div class="xp-item">
+          <div class="xp-date">09/2021 — 11/2021</div>
+          <div class="xp-co">NCCSoft</div>
+          <div class="xp-role">Intern Fullstack</div>
+          <div class="xp-body">
+            Training project with ReactJS, ExpressJS, MongoDB. Fixed bugs in production.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── WORK EXPERIENCE — FREELANCE ── -->
+    <section>
+      <div class="sh">
+        <div class="sh-icon" style="background: var(--green-bg); color: var(--green-ink);"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 0 0-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"/></svg></div>
+        <h2>Work Experience — Freelance</h2>
+      </div>
+
+      <div class="xp-list freelance-list">
+
+        <div class="xp-item freelance-item current">
+          <div class="xp-date">10/2026 — Present</div>
+          <div class="xp-co">Tfluencer (Techcombank)</div>
+          <div class="xp-role">Frontend Developer &middot; Backend Developer</div>
+          <div class="xp-body">
+            KOL monetization platform — TCB Creator, Ambassador (11 brands), TOS eKYC/eContract. Backend: Go &amp; Echo.
+          </div>
+        </div>
+
+
+        <div class="xp-item freelance-item">
+          <div class="xp-date">06/2021 — 08/2021</div>
+          <div class="xp-co">giupvieckimphuc.com</div>
+          <div class="xp-role">Frontend Developer</div>
+          <div class="xp-body">
+            Housekeeping service admin — ReactJS, Redux, REST API. Team: 5.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── EDUCATION ── -->
+    <section>
+      <div class="sh">
+        <div class="sh-icon" style="background: var(--purple-bg); color: #7C3AED;"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"/></svg></div>
+        <h2>Education</h2>
+      </div>
+      <div class="edu">
+        <div>
+          <div class="edu-name">University of Technical Education, University of Danang</div>
+          <div class="edu-sub">Major: Information Technology &middot; Grade: Very Good</div>
+        </div>
+        <div class="edu-date">08/2018 — 12/2022</div>
+      </div>
+    </section>
+
+    <!-- ── SKILLS ── -->
+    <section>
+      <div class="sh">
+        <div class="sh-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"/></svg></div>
+        <h2>Skills</h2>
+      </div>
+      <table class="skills-table">
+        <tr>
+          <td>Programming Language</td>
+          <td>
+            <div class="tags">
+              <span class="t b">HTML</span>
+              <span class="t b">CSS</span>
+              <span class="t b">JavaScript</span>
+              <span class="t b">TypeScript</span>
+              <span class="t a">Go</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>CSS Framework</td>
+          <td>
+            <div class="tags">
+              <span class="t g">Bootstrap</span>
+              <span class="t g">Tailwind CSS</span>
+              <span class="t g">Ant Design</span>
+              <span class="t g">Shadcn/ui</span>
+              <span class="t g">Radix UI</span>
+              <span class="t g">Framer Motion</span>
+              <span class="t g">Framer</span>
+              <span class="t g">Subframer</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Web Framework</td>
+          <td>
+            <div class="tags">
+              <span class="t p">ReactJS</span>
+              <span class="t p">UmiJS</span>
+              <span class="t p">Next.js 14–16</span>
+              <span class="t p">Redux / Dva.js</span>
+              <span class="t p">Zustand</span>
+              <span class="t p">TanStack Query</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>AI & Dev Tools</td>
+          <td>
+            <div class="tags">
+              <span class="t r">Claude Code</span>
+              <span class="t r">ClaudeKit</span>
+              <span class="t r">MCP Servers</span>
+              <span class="t r">Agent Skills</span>
+              <span class="t r">Cursor AI</span>
+              <span class="t r">Trae AI</span>
+              <span class="t r">Antigravity</span>
+              <span class="t r">GitHub Copilot</span>
+              <span class="t r">v0.dev</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>IDE</td>
+          <td>
+            <div class="tags">
+              <span class="t">Visual Studio Code</span>
+              <span class="t">Cursor AI</span>
+              <span class="t">Trae AI</span>
+              <span class="t">GoLand</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Database</td>
+          <td>
+            <div class="tags">
+              <span class="t a">MongoDB</span>
+              <span class="t a">PostgreSQL</span>
+              <span class="t a">MySQL</span>
+              <span class="t a">Supabase</span>
+              <span class="t a">Redis</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Source Control</td>
+          <td>
+            <div class="tags">
+              <span class="t c">Git</span>
+              <span class="t c">Gitea</span>
+              <span class="t c">Github</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Summary</td>
+          <td style="font-size: 0.88rem; line-height: 1.7; color: var(--ink-secondary);">
+            - <strong>Frontend:</strong> JavaScript, TypeScript, ReactJS, Next.js, UmiJS | State: Redux, Zustand | Styling: Tailwind CSS, SCSS, Ant Design, Shadcn/ui.<br>
+            - <strong>Concepts:</strong> Responsive design, SSR, SEO, WebSocket / Socket.IO.<br>
+            - <strong>Backend:</strong> Node.js, Express.js, Go, Echo, MongoDB, MySQL.<br>
+            - <strong>Tools &amp; AI:</strong> Git, Git Flow, Figma, Docker | AI: Claude Code, ClaudeKit, MCP, Cursor, GitHub Copilot.
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         PROJECTS (Table Format)
+         ══════════════════════════════════════ -->
+    <section>
+      <div class="sh">
+        <div class="sh-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m20.25 7.5-.625 10.632a2.25 2.25 0 0 1-2.247 2.118H6.622a2.25 2.25 0 0 1-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z"/></svg></div>
+        <h2>Projects</h2>
+      </div>
+
+      <!-- ── 1. Doraverse ── -->
+      <div class="project-block featured">
+        <div class="project-header">
+          <h3>Doraverse</h3>
+          <span class="project-period">04/2026 — Present</span>
+        </div>
+        <table class="project-table">
+          <tr><td>Client</td><td>Doraverse</td></tr>
+          <tr><td>Descriptions</td><td>AI workspace platform (based on LibreChat). Multi-model chat, AI Agents, deep research, image/video studio, AI debate, meeting notes. Workspace admin: analytics, Stripe billing, credit tracking, member management.</td></tr>
+          <tr><td>Number of members</td><td>10</td></tr>
+          <tr><td>Position</td><td>Frontend Developer</td></tr>
+          <tr><td>Responsibilities</td><td>
+            <ul>
+              <li>Set up frontend architecture for 3 standalone micro-frontends: workspace admin, auth-web, and meeting-note app</li>
+              <li>Built admin dashboard with usage analytics (Recharts), AI model management, per-department credit tracking, member/role management, and Stripe billing</li>
+              <li>Extended LibreChat with custom modules: AI Agents, AI debate, image/video studio, LM notebooks, and meeting notes</li>
+              <li>Built deep research feature with WebSocket streaming, multi-model support (GPT, Claude, Gemini), tool-use and function-calling</li>
+              <li>Built landing page with Framer; published internal cookie consent npm package used across all company products</li>
+              <li>Implemented i18n (EN/VI/JP), dark/light mode, responsive design, and per-workspace branding settings</li>
+              <li>Led code reviews, optimized bundle performance, and refactored legacy code for maintainability</li>
+            </ul>
+          </td></tr>
+          <tr><td>Technology in use</td><td>
+            <div class="tags">
+              <span class="t b">Next.js 15</span>
+              <span class="t b">React 19</span>
+              <span class="t b">TypeScript</span>
+              <span class="t g">Tailwind CSS</span>
+              <span class="t g">Shadcn/ui</span>
+              <span class="t p">Zustand</span>
+              <span class="t p">TanStack Query</span>
+              <span class="t r">Socket.IO</span>
+              <span class="t r">gRPC</span>
+              <span class="t r">Kafka</span>
+              <span class="t a">Node.js</span>
+              <span class="t a">Go</span>
+              <span class="t a">MongoDB</span>
+              <span class="t c">Stripe</span>
+              <span class="t c">Sentry</span>
+            </div>
+          </td></tr>
+        </table>
+      </div>
+
+      <!-- ── 2. Vcreator ── -->
+      <div class="project-block featured">
+        <div class="project-header">
+          <h3>Vcreator</h3>
+          <span class="project-period">04/2024 — 08/2024</span>
+        </div>
+        <table class="project-table">
+          <tr><td>Client</td><td>Vingroup</td></tr>
+          <tr><td>Descriptions</td><td>KOL content creator platform by Vingroup. Creators share content on YouTube, TikTok, Facebook and earn rewards by views. Partners: MB Bank, VPBank, VNPAY, Yody.</td></tr>
+          <tr><td>Number of members</td><td>6</td></tr>
+          <tr><td>Position</td><td>Frontend Developer</td></tr>
+          <tr><td>Responsibilities</td><td>
+            <ul>
+              <li>Developed new features and resolved bugs across the platform</li>
+              <li>Optimized frontend performance and bundle size</li>
+              <li>Maintained codebase and refactored legacy components</li>
+              <li>Conducted code reviews to ensure quality standards</li>
+            </ul>
+          </td></tr>
+          <tr><td>Technology in use</td><td>
+            <div class="tags">
+              <span class="t b">ReactJS</span>
+              <span class="t b">UmiJS</span>
+              <span class="t b">TypeScript</span>
+              <span class="t g">Ant Design</span>
+              <span class="t g">Bootstrap</span>
+              <span class="t p">Dva.js</span>
+              <span class="t a">Go</span>
+              <span class="t a">Echo</span>
+              <span class="t a">MongoDB</span>
+            </div>
+          </td></tr>
+        </table>
+      </div>
+
+      <!-- ── 2b. Tfluencer (TCB Creator + Ambassador + TOS) ── -->
+      <div class="project-block featured">
+        <div class="project-header">
+          <h3>Tfluencer — https://tfluencer.vn</h3>
+          <span class="project-period">10/2026 — Present</span>
+        </div>
+        <table class="project-table">
+          <tr><td>Client</td><td>Techcombank, AccessTrade</td></tr>
+          <tr><td>Descriptions</td><td>KOL monetization platform for Techcombank. 3 sub-systems: <strong>TCB Creator</strong> — content/campaign/KYC management; <strong>Ambassador</strong> — 11 brand campaign variants; <strong>TOS</strong> — eKYC/eContract microservice.</td></tr>
+          <tr><td>Number of members</td><td>6</td></tr>
+          <tr><td>Position</td><td>Frontend Developer &middot; Backend Developer</td></tr>
+          <tr><td>Responsibilities</td><td>
+            <ul>
+              <li>Architected frontend codebase for TCB Creator, Ambassador (11 brand variants), and TOS</li>
+              <li>Developed frontend &amp; admin for TCB Creator: content, events, campaigns, KYC, reconciliation, and partner management</li>
+              <li>Developed Ambassador frontend with multi-brand customization (Yody, VNPAY, VNG, Anker, etc.)</li>
+              <li>Built TOS (service-tos) KYC/eContract frontend with Next.js, Shadcn/ui, and TanStack Query</li>
+              <li>Integrated FPT eContract API for biometric identity verification and digital contract signing</li>
+              <li><strong>Backend:</strong> Implemented several backend features using Go &amp; Echo framework</li>
+              <li>Debugged and resolved issues, optimized performance, and conducted code reviews</li>
+            </ul>
+          </td></tr>
+          <tr><td>Technology in use</td><td>
+            <div class="tags">
+              <span class="t b">ReactJS</span>
+              <span class="t b">UmiJS</span>
+              <span class="t b">Next.js</span>
+              <span class="t b">TypeScript</span>
+              <span class="t g">Ant Design</span>
+              <span class="t g">Bootstrap</span>
+              <span class="t g">Tailwind CSS</span>
+              <span class="t g">Shadcn/ui</span>
+              <span class="t g">Radix UI</span>
+              <span class="t p">Dva.js</span>
+              <span class="t p">TanStack Query</span>
+              <span class="t a">Go</span>
+              <span class="t a">Echo</span>
+              <span class="t a">MongoDB</span>
+              <span class="t a">Redis</span>
+              <span class="t a">MinIO</span>
+              <span class="t c">Firebase</span>
+            </div>
+          </td></tr>
+        </table>
+      </div>
+
+      <!-- ── 3. Webview Mini Game ── -->
+      <div class="project-block">
+        <div class="project-header">
+          <h3>Webview Mini Game</h3>
+          <span class="project-period">10/2024 — 01/2026</span>
+        </div>
+        <table class="project-table">
+          <tr><td>Client</td><td>CaSe Group, Banks</td></tr>
+          <tr><td>Descriptions</td><td>Reward-based webview games (spin wheel, gift opening) with seasonal themes, embedded in banking apps.</td></tr>
+          <tr><td>Number of members</td><td>6</td></tr>
+          <tr><td>Position</td><td>Frontend Developer</td></tr>
+          <tr><td>Responsibilities</td><td>
+            <ul>
+              <li>Architected and established the frontend codebase</li>
+              <li>Developed client-facing and admin features; debugged and resolved issues</li>
+              <li>Optimized frontend performance for webview environments</li>
+            </ul>
+          </td></tr>
+          <tr><td>Technology in use</td><td>
+            <div class="tags">
+              <span class="t b">Next.js</span>
+              <span class="t b">ReactJS</span>
+              <span class="t b">TypeScript</span>
+              <span class="t g">Tailwind CSS</span>
+              <span class="t g">Shadcn/ui</span>
+              <span class="t p">Zustand</span>
+              <span class="t a">Go</span>
+              <span class="t a">Echo</span>
+              <span class="t a">MongoDB</span>
+            </div>
+          </td></tr>
+        </table>
+      </div>
+
+      <!-- ── 4. Bio Link ── -->
+      <div class="project-block">
+        <div class="project-header">
+          <h3>Bio Link</h3>
+          <span class="project-period">08/2024 — 09/2024</span>
+        </div>
+        <table class="project-table">
+          <tr><td>Client</td><td>CaSe Group</td></tr>
+          <tr><td>Descriptions</td><td>Bio link page builder — users create profile pages with social links, articles, and product listings via customizable templates.</td></tr>
+          <tr><td>Number of members</td><td>5</td></tr>
+          <tr><td>Position</td><td>Frontend Developer, Backend Developer</td></tr>
+          <tr><td>Responsibilities</td><td>
+            <ul>
+              <li>Architected and established the frontend codebase</li>
+              <li>Developed client-facing and admin features; debugged and resolved issues</li>
+              <li>Optimized frontend performance and bundle size</li>
+              <li>Maintained codebase and refactored for long-term maintainability</li>
+            </ul>
+          </td></tr>
+          <tr><td>Technology in use</td><td>
+            <div class="tags">
+              <span class="t b">Next.js</span>
+              <span class="t b">ReactJS</span>
+              <span class="t b">TypeScript</span>
+              <span class="t g">Tailwind CSS</span>
+              <span class="t g">Shadcn/ui</span>
+              <span class="t a">Go</span>
+              <span class="t a">Echo</span>
+              <span class="t a">MongoDB</span>
+            </div>
+          </td></tr>
+        </table>
+      </div>
+
+      <!-- ── 5. Selly.vn ── -->
+      <div class="project-block">
+        <div class="project-header">
+          <h3>Selly.vn</h3>
+          <span class="project-period">01/2022 — Present</span>
+        </div>
+        <table class="project-table">
+          <tr><td>Client</td><td>Selly</td></tr>
+          <tr><td>Descriptions</td><td>Dropshipping e-commerce platform — 6 sub-projects: consumer site, seller portal, merchant dashboard, admin, mobile webview, Zalo Mini App.</td></tr>
+          <tr><td>Number of members</td><td>10</td></tr>
+          <tr><td>Position</td><td>Frontend Developer, Backend Developer</td></tr>
+          <tr><td>Responsibilities</td><td>
+            <ul>
+              <li>Developed and maintained 6 frontend applications: consumer site, seller portal, merchant dashboard, admin panel, mobile webview, and web-admin</li>
+              <li>Built complete e-commerce flows: product catalog, checkout, order tracking, inventory management, and campaign/affiliate systems</li>
+              <li>Implemented real-time chat system with Socket.IO for customer support and merchant communication</li>
+              <li>Developed webview integration for mobile apps and banking partners (Zalo Mini App, deep-link, Adjust tracking)</li>
+              <li>Implemented i18n, dark mode, responsive layouts, PDF export, and drag-and-drop interfaces</li>
+              <li>Integrated third-party services: Firebase analytics, Facebook login, Telegram, Google, TikTok APIs</li>
+              <li><strong>Backend:</strong> Resolved backend tasks using Go, Node.js, and MongoDB</li>
+            </ul>
+          </td></tr>
+          <tr><td>Technology in use</td><td>
+            <div class="tags">
+              <span class="t b">ReactJS</span>
+              <span class="t b">UmiJS</span>
+              <span class="t b">TypeScript</span>
+              <span class="t g">Bootstrap</span>
+              <span class="t g">Ant Design</span>
+              <span class="t p">Dva.js</span>
+              <span class="t a">Go</span>
+              <span class="t a">Echo</span>
+              <span class="t a">Nats</span>
+              <span class="t a">MongoDB</span>
+              <span class="t a">PostgreSQL</span>
+              <span class="t c">Docker</span>
+              <span class="t c">Firebase</span>
+            </div>
+          </td></tr>
+        </table>
+      </div>
+
+      <!-- ── 6. Cashbag ── -->
+      <div class="project-block">
+        <div class="project-header">
+          <h3>Cashbag</h3>
+          <span class="project-period">06/2022 — Present</span>
+        </div>
+        <table class="project-table">
+          <tr><td>Client</td><td>Cashbag</td></tr>
+          <tr><td>Descriptions</td><td>Cashback rewards platform embedded in 15+ banking apps (TPBank, MBBank, BIDV, VPBank, SeaBank, Shinhan, etc.). Gamification, vouchers, transactions, withdrawals.</td></tr>
+          <tr><td>Number of members</td><td>6</td></tr>
+          <tr><td>Position</td><td>Frontend Developer</td></tr>
+          <tr><td>Responsibilities</td><td>
+            <ul>
+              <li>Developed new features and resolved bugs across the platform</li>
+              <li>Optimized frontend performance and user experience</li>
+              <li>Conducted code reviews to ensure quality standards</li>
+            </ul>
+          </td></tr>
+          <tr><td>Technology in use</td><td>
+            <div class="tags">
+              <span class="t b">ReactJS</span>
+              <span class="t b">UmiJS</span>
+              <span class="t b">TypeScript</span>
+              <span class="t g">Ant Design</span>
+              <span class="t p">Dva.js</span>
+              <span class="t a">Go</span>
+              <span class="t a">Echo</span>
+              <span class="t a">Nats</span>
+              <span class="t a">MongoDB</span>
+              <span class="t a">PostgreSQL</span>
+            </div>
+          </td></tr>
+        </table>
+      </div>
+
+      <!-- ── 7. Chat Application ── -->
+      <div class="project-block">
+        <div class="project-header">
+          <h3>Chat Application</h3>
+          <span class="project-period">02/2023 — 05/2023</span>
+        </div>
+        <table class="project-table">
+          <tr><td>Client</td><td>Supplier of Selly</td></tr>
+          <tr><td>Descriptions</td><td>Real-time customer support chat for Selly e-commerce, powered by Socket.IO.</td></tr>
+          <tr><td>Number of members</td><td>5</td></tr>
+          <tr><td>Position</td><td>Developer</td></tr>
+          <tr><td>Responsibilities</td><td>
+            <ul>
+              <li>Developed the frontend interface for real-time chat</li>
+              <li>Implemented chat features for customer support workflows</li>
+            </ul>
+          </td></tr>
+          <tr><td>Technology in use</td><td>
+            <div class="tags">
+              <span class="t b">ReactJS</span>
+              <span class="t b">UmiJS</span>
+              <span class="t g">Ant Design</span>
+              <span class="t g">Bootstrap</span>
+              <span class="t r">Socket.IO</span>
+            </div>
+          </td></tr>
+        </table>
+      </div>
+
+      <!-- ── 8. Zalo Mini App ── -->
+      <div class="project-block">
+        <div class="project-header">
+          <h3>Cashbag & Selly Zalo Mini App</h3>
+          <span class="project-period">12/2022 — 01/2023</span>
+        </div>
+        <table class="project-table">
+          <tr><td>Client</td><td>Cashbag &amp; Selly</td></tr>
+          <tr><td>Descriptions</td><td>Cashbag &amp; Selly cashback experience as Zalo Mini App.</td></tr>
+          <tr><td>Number of members</td><td>3</td></tr>
+          <tr><td>Position</td><td>Frontend Developer</td></tr>
+          <tr><td>Responsibilities</td><td>
+            <ul>
+              <li>Architected the core application structure</li>
+              <li>Collaborated with backend developers on API integration and data flow</li>
+              <li>Worked with designers to implement UI from Figma</li>
+              <li>Deployed and configured the app on Zalo platform</li>
+            </ul>
+          </td></tr>
+          <tr><td>Technology in use</td><td>
+            <div class="tags">
+              <span class="t b">UmiJS</span>
+              <span class="t b">TypeScript</span>
+              <span class="t a">Go</span>
+              <span class="t a">Echo</span>
+            </div>
+          </td></tr>
+        </table>
+      </div>
+
+      <!-- ── 9. Mamori.vn ── -->
+      <div class="project-block">
+        <div class="project-header">
+          <h3>Mamori.vn</h3>
+          <span class="project-period">07/2022</span>
+        </div>
+        <table class="project-table">
+          <tr><td>Client</td><td>Sub-brand of Selly</td></tr>
+          <tr><td>Descriptions</td><td>Product showcase website for Mamori's brand.</td></tr>
+          <tr><td>Number of members</td><td>1</td></tr>
+          <tr><td>Position</td><td>Frontend Developer</td></tr>
+          <tr><td>Responsibilities</td><td>
+            <ul>
+              <li>Developed the complete frontend independently</li>
+            </ul>
+          </td></tr>
+          <tr><td>Technology in use</td><td>
+            <div class="tags">
+              <span class="t b">ReactJS</span>
+              <span class="t g">Tailwind CSS</span>
+            </div>
+          </td></tr>
+        </table>
+      </div>
+
+      <!-- ── 10. Shop Selly ── -->
+      <div class="project-block">
+        <div class="project-header">
+          <h3>Shop Selly</h3>
+          <span class="project-period">05/2022 — Present</span>
+        </div>
+        <table class="project-table">
+          <tr><td>Client</td><td>Buyer of Selly</td></tr>
+          <tr><td>Descriptions</td><td>E-commerce storefront for Selly.vn Pro package subscribers.</td></tr>
+          <tr><td>Number of members</td><td>4</td></tr>
+          <tr><td>Position</td><td>Frontend Developer</td></tr>
+          <tr><td>Responsibilities</td><td>
+            <ul>
+              <li>Developed new features for the storefront</li>
+              <li>Improved website functionality and resolved bugs</li>
+            </ul>
+          </td></tr>
+          <tr><td>Technology in use</td><td>
+            <div class="tags">
+              <span class="t b">ReactJS</span>
+              <span class="t b">UmiJS</span>
+              <span class="t g">Bootstrap</span>
+              <span class="t a">Go</span>
+              <span class="t a">Echo</span>
+            </div>
+          </td></tr>
+        </table>
+      </div>
+
+
+    </section>
+
+    <!-- ══════════════════════════════════════
+         PERSONAL PROJECTS
+         ══════════════════════════════════════ -->
+    <section>
+      <div class="sh">
+        <div class="sh-icon" style="background: var(--cyan-bg); color: #0891B2;"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.58-5.84a14.927 14.927 0 0 1-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"/></svg></div>
+        <h2>Personal Projects</h2>
+      </div>
+
+      <!-- Pomodoro Focus App -->
+      <div class="project-block">
+        <div class="project-header">
+          <h3>Pomodoro Focus App</h3>
+          <span class="project-period">2026</span>
+        </div>
+        <table class="project-table">
+          <tr><td>Descriptions</td><td>Free online Pomodoro timer with personalized AI-powered study coach, integrated task management, productivity analytics, leaderboard, and mini-games for breaks.</td></tr>
+          <tr><td>Link</td><td><a href="https://www.pomodoro-focus.site" target="_blank" rel="noopener noreferrer">https://www.pomodoro-focus.site</a></td></tr>
+          <tr><td>Position</td><td>Fullstack Developer</td></tr>
+          <tr><td>Responsibilities</td><td>
+            <ul>
+              <li>Designed and built the full application from scratch</li>
+              <li>Implemented task management with drag-and-drop, tags, and analytics</li>
+              <li>Built productivity analytics dashboard with charts and session history</li>
+            </ul>
+          </td></tr>
+          <tr><td>Technology in use</td><td>
+            <div class="tags">
+              <span class="t b">Next.js 14</span>
+              <span class="t b">React 18</span>
+              <span class="t b">TypeScript</span>
+              <span class="t g">Tailwind CSS</span>
+              <span class="t g">Shadcn/ui</span>
+              <span class="t p">Zustand</span>
+              <span class="t p">Vercel AI SDK</span>
+              <span class="t r">Framer Motion</span>
+              <span class="t r">DND Kit</span>
+              <span class="t a">Supabase</span>
+            </div>
+          </td></tr>
+        </table>
+      </div>
+
+      <!-- Liverpool FC Fan Hub -->
+      <div class="project-block">
+        <div class="project-header">
+          <h3>Liverpool FC Fan Hub</h3>
+          <span class="project-period">2026</span>
+        </div>
+        <table class="project-table">
+          <tr><td>Descriptions</td><td>Comprehensive Liverpool FC fan platform with live fixtures, squad profiles, Premier League standings, multi-source news aggregation (20+ RSS feeds, EN/VI), AI-powered chat assistant, user profiles, and reading history.</td></tr>
+          <tr><td>Link</td><td><a href="https://www.liverpoolfcvn.blog/" target="_blank" rel="noopener noreferrer">https://www.liverpoolfcvn.blog/</a></td></tr>
+          <tr><td>Position</td><td>Fullstack Developer</td></tr>
+          <tr><td>Responsibilities</td><td>
+            <ul>
+              <li>Designed and built the full application from scratch with Next.js App Router and ISR caching</li>
+              <li>Integrated multiple sports data APIs (Football-Data.org, FPL, ESPN) for live fixtures, standings, and player stats</li>
+              <li>Built automated news pipeline syncing 20+ RSS feeds with AI-powered translation (Groq LLM) and content extraction</li>
+              <li>Implemented user authentication, profile management, and favorite player system with Supabase</li>
+              <li>Developed AI chat assistant (LiverBird AI) with multi-turn conversation history and streaming responses</li>
+              <li>Built news reading features: like/comment system, reading history tracking, and article bookmarking</li>
+            </ul>
+          </td></tr>
+          <tr><td>Technology in use</td><td>
+            <div class="tags">
+              <span class="t b">Next.js 16</span>
+              <span class="t b">React 19</span>
+              <span class="t b">TypeScript</span>
+              <span class="t g">Tailwind CSS 4</span>
+              <span class="t g">Radix UI</span>
+              <span class="t p">Zustand</span>
+              <span class="t p">next-intl</span>
+              <span class="t r">Vercel AI SDK</span>
+              <span class="t a">Supabase</span>
+              <span class="t c">Groq AI</span>
+            </div>
+          </td></tr>
+        </table>
+      </div>
+
+    </section>
+
+    <!-- ── CERTIFICATES ── -->
+    <section>
+      <div class="sh">
+        <div class="sh-icon" style="background: var(--amber-bg); color: #D97706;"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 0 1 3 3h-15a3 3 0 0 1 3-3m9 0v-4.5A3.375 3.375 0 0 0 13.125 10.875h-2.25A3.375 3.375 0 0 0 7.5 14.25v4.5m9 0H7.5m4.5-12a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z"/></svg></div>
+        <h2>Certificates</h2>
+      </div>
+      <div class="edu">
+        <div><div class="edu-name">Scrum Course — Axon Active Da Nang</div></div>
+        <div class="edu-date">08/2020</div>
+      </div>
+      <div class="edu">
+        <div><div class="edu-name">ReactJS Course Completion Certificate — Udemy</div></div>
+        <div class="edu-date">01/2022</div>
+      </div>
+    </section>
+
+    <!-- ── CTA: Interview Questions ── -->
+    <section style="text-align:center; padding: 24px 0 8px;">
+      <a href="/interview.html" style="display:inline-flex; align-items:center; gap:8px; padding:14px 28px; background:var(--accent); color:#fff; border-radius:var(--radius); font-family:var(--font-heading); font-weight:600; font-size:0.95rem; text-decoration:none; transition:background 0.2s;" onmouseover="this.style.background='var(--accent-hover)'" onmouseout="this.style.background='var(--accent)'">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z"/></svg>
+        1100+ Câu Hỏi Phỏng Vấn IT
+      </a>
+      <p style="margin-top:10px; font-size:0.82rem; color:var(--ink-muted);">Luyện tập phỏng vấn Frontend, Backend, System Design & more</p>
+    </section>
+
+  </main>
+
+  <footer style="text-align:center; padding:16px; font-size:0.75rem; color:var(--ink-faint); border-top:1px solid var(--border);">
+    <nav aria-label="Footer navigation">
+      <a href="/" style="color:var(--ink-muted); text-decoration:none;">CV</a>
+      <span style="margin:0 8px;">·</span>
+      <a href="/interview.html" style="color:var(--ink-muted); text-decoration:none;">Phỏng Vấn IT</a>
+    </nav>
+    <p style="margin-top:6px;">&copy; 2026 Nguyen Dang Dinh. Da Nang, Vietnam.</p>
+  </footer>
+</div>
+</body>
+</html>

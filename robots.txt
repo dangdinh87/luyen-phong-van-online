@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /.next/
+Disallow: /.vercel/
+Disallow: /.claude/
+
+Sitemap: https://luyenphongvan.online/sitemap.xml
