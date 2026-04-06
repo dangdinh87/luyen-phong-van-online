@@ -388,7 +388,7 @@ export function InterviewClient() {
                     onClick={() => { if (!group.comingSoon) { store.setActiveCategory(group.label); setSidebarOpen(false) } }}
                     style={group.comingSoon ? { cursor: 'default', opacity: 0.7 } : undefined}
                   >
-                    <span><img className="iv-sidebar-icon" src={group.icon} alt="" width={18} height={18} /> {group.label}</span>
+                    <span><img className="iv-sidebar-icon" src={group.icon} alt="" width={18} height={18} /> {group.label} {group.isNew && <span className="iv-sidebar-new">NEW</span>}</span>
                     {group.comingSoon
                       ? <span className="iv-sidebar-badge-soon">{locale === 'en' ? 'Soon' : 'Sắp ra mắt'}</span>
                       : <span className="iv-sidebar-count">{count}</span>

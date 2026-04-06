@@ -43,6 +43,10 @@ import { DESIGN_PATTERNS_DATA } from './data/design-patterns-data'
 import { KAFKA_REDIS_DATA } from './data/kafka-redis-data'
 import { NETWORKING_OS_DATA } from './data/networking-os-data'
 import { AWS_CLOUD_DATA } from './data/aws-cloud-data'
+import { PHP_LARAVEL_DATA } from './data/php-laravel-data'
+import { JAVA_DATA } from './data/java-data'
+import { CSHARP_DATA } from './data/csharp-data'
+import { FLUTTER_DATA } from './data/flutter-data'
 
 export const QA_DATA: QAItem[] = [
   ...HTML_CSS_DATA,
@@ -59,4 +63,8 @@ export const QA_DATA: QAItem[] = [
   ...KAFKA_REDIS_DATA,
   ...NETWORKING_OS_DATA,
   ...AWS_CLOUD_DATA,
+  ...PHP_LARAVEL_DATA,
+  ...JAVA_DATA,
+  ...CSHARP_DATA,
+  ...FLUTTER_DATA,
 ].sort((a, b) => a.id - b.id)

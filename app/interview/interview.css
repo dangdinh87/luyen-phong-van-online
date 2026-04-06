@@ -704,6 +704,22 @@
   background: var(--accent);
   color: white;
 }
+.iv-sidebar-new {
+  font-size: 0.55rem;
+  font-weight: 700;
+  padding: 1px 5px;
+  border-radius: 3px;
+  background: #ef4444;
+  color: #fff;
+  letter-spacing: 0.04em;
+  vertical-align: middle;
+  margin-left: 4px;
+  animation: iv-new-pulse 2s ease-in-out infinite;
+}
+@keyframes iv-new-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
 .iv-sidebar-badge-soon {
   font-size: 0.65rem;
   font-weight: 600;

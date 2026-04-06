@@ -8,6 +8,8 @@ export interface CategoryGroup {
   members: string[]
   /** If true, show "Sắp ra mắt" badge instead of question count */
   comingSoon?: boolean
+  /** If true, show "NEW" badge next to category name */
+  isNew?: boolean
 }
 
 export const CATEGORY_GROUPS: CategoryGroup[] = [
@@ -83,6 +85,36 @@ export const CATEGORY_GROUPS: CategoryGroup[] = [
     members: [
       'Golang', 'Concurrency', 'Struct', 'Collections',
     ],
+  },
+  {
+    label: 'Java',
+    icon: '/icons/java.svg',
+    members: ['Java', 'Spring Boot', 'JVM', 'Java Collections'],
+    isNew: true,
+  },
+  {
+    label: 'PHP',
+    icon: '/icons/php.svg',
+    members: ['PHP'],
+    isNew: true,
+  },
+  {
+    label: 'Laravel',
+    icon: '/icons/laravel.svg',
+    members: ['Laravel'],
+    isNew: true,
+  },
+  {
+    label: 'C#',
+    icon: '/icons/csharp.svg',
+    members: ['C#', 'ASP.NET', 'Entity Framework'],
+    isNew: true,
+  },
+  {
+    label: 'Flutter',
+    icon: '/icons/flutter.svg',
+    members: ['Flutter', 'Dart', 'Flutter Widgets', 'Flutter State'],
+    isNew: true,
   },
   {
     label: 'Backend & API',
@@ -181,22 +213,6 @@ export const CATEGORY_GROUPS: CategoryGroup[] = [
       'AWS & Cloud', 'Compute & Networking', 'Storage & Database',
       'Security & DevOps', 'Architecture',
     ],
-  },
-  {
-    label: 'Java',
-    icon: '/icons/java.svg',
-    members: [
-      'Java', 'Spring Boot', 'JVM', 'Java Collections',
-    ],
-    comingSoon: true,
-  },
-  {
-    label: 'Flutter',
-    icon: '/icons/flutter.svg',
-    members: [
-      'Flutter', 'Dart', 'Flutter Widgets', 'Flutter State',
-    ],
-    comingSoon: true,
   },
   {
     label: 'Career & Non-Tech',

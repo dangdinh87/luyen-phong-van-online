@@ -11,7 +11,7 @@ export interface ChangelogEntry {
   changes: Change[]
 }
 
-export const CURRENT_VERSION = '1.7.0'
+export const CURRENT_VERSION = '1.8.0'
 
 /* Badge labels shown to end-users */
 export const TYPE_LABEL: Record<ChangeType, { vi: string; en: string }> = {
@@ -23,6 +23,17 @@ export const TYPE_LABEL: Record<ChangeType, { vi: string; en: string }> = {
 }
 
 export const CHANGELOG: ChangelogEntry[] = [
+  {
+    version: '1.8.0',
+    date: '2026-04-06',
+    changes: [
+      { type: 'category', text: { vi: 'Thêm 307 câu hỏi phỏng vấn mới cho 5 danh mục: Java, PHP, Laravel, C#, Flutter — song ngữ Việt-Anh, cập nhật xu hướng 2026', en: 'Added 307 new interview questions for 5 categories: Java, PHP, Laravel, C#, Flutter — bilingual, updated for 2026 trends' } },
+      { type: 'category', text: { vi: 'Java: Core, Collections, OOP, Concurrency, JVM, Spring Boot, Virtual Threads, GraalVM (88 câu)', en: 'Java: Core, Collections, OOP, Concurrency, JVM, Spring Boot, Virtual Threads, GraalVM (88 questions)' } },
+      { type: 'category', text: { vi: 'PHP & Laravel: PHP 8.4, Enums, Fibers, Eloquent, Livewire 3, Pest, Reverb (72 câu)', en: 'PHP & Laravel: PHP 8.4, Enums, Fibers, Eloquent, Livewire 3, Pest, Reverb (72 questions)' } },
+      { type: 'category', text: { vi: 'C#: .NET 9, LINQ, Minimal APIs, Blazor, Native AOT, Entity Framework, gRPC (71 câu)', en: 'C#: .NET 9, LINQ, Minimal APIs, Blazor, Native AOT, Entity Framework, gRPC (71 questions)' } },
+      { type: 'category', text: { vi: 'Flutter: Dart 3, Impeller, BLoC, Riverpod, Flutter Web/WASM, Shorebird (76 câu)', en: 'Flutter: Dart 3, Impeller, BLoC, Riverpod, Flutter Web/WASM, Shorebird (76 questions)' } },
+    ],
+  },
   {
     version: '1.7.0',
     date: '2026-04-05',
