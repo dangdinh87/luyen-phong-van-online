@@ -388,7 +388,7 @@ export function InterviewClient() {
                     onClick={() => { if (!group.comingSoon) { store.setActiveCategory(group.label); setSidebarOpen(false) } }}
                     style={group.comingSoon ? { cursor: 'default', opacity: 0.7 } : undefined}
                   >
-                    <span><img className="iv-sidebar-icon" src={group.icon} alt="" width={18} height={18} /> {group.label} {group.isNew && <span className="iv-sidebar-new">NEW</span>}</span>
+                    <span><img className="iv-sidebar-icon" src={group.icon} alt="" width={18} height={18} /> {group.label} {group.addedDate && (Date.now() - new Date(group.addedDate).getTime() < 30 * 86400000) && <span className="iv-sidebar-new">NEW</span>}</span>
                     {group.comingSoon
                       ? <span className="iv-sidebar-badge-soon">{locale === 'en' ? 'Soon' : 'Sắp ra mắt'}</span>
                       : <span className="iv-sidebar-count">{count}</span>
@@ -489,8 +489,8 @@ export function InterviewClient() {
             <span className="iv-footer-logo">{locale === 'en' ? 'IT Knowledge Hub' : 'Luyện Phỏng Vấn IT'}</span>
           </div>
           <p className="iv-footer-slogan">{locale === 'en'
-                ? '1580+ IT interview questions with detailed answers — Frontend, Backend, Java, PHP, C#, Flutter, System Design, DevOps. Built by the community, for the community.'
-                : '1580+ câu hỏi phỏng vấn IT kèm đáp án chi tiết — Frontend, Backend, Java, PHP, C#, Flutter, System Design, DevOps. Được xây dựng bởi cộng đồng, dành cho cộng đồng.'}</p>
+                ? '1700+ IT interview questions with detailed answers — Frontend, Backend, Java, PHP, C#, Flutter, System Design, DevOps. Built by the community, for the community.'
+                : '1700+ câu hỏi phỏng vấn IT kèm đáp án chi tiết — Frontend, Backend, Java, PHP, C#, Flutter, System Design, DevOps. Được xây dựng bởi cộng đồng, dành cho cộng đồng.'}</p>
           <div className="iv-footer-links">
             <a href="mailto:nguyendangdinh47@gmail.com" className="iv-footer-link">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>

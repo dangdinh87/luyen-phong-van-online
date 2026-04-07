@@ -47,6 +47,8 @@ import { PHP_LARAVEL_DATA } from './data/php-laravel-data'
 import { JAVA_DATA } from './data/java-data'
 import { CSHARP_DATA } from './data/csharp-data'
 import { FLUTTER_DATA } from './data/flutter-data'
+import { ANDROID_DATA } from './data/android-data'
+import { RABBITMQ_DATA } from './data/rabbitmq-data'
 
 export const QA_DATA: QAItem[] = [
   ...HTML_CSS_DATA,
@@ -67,4 +69,6 @@ export const QA_DATA: QAItem[] = [
   ...JAVA_DATA,
   ...CSHARP_DATA,
   ...FLUTTER_DATA,
+  ...ANDROID_DATA,
+  ...RABBITMQ_DATA,
 ].sort((a, b) => a.id - b.id)

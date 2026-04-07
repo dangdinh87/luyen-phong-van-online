@@ -8,8 +8,8 @@ export interface CategoryGroup {
   members: string[]
   /** If true, show "Sắp ra mắt" badge instead of question count */
   comingSoon?: boolean
-  /** If true, show "NEW" badge next to category name */
-  isNew?: boolean
+  /** Date category was added (ISO string). Shows "NEW" badge for 30 days after this date. */
+  addedDate?: string
 }
 
 export const CATEGORY_GROUPS: CategoryGroup[] = [
@@ -90,31 +90,37 @@ export const CATEGORY_GROUPS: CategoryGroup[] = [
     label: 'Java',
     icon: '/icons/java.svg',
     members: ['Java', 'Spring Boot', 'JVM', 'Java Collections'],
-    isNew: true,
+    addedDate: '2026-04-06',
   },
   {
     label: 'PHP',
     icon: '/icons/php.svg',
     members: ['PHP'],
-    isNew: true,
+    addedDate: '2026-04-06',
   },
   {
     label: 'Laravel',
     icon: '/icons/laravel.svg',
     members: ['Laravel'],
-    isNew: true,
+    addedDate: '2026-04-06',
   },
   {
     label: 'C#',
     icon: '/icons/csharp.svg',
     members: ['C#', 'ASP.NET', 'Entity Framework'],
-    isNew: true,
+    addedDate: '2026-04-06',
   },
   {
     label: 'Flutter',
     icon: '/icons/flutter.svg',
     members: ['Flutter', 'Dart', 'Flutter Widgets', 'Flutter State'],
-    isNew: true,
+    addedDate: '2026-04-06',
+  },
+  {
+    label: 'Android',
+    icon: '/icons/android.svg',
+    members: ['Android', 'Kotlin', 'Jetpack Compose'],
+    addedDate: '2026-04-07',
   },
   {
     label: 'Backend & API',
@@ -191,6 +197,12 @@ export const CATEGORY_GROUPS: CategoryGroup[] = [
     members: [
       'Redis',
     ],
+  },
+  {
+    label: 'RabbitMQ',
+    icon: '/icons/rabbitmq.svg',
+    members: ['RabbitMQ'],
+    addedDate: '2026-04-07',
   },
   {
     label: 'Network',
