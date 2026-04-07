@@ -90,7 +90,7 @@ export function InterviewClient() {
     <div style={{ '--iv-fs': `${fontSize}px` } as React.CSSProperties} role="main">
       {/* Hero */}
       <header className="iv-hero">
-        <h1 className="sr-only">IT Knowledge Hub — 1280+ IT Interview Questions & Knowledge Base (Vietnamese/English)</h1>
+        <h1 className="sr-only">Luyện Phỏng Vấn IT — 1700+ Câu Hỏi Phỏng Vấn IT Có Đáp Án 2026</h1>
         <div className="iv-hero-actions">
           <button className="iv-hover-btn iv-hover-btn--donate" onClick={() => setDonateOpen(true)} title={locale === 'en' ? 'Support the project' : 'Ủng hộ dự án'}>
             <span className="iv-hover-btn-dot" />
@@ -150,7 +150,7 @@ export function InterviewClient() {
         <h2 className="iv-hero-title-mobile">
           {locale === 'en' ? `${QA_DATA.length}+ IT Knowledge & Questions` : `${QA_DATA.length}+ Câu Hỏi & Kiến Thức IT`}
         </h2>
-        <p className="iv-hero-sub">HTML · CSS · JS · TS · React · Next.js · Node.js · Go · System Design · Design Patterns · Kafka · Redis · AWS · DevOps</p>
+        <p className="iv-hero-sub">Luyện phỏng vấn IT miễn phí — HTML · CSS · JS · TS · React · Next.js · Node.js · Go · Java · PHP · C# · Flutter · System Design · DevOps</p>
         <div className="iv-hero-stats">
           <div className="iv-hero-stat">
             <div className="iv-hero-stat-num"><NumberTicker value={store.progress.total} /></div>
@@ -512,7 +512,7 @@ export function InterviewClient() {
           </a>
         </div>
         </div>
-        <div className="iv-footer-copy">&copy; {new Date().getFullYear()} {locale === 'en' ? 'IT Knowledge Hub' : 'Luyện Phỏng Vấn IT'}</div>
+        <div className="iv-footer-copy">&copy; {new Date().getFullYear()} {locale === 'en' ? 'IT Knowledge Hub' : 'Luyện Phỏng Vấn IT'} · <a href="/changelog" className="iv-footer-version">v{CURRENT_VERSION}</a></div>
       </footer>
     </div>
   )

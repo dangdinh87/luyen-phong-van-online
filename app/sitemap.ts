@@ -7,6 +7,7 @@ const categories = [
   'system-design', 'design-patterns', 'kafka', 'redis',
   'network', 'operating-system', 'aws-cloud',
   'backend-api', 'career',
+  'java', 'php', 'laravel', 'csharp', 'flutter', 'rabbitmq', 'android',
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -32,6 +33,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/changelog`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.5,
     },
   ]
 
