@@ -99,14 +99,14 @@ export default function RootLayout({
   return (
     <html lang="vi" className={`${spaceGrotesk.variable} ${dmSans.variable} ${jetbrainsMono.variable}`} suppressHydrationWarning>
       <head>
-        {process.env.NEXT_PUBLIC_GA_ID && (
+        {process.env.NEXT_PUBLIC_GA_ID?.trim() && (
           <>
-            <Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`} strategy="afterInteractive" />
+            <Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID.trim()}`} strategy="afterInteractive" />
             <Script id="google-analytics" strategy="afterInteractive">
               {`window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');`}
+              gtag('config', '${process.env.NEXT_PUBLIC_GA_ID.trim()}');`}
             </Script>
           </>
         )}
