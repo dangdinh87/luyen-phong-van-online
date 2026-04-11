@@ -38,7 +38,19 @@ export const QACard = memo(function QACard({
       data-bookmarked={isBookmarked || undefined}
       data-learned={isLearned || undefined}
     >
-      <div className="qa-question" onClick={() => onToggleAnswer(item.id)}>
+      <div
+        className="qa-question"
+        onClick={() => onToggleAnswer(item.id)}
+        role="button"
+        tabIndex={0}
+        aria-expanded={isOpen}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            onToggleAnswer(item.id);
+          }
+        }}
+      >
         <span className="qa-num">#{index}</span>
         <span className="qa-text" dangerouslySetInnerHTML={{ __html: highlightedQuestion }} />
         <div className="qa-meta">
