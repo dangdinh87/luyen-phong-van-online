@@ -122,6 +122,8 @@ function applyInlineFormat(text: string): string {
   return text
     .replace(/`([^`]+)`/g, '<code>$1</code>')
     .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*([^*]+)\*/g, '<em>$1</em>')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
 }
 
 // Split text on ". " but NOT inside backticks or after common abbreviations/decimals
@@ -157,6 +159,34 @@ function smartSentenceSplit(text: string): string[] {
 }
 
 function formatAnswer(text: string): string {
+  // 1. Check for manual layout formatting (\n\n or \n- )
+  if (text.includes('\n\n') || text.includes('\n- ')) {
+    let html = '';
+    const escaped = escapeHtml(text);
+    // Split by single or multiple newlines
+    const blocks = escaped.split(/\n/).filter(line => line.trim().length > 0);
+
+    let inList = false;
+    for (let i = 0; i < blocks.length; i++) {
+       const line = blocks[i].trim();
+       if (line.startsWith('- ')) {
+          if (!inList) {
+              html += '<ul class="qa-points">';
+              inList = true;
+          }
+          html += `<li>${applyInlineFormat(line.substring(2))}</li>`;
+       } else {
+          if (inList) {
+              html += '</ul>';
+              inList = false;
+          }
+          html += `<p class="qa-detail">${applyInlineFormat(line)}</p>`;
+       }
+    }
+    if (inList) html += '</ul>';
+    return html;
+  }
+
   const escaped = escapeHtml(text)
 
   // Detect numbered pattern: (1) ... (2) ... (3) ...
