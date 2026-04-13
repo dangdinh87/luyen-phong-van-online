@@ -75,6 +75,13 @@ export function ChangelogClient() {
                     {entry.changes.map((change, j) => (
                       <li key={j} className="cl-change">
                         <span className={`cl-badge cl-badge--${change.type}`}>{TYPE_LABEL[change.type][lang]}</span>
+                        {change.icons && (
+                          <span className="cl-change-icons">
+                            {change.icons.map(icon => (
+                              <img key={icon} src={icon} alt="" width={18} height={18} className="cl-change-icon" />
+                            ))}
+                          </span>
+                        )}
                         <span>{change.text[lang]}</span>
                       </li>
                     ))}
