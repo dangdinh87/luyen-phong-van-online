@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useLanguage } from '../context/language-context'
 import { CHANGELOG, CURRENT_VERSION, TYPE_LABEL } from './changelog-data'
 import './changelog.css'
@@ -28,9 +28,9 @@ export function ChangelogClient() {
   })
 
   /* Mark current version as seen when user visits this page */
-  if (typeof window !== 'undefined') {
+  useEffect(() => {
     localStorage.setItem(SEEN_KEY, CURRENT_VERSION)
-  }
+  }, [])
 
   const toggle = (version: string) => {
     setExpanded(prev => {
