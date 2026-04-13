@@ -292,8 +292,15 @@ export function InterviewClient() {
 
               {/* Show all answers */}
               <div className="iv-settings-row">
-                <span>{locale === 'en' ? 'Show all answers' : 'Hiện tất cả đáp án'}</span>
-                <button className="iv-settings-toggle" data-active={store.showAll} onClick={() => store.toggleAllAnswers(!store.showAll)}>
+                <span id="show-all-answers-label">{locale === 'en' ? 'Show all answers' : 'Hiện tất cả đáp án'}</span>
+                <button
+                  className="iv-settings-toggle"
+                  data-active={store.showAll}
+                  onClick={() => store.toggleAllAnswers(!store.showAll)}
+                  role="switch"
+                  aria-checked={store.showAll}
+                  aria-labelledby="show-all-answers-label"
+                >
                   <span className="iv-settings-toggle-thumb" />
                 </button>
               </div>
