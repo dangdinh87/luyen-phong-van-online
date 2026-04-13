@@ -10,12 +10,15 @@ export interface CategoryGroup {
   comingSoon?: boolean
   /** Date category was added (ISO string). Shows "NEW" badge for 30 days after this date. */
   addedDate?: string
+  /** If set, render a section divider with this label before this group */
+  sectionLabel?: { vi: string; en: string }
 }
 
 export const CATEGORY_GROUPS: CategoryGroup[] = [
   // ── Frontend ──────────────────────────────────────────────────────────────
   {
     label: 'HTML',
+    sectionLabel: { vi: 'Frontend', en: 'Frontend' },
     icon: '/icons/html.svg',
     members: [
       'HTML', 'HTML5', 'Semantic', 'Forms', 'Headers', 'Accessibility',
@@ -82,6 +85,7 @@ export const CATEGORY_GROUPS: CategoryGroup[] = [
   // ── Backend / Server-side ─────────────────────────────────────────────────
   {
     label: 'Node.js',
+    sectionLabel: { vi: 'Backend', en: 'Backend' },
     icon: '/icons/nodejs.svg',
     members: [
       'Node.js', 'Node.js Deep', 'Node.js Thực Tế', 'Express',
@@ -135,6 +139,7 @@ export const CATEGORY_GROUPS: CategoryGroup[] = [
   // ── Mobile ────────────────────────────────────────────────────────────────
   {
     label: 'Flutter',
+    sectionLabel: { vi: 'Mobile', en: 'Mobile' },
     icon: '/icons/flutter.svg',
     members: ['Flutter', 'Dart', 'Flutter Widgets', 'Flutter State'],
     addedDate: '2026-04-06',
@@ -149,6 +154,7 @@ export const CATEGORY_GROUPS: CategoryGroup[] = [
   // ── Architecture & Design ─────────────────────────────────────────────────
   {
     label: 'System Design',
+    sectionLabel: { vi: 'Kiến trúc', en: 'Architecture' },
     icon: '/icons/system-design.svg',
     members: [
       'System Design', 'Fundamentals', 'Scaling', 'Architecture Patterns',
@@ -180,6 +186,7 @@ export const CATEGORY_GROUPS: CategoryGroup[] = [
   // ── Messaging ─────────────────────────────────────────────────────────────
   {
     label: 'Kafka',
+    sectionLabel: { vi: 'Messaging', en: 'Messaging' },
     icon: '/icons/kafka.svg',
     members: ['Kafka'],
   },
@@ -198,6 +205,7 @@ export const CATEGORY_GROUPS: CategoryGroup[] = [
   // ── Infrastructure ────────────────────────────────────────────────────────
   {
     label: 'AWS & Cloud',
+    sectionLabel: { vi: 'Hạ tầng', en: 'Infrastructure' },
     icon: '/icons/aws-cloud.svg',
     members: [
       'AWS & Cloud', 'Compute & Networking', 'Storage & Database',
@@ -231,6 +239,7 @@ export const CATEGORY_GROUPS: CategoryGroup[] = [
   // ── Quality & Soft Skills ─────────────────────────────────────────────────
   {
     label: 'Testing',
+    sectionLabel: { vi: 'Chất lượng', en: 'Quality' },
     icon: '/icons/testing.svg',
     members: [
       'Testing', 'Jest', 'Vitest', 'Cypress', 'Playwright',

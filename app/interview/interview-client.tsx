@@ -384,6 +384,11 @@ export function InterviewClient() {
 
               return (
                 <div key={group.label}>
+                  {group.sectionLabel && (
+                    <div className="iv-sidebar-section">
+                      <span className="iv-sidebar-section-label">{locale === 'en' ? group.sectionLabel.en : group.sectionLabel.vi}</span>
+                    </div>
+                  )}
                   <div
                     className={`iv-sidebar-item iv-sidebar-group ${group.comingSoon ? 'coming-soon' : ''} ${isGroupActive || isSubActive ? 'active' : ''}`}
                     onClick={() => { if (!group.comingSoon) { store.setActiveCategory(group.label); setSidebarOpen(false) } }}
