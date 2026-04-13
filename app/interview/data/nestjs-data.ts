@@ -1684,350 +1684,332 @@ export class UsersController {
   {
     id: 3274,
     category: 'NestJS',
-    subcategory: 'Advanced',
-    level: 'advanced',
-    q: 'CQRS pattern trong NestJS: Commands, Queries, Events, Sagas?',
-    a: `**CQRS (Command Query Responsibility Segregation)** tách biệt write operations (Commands) và read operations (Queries). NestJS cung cấp \`@nestjs/cqrs\`.
+    subcategory: 'TypeORM',
+    level: 'intermediate',
+    q: 'Prisma với NestJS — setup và so sánh với TypeORM?',
+    a: `**Prisma** là ORM thế hệ mới với type-safety tuyệt vời, ngày càng được ưa dùng thay TypeORM.
 
+**Setup Prisma:**
 \`\`\`bash
-pnpm add @nestjs/cqrs
+pnpm add prisma @prisma/client
+npx prisma init
 \`\`\`
 
-**Command (Write):**
-\`\`\`typescript
-// create-user.command.ts
-export class CreateUserCommand {
-  constructor(
-    public readonly email: string,
-    public readonly name: string,
-  ) {}
+**Schema (prisma/schema.prisma):**
+\`\`\`prisma
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  name      String
+  password  String
+  role      Role     @default(USER)
+  posts     Post[]
+  createdAt DateTime @default(now())
 }
 
-// create-user.handler.ts
-@CommandHandler(CreateUserCommand)
-export class CreateUserHandler implements ICommandHandler<CreateUserCommand> {
-  constructor(
-    private userRepo: UserRepository,
-    private eventBus: EventBus,
-  ) {}
-
-  async execute(command: CreateUserCommand) {
-    const user = await this.userRepo.create(command)
-    this.eventBus.publish(new UserCreatedEvent(user.id))
-    return user
-  }
-}
-\`\`\`
-
-**Query (Read):**
-\`\`\`typescript
-export class GetUserQuery {
-  constructor(public readonly id: number) {}
+enum Role {
+  USER
+  ADMIN
 }
 
-@QueryHandler(GetUserQuery)
-export class GetUserHandler implements IQueryHandler<GetUserQuery> {
-  async execute(query: GetUserQuery) {
-    return this.userReadModel.findById(query.id)
-  }
+model Post {
+  id       Int    @id @default(autoincrement())
+  title    String
+  author   User   @relation(fields: [authorId], references: [id])
+  authorId Int
 }
 \`\`\`
 
-**Event + Saga:**
+**PrismaService (tái sử dụng 1 connection):**
 \`\`\`typescript
-export class UserCreatedEvent {
-  constructor(public readonly userId: number) {}
+// prisma/prisma.service.ts
+@Injectable()
+export class PrismaService extends PrismaClient implements OnModuleInit {
+  async onModuleInit() {
+    await this.$connect()
+  }
 }
 
-@EventsHandler(UserCreatedEvent)
-export class UserCreatedHandler implements IEventHandler<UserCreatedEvent> {
-  handle(event: UserCreatedEvent) {
-    // Send welcome email
-    this.emailService.sendWelcome(event.userId)
+// prisma/prisma.module.ts
+@Global()
+@Module({
+  providers: [PrismaService],
+  exports: [PrismaService],
+})
+export class PrismaModule {}
+\`\`\`
+
+**Dùng trong service:**
+\`\`\`typescript
+@Injectable()
+export class UsersService {
+  constructor(private prisma: PrismaService) {}
+
+  findAll() {
+    return this.prisma.user.findMany({
+      include: { posts: true },
+      orderBy: { createdAt: 'desc' },
+    })
+  }
+
+  findByEmail(email: string) {
+    return this.prisma.user.findUnique({ where: { email } })
+  }
+
+  async create(dto: CreateUserDto) {
+    return this.prisma.user.create({ data: dto })
+  }
+
+  // Transaction
+  async transferPoints(fromId: number, toId: number, points: number) {
+    return this.prisma.$transaction([
+      this.prisma.user.update({ where: { id: fromId }, data: { points: { decrement: points } } }),
+      this.prisma.user.update({ where: { id: toId }, data: { points: { increment: points } } }),
+    ])
   }
 }
 \`\`\`
 
-**Controller dùng CommandBus / QueryBus:**
-\`\`\`typescript
-@Controller('users')
-export class UsersController {
-  constructor(
-    private commandBus: CommandBus,
-    private queryBus: QueryBus,
-  ) {}
+**So sánh Prisma vs TypeORM:**
+| | Prisma | TypeORM |
+|---|---|---|
+| Type safety | Tuyệt vời (auto-generated) | Trung bình |
+| Migration | \`prisma migrate\` (rõ ràng) | \`synchronize\` (nguy hiểm) |
+| Query API | Fluent, dễ đọc | Repository + QueryBuilder |
+| Raw query | \`$queryRaw\` | \`query()\` |
+| Learning curve | Thấp hơn | Cao hơn |`,
+    q_en: 'Prisma with NestJS — setup and comparison with TypeORM?',
+    a_en: `**Prisma** is a next-generation ORM with excellent type-safety, increasingly preferred over TypeORM.
 
-  @Post()
-  create(@Body() dto: CreateUserDto) {
-    return this.commandBus.execute(new CreateUserCommand(dto.email, dto.name))
-  }
-
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.queryBus.execute(new GetUserQuery(+id))
-  }
-}
-\`\`\``,
-    q_en: 'CQRS pattern in NestJS: Commands, Queries, Events, Sagas?',
-    a_en: `**CQRS (Command Query Responsibility Segregation)** separates write operations (Commands) from read operations (Queries). NestJS provides \`@nestjs/cqrs\`.
-
+**Setup Prisma:**
 \`\`\`bash
-pnpm add @nestjs/cqrs
+pnpm add prisma @prisma/client
+npx prisma init
 \`\`\`
 
-**Command (Write):**
-\`\`\`typescript
-// create-user.command.ts
-export class CreateUserCommand {
-  constructor(
-    public readonly email: string,
-    public readonly name: string,
-  ) {}
+**Schema (prisma/schema.prisma):**
+\`\`\`prisma
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  name      String
+  password  String
+  role      Role     @default(USER)
+  posts     Post[]
+  createdAt DateTime @default(now())
 }
 
-// create-user.handler.ts
-@CommandHandler(CreateUserCommand)
-export class CreateUserHandler implements ICommandHandler<CreateUserCommand> {
-  constructor(
-    private userRepo: UserRepository,
-    private eventBus: EventBus,
-  ) {}
-
-  async execute(command: CreateUserCommand) {
-    const user = await this.userRepo.create(command)
-    this.eventBus.publish(new UserCreatedEvent(user.id))
-    return user
-  }
+enum Role {
+  USER
+  ADMIN
 }
 \`\`\`
 
-**Query (Read):**
+**PrismaService (single connection):**
 \`\`\`typescript
-export class GetUserQuery {
-  constructor(public readonly id: number) {}
+@Injectable()
+export class PrismaService extends PrismaClient implements OnModuleInit {
+  async onModuleInit() {
+    await this.$connect()
+  }
 }
 
-@QueryHandler(GetUserQuery)
-export class GetUserHandler implements IQueryHandler<GetUserQuery> {
-  async execute(query: GetUserQuery) {
-    return this.userReadModel.findById(query.id)
+@Global()
+@Module({
+  providers: [PrismaService],
+  exports: [PrismaService],
+})
+export class PrismaModule {}
+\`\`\`
+
+**Usage in service:**
+\`\`\`typescript
+@Injectable()
+export class UsersService {
+  constructor(private prisma: PrismaService) {}
+
+  findAll() {
+    return this.prisma.user.findMany({
+      include: { posts: true },
+      orderBy: { createdAt: 'desc' },
+    })
+  }
+
+  async create(dto: CreateUserDto) {
+    return this.prisma.user.create({ data: dto })
+  }
+
+  // Transaction
+  async transferPoints(fromId: number, toId: number, points: number) {
+    return this.prisma.$transaction([
+      this.prisma.user.update({ where: { id: fromId }, data: { points: { decrement: points } } }),
+      this.prisma.user.update({ where: { id: toId }, data: { points: { increment: points } } }),
+    ])
   }
 }
 \`\`\`
 
-**Event + Handler:**
-\`\`\`typescript
-export class UserCreatedEvent {
-  constructor(public readonly userId: number) {}
-}
-
-@EventsHandler(UserCreatedEvent)
-export class UserCreatedHandler implements IEventHandler<UserCreatedEvent> {
-  handle(event: UserCreatedEvent) {
-    this.emailService.sendWelcome(event.userId)
-  }
-}
-\`\`\`
-
-**Controller using CommandBus / QueryBus:**
-\`\`\`typescript
-@Controller('users')
-export class UsersController {
-  constructor(
-    private commandBus: CommandBus,
-    private queryBus: QueryBus,
-  ) {}
-
-  @Post()
-  create(@Body() dto: CreateUserDto) {
-    return this.commandBus.execute(new CreateUserCommand(dto.email, dto.name))
-  }
-
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.queryBus.execute(new GetUserQuery(+id))
-  }
-}
-\`\`\``,
+**Prisma vs TypeORM:**
+| | Prisma | TypeORM |
+|---|---|---|
+| Type safety | Excellent (auto-generated) | Moderate |
+| Migration | \`prisma migrate\` (explicit) | \`synchronize\` (dangerous) |
+| Query API | Fluent, readable | Repository + QueryBuilder |
+| Learning curve | Lower | Higher |`,
   },
   {
     id: 3275,
     category: 'NestJS',
-    subcategory: 'Advanced',
-    level: 'advanced',
-    q: 'Dynamic Modules trong NestJS — forRoot / forRootAsync pattern là gì?',
-    a: `**Dynamic Modules** cho phép cấu hình module khi import, thay vì hardcode. Pattern phổ biến trong các library modules.
+    subcategory: 'Core',
+    level: 'intermediate',
+    q: 'File upload trong NestJS với Multer — upload single, multiple file và validate?',
+    a: `NestJS tích hợp Multer qua \`@nestjs/platform-express\`. Multer xử lý \`multipart/form-data\`.
 
-**Implement Dynamic Module:**
+**Upload single file:**
 \`\`\`typescript
-// mailer.module.ts
-export interface MailerOptions {
-  host: string
-  port: number
-  user: string
-  pass: string
-  from: string
-}
-
-@Module({})
-export class MailerModule {
-  // Đồng bộ — config biết trước
-  static forRoot(options: MailerOptions): DynamicModule {
-    return {
-      module: MailerModule,
-      providers: [
-        { provide: 'MAILER_OPTIONS', useValue: options },
-        MailerService,
-      ],
-      exports: [MailerService],
-      global: true,
-    }
-  }
-
-  // Bất đồng bộ — config từ ConfigService, DB, ...
-  static forRootAsync(options: {
-    inject?: any[]
-    useFactory: (...args: any[]) => MailerOptions | Promise<MailerOptions>
-    imports?: any[]
-  }): DynamicModule {
-    return {
-      module: MailerModule,
-      imports: options.imports || [],
-      providers: [
-        {
-          provide: 'MAILER_OPTIONS',
-          useFactory: options.useFactory,
-          inject: options.inject || [],
-        },
-        MailerService,
-      ],
-      exports: [MailerService],
-      global: true,
-    }
-  }
+// Controller
+@Post('avatar')
+@UseGuards(JwtAuthGuard)
+@UseInterceptors(
+  FileInterceptor('file', {
+    storage: diskStorage({
+      destination: './uploads',
+      filename: (req, file, cb) => {
+        const ext = extname(file.originalname)
+        cb(null, \`\${Date.now()}-\${Math.random().toString(36).slice(2)}\${ext}\`)
+      },
+    }),
+    fileFilter: (req, file, cb) => {
+      if (!file.mimetype.match(/^image\/(jpeg|png|webp)$/)) {
+        return cb(new BadRequestException('Only image files allowed'), false)
+      }
+      cb(null, true)
+    },
+    limits: { fileSize: 5 * 1024 * 1024 }, // 5MB
+  }),
+)
+uploadAvatar(
+  @UploadedFile() file: Express.Multer.File,
+  @CurrentUser('id') userId: number,
+) {
+  if (!file) throw new BadRequestException('File is required')
+  return this.usersService.updateAvatar(userId, file.filename)
 }
 \`\`\`
 
-**Cách sử dụng:**
+**Upload multiple files:**
 \`\`\`typescript
-// forRoot — config tĩnh
-@Module({
-  imports: [
-    MailerModule.forRoot({
-      host: 'smtp.gmail.com',
-      port: 587,
-      user: 'my@gmail.com',
-      pass: 'secret',
-      from: 'noreply@myapp.com',
-    }),
-  ],
-})
-export class AppModule {}
+@Post('photos')
+@UseInterceptors(FilesInterceptor('photos', 10)) // max 10 files
+uploadPhotos(@UploadedFiles() files: Express.Multer.File[]) {
+  return files.map(f => ({ filename: f.filename, size: f.size }))
+}
+\`\`\`
 
-// forRootAsync — lấy config từ ConfigService
-@Module({
-  imports: [
-    MailerModule.forRootAsync({
-      imports: [ConfigModule],
-      inject: [ConfigService],
-      useFactory: (config: ConfigService) => ({
-        host: config.get('SMTP_HOST'),
-        port: config.get('SMTP_PORT'),
-        user: config.get('SMTP_USER'),
-        pass: config.get('SMTP_PASS'),
-        from: config.get('SMTP_FROM'),
-      }),
+**Upload lên S3 (memory storage):**
+\`\`\`typescript
+@Post('upload')
+@UseInterceptors(FileInterceptor('file', { storage: memoryStorage() }))
+async uploadToS3(@UploadedFile() file: Express.Multer.File) {
+  const key = \`uploads/\${Date.now()}-\${file.originalname}\`
+  await this.s3.putObject({
+    Bucket: process.env.S3_BUCKET,
+    Key: key,
+    Body: file.buffer,
+    ContentType: file.mimetype,
+  })
+  return { url: \`https://\${process.env.S3_BUCKET}.s3.amazonaws.com/\${key}\` }
+}
+\`\`\`
+
+**ParseFilePipe — validate bằng built-in pipe:**
+\`\`\`typescript
+@Post('doc')
+uploadDoc(
+  @UploadedFile(
+    new ParseFilePipe({
+      validators: [
+        new MaxFileSizeValidator({ maxSize: 10 * 1024 * 1024 }), // 10MB
+        new FileTypeValidator({ fileType: 'application/pdf' }),
+      ],
     }),
-  ],
-})
-export class AppModule {}
+  )
+  file: Express.Multer.File,
+) {}
 \`\`\``,
-    q_en: 'What are Dynamic Modules in NestJS — the forRoot / forRootAsync pattern?',
-    a_en: `**Dynamic Modules** allow configuring a module at import time, instead of hardcoding. Common pattern in library modules.
+    q_en: 'File upload in NestJS with Multer — single, multiple files and validation?',
+    a_en: `NestJS integrates Multer via \`@nestjs/platform-express\`. Multer handles \`multipart/form-data\`.
 
-**Implement Dynamic Module:**
+**Upload single file:**
 \`\`\`typescript
-// mailer.module.ts
-export interface MailerOptions {
-  host: string
-  port: number
-  user: string
-  pass: string
-  from: string
-}
-
-@Module({})
-export class MailerModule {
-  // Synchronous — config known ahead of time
-  static forRoot(options: MailerOptions): DynamicModule {
-    return {
-      module: MailerModule,
-      providers: [
-        { provide: 'MAILER_OPTIONS', useValue: options },
-        MailerService,
-      ],
-      exports: [MailerService],
-      global: true,
-    }
-  }
-
-  // Asynchronous — config from ConfigService, DB, ...
-  static forRootAsync(options: {
-    inject?: any[]
-    useFactory: (...args: any[]) => MailerOptions | Promise<MailerOptions>
-    imports?: any[]
-  }): DynamicModule {
-    return {
-      module: MailerModule,
-      imports: options.imports || [],
-      providers: [
-        {
-          provide: 'MAILER_OPTIONS',
-          useFactory: options.useFactory,
-          inject: options.inject || [],
-        },
-        MailerService,
-      ],
-      exports: [MailerService],
-      global: true,
-    }
-  }
+@Post('avatar')
+@UseGuards(JwtAuthGuard)
+@UseInterceptors(
+  FileInterceptor('file', {
+    storage: diskStorage({
+      destination: './uploads',
+      filename: (req, file, cb) => {
+        const ext = extname(file.originalname)
+        cb(null, \`\${Date.now()}-\${Math.random().toString(36).slice(2)}\${ext}\`)
+      },
+    }),
+    fileFilter: (req, file, cb) => {
+      if (!file.mimetype.match(/^image\/(jpeg|png|webp)$/)) {
+        return cb(new BadRequestException('Only image files allowed'), false)
+      }
+      cb(null, true)
+    },
+    limits: { fileSize: 5 * 1024 * 1024 }, // 5MB
+  }),
+)
+uploadAvatar(
+  @UploadedFile() file: Express.Multer.File,
+  @CurrentUser('id') userId: number,
+) {
+  if (!file) throw new BadRequestException('File is required')
+  return this.usersService.updateAvatar(userId, file.filename)
 }
 \`\`\`
 
-**Usage:**
+**Upload multiple files:**
 \`\`\`typescript
-// forRoot — static config
-@Module({
-  imports: [
-    MailerModule.forRoot({
-      host: 'smtp.gmail.com',
-      port: 587,
-      user: 'my@gmail.com',
-      pass: 'secret',
-      from: 'noreply@myapp.com',
-    }),
-  ],
-})
-export class AppModule {}
+@Post('photos')
+@UseInterceptors(FilesInterceptor('photos', 10)) // max 10 files
+uploadPhotos(@UploadedFiles() files: Express.Multer.File[]) {
+  return files.map(f => ({ filename: f.filename, size: f.size }))
+}
+\`\`\`
 
-// forRootAsync — config from ConfigService
-@Module({
-  imports: [
-    MailerModule.forRootAsync({
-      imports: [ConfigModule],
-      inject: [ConfigService],
-      useFactory: (config: ConfigService) => ({
-        host: config.get('SMTP_HOST'),
-        port: config.get('SMTP_PORT'),
-        user: config.get('SMTP_USER'),
-        pass: config.get('SMTP_PASS'),
-        from: config.get('SMTP_FROM'),
-      }),
+**Upload to S3 (memory storage):**
+\`\`\`typescript
+@Post('upload')
+@UseInterceptors(FileInterceptor('file', { storage: memoryStorage() }))
+async uploadToS3(@UploadedFile() file: Express.Multer.File) {
+  const key = \`uploads/\${Date.now()}-\${file.originalname}\`
+  await this.s3.putObject({
+    Bucket: process.env.S3_BUCKET,
+    Key: key,
+    Body: file.buffer,
+    ContentType: file.mimetype,
+  })
+  return { url: \`https://\${process.env.S3_BUCKET}.s3.amazonaws.com/\${key}\` }
+}
+\`\`\`
+
+**ParseFilePipe — built-in validation:**
+\`\`\`typescript
+@Post('doc')
+uploadDoc(
+  @UploadedFile(
+    new ParseFilePipe({
+      validators: [
+        new MaxFileSizeValidator({ maxSize: 10 * 1024 * 1024 }), // 10MB
+        new FileTypeValidator({ fileType: 'application/pdf' }),
+      ],
     }),
-  ],
-})
-export class AppModule {}
+  )
+  file: Express.Multer.File,
+) {}
 \`\`\``,
   },
   {
