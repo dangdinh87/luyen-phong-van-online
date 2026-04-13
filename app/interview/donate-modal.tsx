@@ -69,6 +69,7 @@ export function DonateModal({ onClose }: { onClose: () => void }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="iv-donate-btn iv-donate-btn-momo"
+                onClick={() => fetch('/api/donate-notify', { method: 'POST' }).catch(() => {})}
               >
                 <MomoIcon size={20} />
                 MoMo
