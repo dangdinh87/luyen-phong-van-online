@@ -13,6 +13,7 @@ export interface CategoryGroup {
 }
 
 export const CATEGORY_GROUPS: CategoryGroup[] = [
+  // ── Frontend ──────────────────────────────────────────────────────────────
   {
     label: 'HTML',
     icon: '/icons/html.svg',
@@ -65,12 +66,20 @@ export const CATEGORY_GROUPS: CategoryGroup[] = [
     ],
   },
   {
+    label: 'Vue.js',
+    icon: '/icons/vuejs.svg',
+    members: ['Vue.js'],
+    addedDate: '2026-04-13',
+  },
+  {
     label: 'State Management',
     icon: '/icons/state-management.svg',
     members: [
       'State Management', 'Redux', 'RTK', 'Zustand', 'Recoil', 'Jotai',
     ],
   },
+
+  // ── Backend / Server-side ─────────────────────────────────────────────────
   {
     label: 'Node.js',
     icon: '/icons/nodejs.svg',
@@ -78,6 +87,18 @@ export const CATEGORY_GROUPS: CategoryGroup[] = [
       'Node.js', 'Node.js Deep', 'Node.js Thực Tế', 'Express',
       'Streams', 'Buffers', 'File System',
     ],
+  },
+  {
+    label: 'NestJS',
+    icon: '/icons/nestjs.svg',
+    members: ['NestJS'],
+    addedDate: '2026-04-13',
+  },
+  {
+    label: 'Python',
+    icon: '/icons/python.svg',
+    members: ['Python'],
+    addedDate: '2026-04-13',
   },
   {
     label: 'Golang',
@@ -110,6 +131,8 @@ export const CATEGORY_GROUPS: CategoryGroup[] = [
     members: ['C#', 'ASP.NET', 'Entity Framework'],
     addedDate: '2026-04-06',
   },
+
+  // ── Mobile ────────────────────────────────────────────────────────────────
   {
     label: 'Flutter',
     icon: '/icons/flutter.svg',
@@ -122,23 +145,22 @@ export const CATEGORY_GROUPS: CategoryGroup[] = [
     members: ['Android', 'Kotlin', 'Jetpack Compose'],
     addedDate: '2026-04-07',
   },
+
+  // ── Architecture & Design ─────────────────────────────────────────────────
   {
-    label: 'Python',
-    icon: '/icons/python.svg',
-    members: ['Python'],
-    addedDate: '2026-04-13',
+    label: 'System Design',
+    icon: '/icons/system-design.svg',
+    members: [
+      'System Design', 'Fundamentals', 'Scaling', 'Architecture Patterns',
+      'Data & Storage', 'Interview Scenarios',
+    ],
   },
   {
-    label: 'Vue.js',
-    icon: '/icons/vuejs.svg',
-    members: ['Vue.js'],
-    addedDate: '2026-04-13',
-  },
-  {
-    label: 'NestJS',
-    icon: '/icons/nestjs.svg',
-    members: ['NestJS'],
-    addedDate: '2026-04-13',
+    label: 'Design Patterns',
+    icon: '/icons/design-patterns.svg',
+    members: [
+      'Design Patterns', 'SOLID', 'Creational', 'Structural', 'Behavioral',
+    ],
   },
   {
     label: 'Backend & API',
@@ -154,6 +176,34 @@ export const CATEGORY_GROUPS: CategoryGroup[] = [
       'Database', 'Database Design', 'SQL Cơ Bản', 'NoSQL', 'ORM', 'Caching',
     ],
   },
+
+  // ── Messaging ─────────────────────────────────────────────────────────────
+  {
+    label: 'Kafka',
+    icon: '/icons/kafka.svg',
+    members: ['Kafka'],
+  },
+  {
+    label: 'Redis',
+    icon: '/icons/redis.svg',
+    members: ['Redis'],
+  },
+  {
+    label: 'RabbitMQ',
+    icon: '/icons/rabbitmq.svg',
+    members: ['RabbitMQ'],
+    addedDate: '2026-04-07',
+  },
+
+  // ── Infrastructure ────────────────────────────────────────────────────────
+  {
+    label: 'AWS & Cloud',
+    icon: '/icons/aws-cloud.svg',
+    members: [
+      'AWS & Cloud', 'Compute & Networking', 'Storage & Database',
+      'Security & DevOps', 'Architecture',
+    ],
+  },
   {
     label: 'DevOps & Tools',
     icon: '/icons/devops.svg',
@@ -163,6 +213,22 @@ export const CATEGORY_GROUPS: CategoryGroup[] = [
       'Git', 'CI/CD', 'Docker', 'DevOps',
     ],
   },
+  {
+    label: 'Network',
+    icon: '/icons/network.svg',
+    members: [
+      'Network', 'OSI & TCP/IP', 'Web & API Networking',
+    ],
+  },
+  {
+    label: 'Operating System',
+    icon: '/icons/os.svg',
+    members: [
+      'Operating System', 'Process & Thread', 'Memory & Storage',
+    ],
+  },
+
+  // ── Quality & Soft Skills ─────────────────────────────────────────────────
   {
     label: 'Testing',
     icon: '/icons/testing.svg',
@@ -185,63 +251,6 @@ export const CATEGORY_GROUPS: CategoryGroup[] = [
     icon: '/icons/security.svg',
     members: [
       'Security', 'Authentication', 'Auth', 'XSS & CSRF', 'CSP',
-    ],
-  },
-  {
-    label: 'System Design',
-    icon: '/icons/system-design.svg',
-    members: [
-      'System Design', 'Fundamentals', 'Scaling', 'Architecture Patterns',
-      'Data & Storage', 'Interview Scenarios',
-    ],
-  },
-  {
-    label: 'Design Patterns',
-    icon: '/icons/design-patterns.svg',
-    members: [
-      'Design Patterns', 'SOLID', 'Creational', 'Structural', 'Behavioral',
-    ],
-  },
-  {
-    label: 'Kafka',
-    icon: '/icons/kafka.svg',
-    members: [
-      'Kafka',
-    ],
-  },
-  {
-    label: 'Redis',
-    icon: '/icons/redis.svg',
-    members: [
-      'Redis',
-    ],
-  },
-  {
-    label: 'RabbitMQ',
-    icon: '/icons/rabbitmq.svg',
-    members: ['RabbitMQ'],
-    addedDate: '2026-04-07',
-  },
-  {
-    label: 'Network',
-    icon: '/icons/network.svg',
-    members: [
-      'Network', 'OSI & TCP/IP', 'Web & API Networking',
-    ],
-  },
-  {
-    label: 'Operating System',
-    icon: '/icons/os.svg',
-    members: [
-      'Operating System', 'Process & Thread', 'Memory & Storage',
-    ],
-  },
-  {
-    label: 'AWS & Cloud',
-    icon: '/icons/aws-cloud.svg',
-    members: [
-      'AWS & Cloud', 'Compute & Networking', 'Storage & Database',
-      'Security & DevOps', 'Architecture',
     ],
   },
   {
