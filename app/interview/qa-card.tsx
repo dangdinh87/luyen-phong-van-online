@@ -107,11 +107,13 @@ export const QACard = memo(function QACard({
               onClick={(e) => { e.stopPropagation(); onToggleBookmark(item.id) }}
               title={locale === 'en' ? 'Save' : 'Lưu'}
               aria-label={locale === 'en' ? 'Bookmark' : 'Đánh dấu'}
+              aria-pressed={isBookmarked}
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill={isBookmarked ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
             </button>
             <button
               className={`qa-action-btn ${isLearned ? 'learned-active' : ''}`}
+              aria-pressed={isLearned}
               onClick={(e) => {
                 e.stopPropagation()
                 if (!isLearned) {
